@@ -12,7 +12,7 @@ use Illuminate\Database\Eloquent\Model;
 
   
 
-class Pengguna extends Model
+class Admin extends Model
 
 {
 

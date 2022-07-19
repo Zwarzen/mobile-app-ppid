@@ -10,13 +10,13 @@
 
             <div class="pull-left">
 
-                <h2> Show Product</h2>
+                <h2> Detail Pengaduan</h2>
 
             </div>
 
             <div class="pull-right">
 
-                <a class="btn btn-primary" href="{{ route('products.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('admin.index') }}"> Back</a>
 
             </div>
 

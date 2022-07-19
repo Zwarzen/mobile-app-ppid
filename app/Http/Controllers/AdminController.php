@@ -12,7 +12,7 @@ use Illuminate\Http\Request;
 
   
 
-class PenggunaController extends Controller
+class AdminController extends Controller
 
 {
 
@@ -30,11 +30,11 @@ class PenggunaController extends Controller
 
     {
 
-        $products = Product::latest()->paginate(5);
+        $products = Product::latest()->paginate(10);
 
     
 
-        return view('pengguna.create',compact('products'))
+        return view('admin.index',compact('products'))
 
             ->with('i', (request()->input('page', 1) - 1) * 5);
 
@@ -56,7 +56,7 @@ class PenggunaController extends Controller
 
     {
 
-        return view('pengguna.create');
+        return view('admin.create');
 
     }
 
@@ -112,7 +112,7 @@ class PenggunaController extends Controller
 
      
 
-        return redirect()->route('pengguna.index')
+        return redirect()->route('admin.index')
 
                         ->with('success','Product created successfully.');
 
@@ -136,7 +136,7 @@ class PenggunaController extends Controller
 
     {
 
-        return view('pengguna.show',compact('product'));
+        return view('admin.show',compact('product'));
 
     }
 
@@ -158,7 +158,7 @@ class PenggunaController extends Controller
 
     {
 
-        return view('pengguna.edit',compact('product'));
+        return view('admin.edit',compact('product'));
 
     }
 
@@ -218,7 +218,7 @@ class PenggunaController extends Controller
 
     
 
-        return redirect()->route('pengguna.index')
+        return redirect()->route('admin.index')
 
                         ->with('success','Product updated successfully');
 
@@ -246,7 +246,7 @@ class PenggunaController extends Controller
 
      
 
-        return redirect()->route('pengguna.index')
+        return redirect()->route('admin.index')
 
                         ->with('success','Product deleted successfully');
 

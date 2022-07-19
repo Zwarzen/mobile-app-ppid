@@ -34,7 +34,7 @@ class ProductController extends Controller
 
     
 
-        return view('products.index',compact('products'))
+        return view('products.create',compact('products'))
 
             ->with('i', (request()->input('page', 1) - 1) * 5);
 
@@ -218,7 +218,7 @@ class ProductController extends Controller
 
     
 
-        return redirect()->route('products.index')
+        return redirect()->route('admin.index')
 
                         ->with('success','Product updated successfully');
 
@@ -246,7 +246,7 @@ class ProductController extends Controller
 
      
 
-        return redirect()->route('products.index')
+        return redirect()->route('admin.index')
 
                         ->with('success','Product deleted successfully');
 

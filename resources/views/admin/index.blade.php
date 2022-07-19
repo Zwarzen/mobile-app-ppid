@@ -10,16 +10,15 @@
 
             <div class="pull-left">
 
-                <h2>CRUD with Image Upload</h2>
+                <h2>Admin Pusat PPID Kabupaten</h2>
 
             </div>
 
-            <div class="pull-right">
+            <div class="pull-left">
 
-                <a class="btn btn-success" href="{{ route('products.create') }}"> Create New Product</a>
+                <a class="btn btn-success" href="{{ route('admin.create') }}"> Buat Pengaduan Baru</a>
 
             </div>
-
         </div>
 
     </div>
@@ -70,7 +69,6 @@
 
                     <a class="btn btn-info" href="{{ route('products.show',$product->id) }}">Show</a>
 
-      
 
                     <a class="btn btn-primary" href="{{ route('products.edit',$product->id) }}">Edit</a>
 

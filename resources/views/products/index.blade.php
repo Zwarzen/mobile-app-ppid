@@ -14,9 +14,9 @@
 
             </div>
 
-            <div class="pull-right">
+            <div class="pull-left">
 
-                <a class="btn btn-success" href="{{ route('products.create') }}"> Create New Product</a>
+                <a class="btn btn-success" href="{{ route('products.create') }}"> Buat Pengaduan Baru</a>
 
             </div>
 

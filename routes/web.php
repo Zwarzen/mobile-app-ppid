@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
-use App\Http\Controllers\PenggunaController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +19,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::resource('products', ProductController::class);
-Route::resource('pengguna', PenggunaController::class);
+Route::resource('admin', AdminController::class);
