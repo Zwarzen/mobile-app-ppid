@@ -12,7 +12,7 @@ use Illuminate\Http\Request;
 
   
 
-class UserController extends Controller
+class PenggunaController extends Controller
 
 {
 
@@ -34,7 +34,7 @@ class UserController extends Controller
 
     
 
-        return view('users.create',compact('users'))
+        return view('pengguna.create',compact('products'))
 
             ->with('i', (request()->input('page', 1) - 1) * 5);
 
@@ -56,7 +56,7 @@ class UserController extends Controller
 
     {
 
-        return view('products.create');
+        return view('pengguna.create');
 
     }
 
@@ -112,7 +112,7 @@ class UserController extends Controller
 
      
 
-        return redirect()->route('products.index')
+        return redirect()->route('pengguna.index')
 
                         ->with('success','Product created successfully.');
 
@@ -136,7 +136,7 @@ class UserController extends Controller
 
     {
 
-        return view('products.show',compact('product'));
+        return view('pengguna.show',compact('product'));
 
     }
 
@@ -158,7 +158,7 @@ class UserController extends Controller
 
     {
 
-        return view('products.edit',compact('product'));
+        return view('pengguna.edit',compact('product'));
 
     }
 
@@ -218,7 +218,7 @@ class UserController extends Controller
 
     
 
-        return redirect()->route('products.index')
+        return redirect()->route('pengguna.index')
 
                         ->with('success','Product updated successfully');
 
@@ -246,7 +246,7 @@ class UserController extends Controller
 
      
 
-        return redirect()->route('products.index')
+        return redirect()->route('pengguna.index')
 
                         ->with('success','Product deleted successfully');
 

@@ -13,6 +13,8 @@
             <h2>Add New Product</h2>
 
         </div>
+        
+        
 
         <div class="pull-right">
 
@@ -24,6 +26,14 @@
 
 </div>
 
+@if ($message = Session::get('success'))
+
+        <div class="alert alert-success">
+
+            <p>{{ $message }}</p>
+
+        </div>
+@endif
      
 
 @if ($errors->any())
@@ -60,7 +70,7 @@
 
             <div class="form-group">
 
-                <strong>Name:</strong>
+                <strong>Nama:</strong>
 
                 <input type="text" name="name" class="form-control" placeholder="Name">
 
@@ -72,7 +82,7 @@
 
             <div class="form-group">
 
-                <strong>Detail:</strong>
+                <strong>Subjek:</strong>
 
                 <textarea class="form-control" style="height:150px" name="detail" placeholder="Detail"></textarea>
 
@@ -94,7 +104,7 @@
 
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
 
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Buat</button>
 
         </div>
 
