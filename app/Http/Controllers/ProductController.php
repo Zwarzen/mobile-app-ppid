@@ -80,11 +80,29 @@ class ProductController extends Controller
 
         $request->validate([
 
-            'name' => 'required',
+            'nama' => 'required',
 
-            'detail' => 'required',
+            'no_identitas' => 'required',
+
+            'organisasi' => 'required',
+
+            'alamat' => 'required',
+
+            'kontak' => 'required',
+
+            'detail_info_diminta' => 'required',
+
+            'tujuan_penggunaan' => 'required',
+
+            'cara_memperoleh_info' => 'required',
+
+            'cara_mendapat_salinan' => 'required',
+
+            'tujuan_skpd' => 'required',
 
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+
+            'date' => 'required',
 
         ]);
 
@@ -184,10 +202,29 @@ class ProductController extends Controller
 
         $request->validate([
 
-            'name' => 'required',
+            'nama' => 'required',
 
-            'detail' => 'required'
+            'no_identitas' => 'required',
 
+            'origanisasi' => 'required',
+
+            'alamat' => 'required',
+
+            'kontak' => 'required',
+
+            'detail_info_diminta' => 'required',
+
+            'tujuan_penggunaan' => 'required',
+
+            'cara_memperoleh_info' => 'required',
+
+            'cara_mendapat_salinan' => 'required',
+
+            'tujuan_skpd' => 'required',
+
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+
+            'date' => 'required',
         ]);
 
   

@@ -32,9 +32,25 @@ class CreateProductsTable extends Migration
 
             $table->id();
 
-            $table->string('name');
+            $table->text('nama');
 
-            $table->text('detail');
+            $table->integer('no_identitas');
+
+            $table->text('organisasi');
+
+            $table->text('alamat');
+
+            $table->text('kontak');
+
+            $table->text('detail_info_diminta');
+
+            $table->text('tujuan_penggunaan');
+
+            $table->text('cara_memperoleh_info');
+
+            $table->text('cara_mendapat_salinan');
+
+            $table->text('tujuan_skpd');
 
             $table->string('image');
 

@@ -43,9 +43,9 @@
 
             <th>No</th>
 
-            <th>Name</th>
+            <th>Nama</th>
 
-            <th>Subjek</th>
+            <th>Detail</th>
 
             <th width="280px">Action</th>
 
@@ -57,9 +57,9 @@
 
             <td>{{ ++$i }}</td>
 
-            <td>{{ $product->name }}</td>
+            <td>{{ $product->nama }}</td>
 
-            <td>{{ $product->detail }}</td>
+            <td>{{ $product->detail_info_diminta  }}</td>
 
             <td>
 
@@ -67,7 +67,7 @@
 
      
 
-                    <a class="btn btn-info" href="{{ route('products.show',$product->id) }}">Show</a>
+                    <a class="btn btn-info" href="{{ route('products.show',$product->id) }}">Detail</a>
 
 
                     <a class="btn btn-primary" href="{{ route('products.edit',$product->id) }}">Edit</a>
@@ -80,7 +80,7 @@
 
         
 
-                    <button type="submit" class="btn btn-danger">Delete</button>
+                    <button type="submit" class="btn btn-danger">Hapus</button>
 
                 </form>
 

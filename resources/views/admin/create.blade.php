@@ -82,9 +82,105 @@
 
             <div class="form-group">
 
-                <strong>Subjek:</strong>
+                <strong>No. KTP/SIM/Paspor:</strong>
+
+                <input type="text" name="name" class="form-control" placeholder="Name">
+
+            </div>
+
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+
+            <div class="form-group">
+
+                <strong>Ormas/Perorangan:</strong>
 
                 <textarea class="form-control" style="height:150px" name="detail" placeholder="Detail"></textarea>
+
+            </div>
+
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+
+            <div class="form-group">
+
+                <strong>No Telp/Email:</strong>
+
+                <input type="text" name="name" class="form-control" placeholder="Name">
+
+            </div>
+
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+
+            <div class="form-group">
+
+                <strong>Rincian Informasi yang dibutuhkan:</strong>
+
+                <input type="text" name="name" class="form-control" placeholder="Name">
+
+            </div>
+
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+
+            <div class="form-group">
+
+                <strong>Tujuan Penggunaan Informasi:</strong>
+
+                <input type="text" name="name" class="form-control" placeholder="Name">
+
+            </div>
+
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+
+            <div class="form-group">
+
+                <strong>Cara Memperoleh Informasi:</strong>
+
+                <input type="text" name="name" class="form-control" placeholder="Name">
+
+            </div>
+
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+
+            <div class="form-group">
+
+                <strong>Cara Mendapatkan Salinan Informasi:</strong>
+
+                <input type="text" name="name" class="form-control" placeholder="Name">
+
+            </div>
+
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+
+            <div class="form-group">
+
+                <strong>Tujuan SKPD:</strong>
+
+                <input type="text" name="name" class="form-control" placeholder="Name">
+
+            </div>
+
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+
+            <div class="form-group">
+
+                <strong>Tanggal:</strong>
+
+                <input type="text" name="name" class="form-control" placeholder="Name">
 
             </div>
 
