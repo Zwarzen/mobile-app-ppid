@@ -12,7 +12,7 @@ use Illuminate\Http\Request;
 
   
 
-class ProductController extends Controller
+class UserController extends Controller
 
 {
 
@@ -34,7 +34,7 @@ class ProductController extends Controller
 
     
 
-        return view('products.index',compact('products'))
+        return view('users.create',compact('users'))
 
             ->with('i', (request()->input('page', 1) - 1) * 5);
 
