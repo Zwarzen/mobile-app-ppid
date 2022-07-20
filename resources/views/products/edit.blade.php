@@ -10,7 +10,7 @@
 
         <div class="pull-left">
 
-            <h2>Edit Product</h2>
+            <h2>Edit Data</h2>
 
         </div>
 
@@ -64,7 +64,7 @@
 
                 <strong>Nama:</strong>
 
-                <input type="text" name="nama" class="form-control" placeholder="Nama Pemohon">
+                <input type="text" name="nama" value="{{ $product->nama }}" class="form-control" placeholder="Nama">
 
             </div>
 
@@ -76,7 +76,7 @@
 
                 <strong>Alamat:</strong>
 
-                <input type="text" name="alamat" class="form-control" placeholder="Nama Pemohon">
+                <input type="text" name="alamat" value="{{ $product->alamat }}" class="form-control" placeholder="Alamat">
 
             </div>
 
@@ -88,7 +88,7 @@
 
                 <strong>No. KTP/SIM/Paspor:</strong>
 
-                <input type="text" name="no_identitas" class="form-control" placeholder="Nomor KTP/SIM/Paspor">
+                <input type="text" name="no_identitas" value="{{ $product->no_identitas }}" class="form-control" placeholder="Nomor KTP/SIM/Paspor">
 
             </div>
 
@@ -99,7 +99,7 @@
             <div class="form-group">
 
                 <strong>Ormas/Perorangan:</strong>
-                <input type="text" name="organisasi" class="form-control" placeholder="Nama Organisasi">
+                <input type="text" name="organisasi" value="{{ $product->organisasi }}" class="form-control" placeholder="Nama Organisasi">
             </div>
 
         </div>
@@ -110,7 +110,7 @@
 
                 <strong>No Telp/Email:</strong>
 
-                <input type="text" name="kontak" class="form-control" placeholder="Nomor Telp/Email">
+                <input type="text" name="kontak" value="{{ $product->kontak }}" class="form-control" placeholder="Nomor Telp/Email">
 
             </div>
 
@@ -121,7 +121,7 @@
             <div class="form-group">
 
                 <strong>Rincian Informasi yang dibutuhkan:</strong>
-                <textarea class="form-control" style="height:150px" name="detail_info_diminta" placeholder="Detail info yang diminta"></textarea>
+                <textarea class="form-control" style="height:150px" name="detail_info_diminta" placeholder="Detail info yang diminta">{{ $product->detail_info_diminta }}</textarea>
             </div>
 
         </div>
@@ -131,7 +131,7 @@
             <div class="form-group">
 
                 <strong>Tujuan Penggunaan Informasi:</strong>
-                <textarea class="form-control" style="height:150px" name="tujuan_penggunaan" placeholder="Tujuan Penggunaan"></textarea>
+                <textarea class="form-control" style="height:150px" name="tujuan_penggunaan" placeholder="Tujuan Penggunaan">{{ $product->tujuan_penggunaan }}</textarea>
             </div>
 
         </div>
@@ -142,7 +142,7 @@
 
                 <strong>Cara Memperoleh Informasi:</strong>
 
-                <input type="text" name="cara_memperoleh_info" class="form-control" placeholder="Cara Memperoleh Informasi">
+                <input type="text" name="cara_memperoleh_info" value="{{ $product->cara_memperoleh_info}}" class="form-control" placeholder="Cara Memperoleh Informasi">
 
             </div>
 
@@ -154,7 +154,7 @@
 
                 <strong>Cara Mendapatkan Salinan Informasi:</strong>
 
-                <input type="text" name="cara_mendapat_salinan" class="form-control" placeholder="Cara Mendapat Salinan">
+                <input type="text" name="cara_mendapat_salinan" value="{{ $product->cara_mendapat_salinan}}" class="form-control" placeholder="Cara Mendapat Salinan">
 
             </div>
 
@@ -166,7 +166,7 @@
 
                 <strong>Tujuan SKPD:</strong>
 
-                <input type="text" name="tujuan_skpd" class="form-control" placeholder="Tujuan">
+                <input type="text" name="tujuan_skpd" value="{{ $product->tujuan_skpd}}" class="form-control" placeholder="Tujuan">
 
             </div>
 
@@ -178,7 +178,7 @@
 
                 <strong>Tanggal:</strong>
 
-                <input type="date" name="date" class="form-control" placeholder="Name">
+                <input type="date" name="date" value="{{ $product->date}}" class="form-control" placeholder="Name">
 
             </div>
 
@@ -192,6 +192,7 @@
 
                 <input type="file" name="image" class="form-control" placeholder="image">
 
+                <img src="/image/{{ $product->image }}" width="300px">
             </div>
 
         </div>

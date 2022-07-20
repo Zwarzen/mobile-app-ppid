@@ -62,9 +62,9 @@
 
                 <div class="form-group">
 
-                    <strong>Name:</strong>
+                    <strong>Nama:</strong>
 
-                    <input type="text" name="name" value="{{ $product->name }}" class="form-control" placeholder="Name">
+                    <input type="text" name="nama" value="{{ $product->name }}" class="form-control" placeholder="Nama">
 
                 </div>
 

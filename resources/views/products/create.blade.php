@@ -76,7 +76,7 @@
 
                 <strong>Alamat:</strong>
 
-                <input type="text" name="alamat" class="form-control" placeholder="Nama Pemohon">
+                <input type="text" name="alamat" class="form-control" placeholder="Alamat">
 
             </div>
 
