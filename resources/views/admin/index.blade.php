@@ -70,22 +70,15 @@
 
             <form action="{{ route('products.destroy',$product->id) }}" method="POST">
 
-
-
                 <a class="btn btn-info" href="{{ route('products.show',$product->id) }}">Detail</a>
 
-
                 <!-- <a class="btn btn-primary" href="{{ route('products.edit',$product->id) }}">Edit</a> -->
-
-
 
                 @csrf
 
                 @method('DELETE')
 
-
-
-                <button type="submit" class="btn btn-danger">Hapus</button>
+                <button type="submit" class="btn btn-danger"> <i class="bi bi-trash"></i> Hapus</button>
 
             </form>
 
@@ -97,10 +90,6 @@
 
 </table>
 
-
-
 {!! $products->links() !!}
-
-
 
 @endsection
