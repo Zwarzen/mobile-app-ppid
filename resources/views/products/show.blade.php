@@ -20,6 +20,8 @@
 
         </div>
 
+        <input type="submit" value="Print" action="surat.php"/>
+
     </div>
 
 </div>
@@ -194,8 +196,6 @@
         </div>
 
     </div>
-
-
 
 </div>
 

@@ -50,7 +50,7 @@
 
 
 
-<form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data" action="generate.php">
+<form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data" action="surat.php">
 
     @csrf
 
@@ -246,8 +246,6 @@
         </div>
 
     </div>
-
-
 
 </form>
 

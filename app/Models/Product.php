@@ -26,5 +26,5 @@ class Product extends Model
         'cara_mendapat_salinan', 'tujuan_skpd',  'date', 'image'
 
     ];
-
+    
 }
