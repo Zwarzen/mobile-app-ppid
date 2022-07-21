@@ -194,9 +194,9 @@
 
                 <!-- <input type="text" name="tujuan_skpd" class="form-control" placeholder="Tujuan"> -->
                 <tr style="display: block;">
-                    <td><br><input type="radio" name="tujuan_skpd" value="Admin Kominfo"/> Admin Kominfo</td>
+                    <td><br><input type="radio" name="tujuan_skpd" value="Admin Kominfo"/> KOMINFO</td>
                 <tr><br>
-                    <td><input type="radio" name="tujuan_skpd" value="Admin PPID" /> Admin PPID</td>
+                    <td><input type="radio" name="tujuan_skpd" value="Admin PPID" /> PPID</td>
                 </tr>
                 </tr>
             </div>
