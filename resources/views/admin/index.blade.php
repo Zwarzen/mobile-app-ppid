@@ -17,7 +17,7 @@
 
     <div class="col-lg-12 margin-tb">
 
-        <div class="pull-left">
+        <div class="pull-left" style="margin-top: 20px;">
 
             <h2>Admin Pusat PPID Kabupaten</h2>
 
@@ -51,7 +51,7 @@
 
 
 
-<table class="table table-bordered">
+<table class="table table-bordered" style="margin-top: 20px;">
 
     <tr>
 

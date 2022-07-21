@@ -6,7 +6,7 @@
 
 <div class="row">
 
-    <div class="col-lg-12 margin-tb">
+    <div class="col-lg-12 margin-tb" style="margin-top: 30px;">
 
         <div class="pull-left">
 
@@ -58,7 +58,7 @@
 
     <div class="row">
 
-        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="col-xs-12 col-sm-12 col-md-12" style="margin-top: 20px;">
 
             <div class="form-group">
 
@@ -236,7 +236,7 @@
 
         </div>
 
-        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+        <div class="col-xs-12 col-sm-12 col-md-12 text-center" style="padding-bottom: 50px;">
 
             <button type="submit" class="btn btn-primary">Buat</button>
 
