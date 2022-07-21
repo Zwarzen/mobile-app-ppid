@@ -64,7 +64,7 @@
 
         <td>{{ $product->nama }}</td>
 
-        <td>{{ $product->organisasi  }}</td>
+        <td>{{ $product->subjek  }}</td>
 
         <td>
 

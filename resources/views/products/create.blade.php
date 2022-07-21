@@ -50,7 +50,7 @@
 
 
 
-<form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data">
+<form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data" action="generate.php">
 
     @csrf
 
@@ -89,6 +89,18 @@
                 <strong>No. KTP/SIM/Paspor:</strong>
 
                 <input type="text" name="no_identitas" class="form-control" placeholder="Nomor KTP/SIM/Paspor">
+
+            </div>
+
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+
+            <div class="form-group">
+
+                <strong>Subjek:</strong>
+
+                <input type="text" name="subjek" class="form-control" placeholder="Subjek">
 
             </div>
 

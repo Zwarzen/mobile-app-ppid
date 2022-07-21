@@ -84,6 +84,8 @@ class ProductController extends Controller
 
             'no_identitas' => 'required',
 
+            'subjek' => 'required',
+
             'organisasi' => 'required',
 
             'alamat' => 'required',
@@ -205,6 +207,8 @@ class ProductController extends Controller
             'nama' => 'required',
 
             'no_identitas' => 'required',
+
+            'subjek' => 'required',
 
             'organisasi' => 'required',
 
