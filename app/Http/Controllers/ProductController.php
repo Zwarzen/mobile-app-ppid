@@ -132,7 +132,7 @@ class ProductController extends Controller
 
         return redirect()->route('products.index')
 
-                        ->with('success','Product created successfully.');
+                        ->with('success','Data berhasil dikirim!');
 
     }
 
@@ -206,7 +206,7 @@ class ProductController extends Controller
 
             'no_identitas' => 'required',
 
-            'origanisasi' => 'required',
+            'organisasi' => 'required',
 
             'alamat' => 'required',
 
@@ -285,7 +285,7 @@ class ProductController extends Controller
 
         return redirect()->route('admin.index')
 
-                        ->with('success','Product deleted successfully');
+                        ->with('success','Data Berhasil dihapus!');
 
     }
 

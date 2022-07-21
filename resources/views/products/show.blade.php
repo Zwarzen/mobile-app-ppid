@@ -175,13 +175,15 @@
 
         <div class="form-group">
 
-            <strong>Image:</strong>
-
-            <img src="/image/{{ $product->image }}" width="500px">
+            <strong>Foto KTP:</strong>
+            <br>
+            <img src="/image/{{ $product->image }}" width="250px">
 
         </div>
 
     </div>
+
+
 
 </div>
 

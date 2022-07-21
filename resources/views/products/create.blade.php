@@ -1,6 +1,6 @@
 @extends('products.layout')
 
-  
+
 
 @section('content')
 
@@ -20,43 +20,43 @@
 
 @if ($message = Session::get('success'))
 
-        <div class="alert alert-success">
+<div class="alert alert-success">
 
-            <p>{{ $message }}</p>
+    <p>{{ $message }}</p>
 
-        </div>
+</div>
 @endif
-     
+
 
 @if ($errors->any())
 
-    <div class="alert alert-danger">
+<div class="alert alert-danger">
 
-        <strong>Whoops!</strong> There were some problems with your input.<br><br>
+    <strong>Whoops!</strong> There were some problems with your input.<br><br>
 
-        <ul>
+    <ul>
 
-            @foreach ($errors->all() as $error)
+        @foreach ($errors->all() as $error)
 
-                <li>{{ $error }}</li>
+        <li>{{ $error }}</li>
 
-            @endforeach
+        @endforeach
 
-        </ul>
+    </ul>
 
-    </div>
+</div>
 
 @endif
 
-     
+
 
 <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data">
 
     @csrf
 
-    
 
-     <div class="row">
+
+    <div class="row">
 
         <div class="col-xs-12 col-sm-12 col-md-12">
 
@@ -98,8 +98,14 @@
 
             <div class="form-group">
 
-                <strong>Ormas/Perorangan:</strong>
-                <input type="text" name="organisasi" class="form-control" placeholder="Nama Organisasi">
+                <strong>Ormas/Perorangan:</strong><br>
+                <!-- <input type="text" name="organisasi" class="form-control" placeholder="Nama Organisasi"> -->
+                <tr style="display: block;">
+                    <td><input type="radio" name="organisasi" value="Ormas" /> Ormas</td>
+                <tr>
+                    <td><br><input type="radio" name="organisasi" value="Perorangan" /> Perorangan</td>
+                </tr>
+                </tr>
             </div>
 
         </div>
@@ -140,9 +146,15 @@
 
             <div class="form-group">
 
-                <strong>Cara Memperoleh Informasi:</strong>
+                <strong>Cara Memperoleh Informasi:</strong><br>
 
-                <input type="text" name="cara_memperoleh_info" class="form-control" placeholder="Cara Memperoleh Informasi">
+                <!-- <input type="text" name="cara_memperoleh_info" class="form-control" placeholder="Cara Memperoleh Informasi"> -->
+                <tr style="display: block;">
+                    <td><input type="radio" name="cara_memperoleh_info" value="Melihat/Membaca/Mendengar/Mencatat"/> Melihat/Membaca/Mendengar/Mencatat</td>
+                <tr><br>
+                    <td><input type="radio" name="cara_memperoleh_info" value="Mendapat Salinan Informasi(Hard Copy/Soft Copy)" /> Mendapat Salinan Informasi(Hard Copy/Soft Copy)</td>
+                </tr>
+                </tr>
 
             </div>
 
@@ -154,8 +166,22 @@
 
                 <strong>Cara Mendapatkan Salinan Informasi:</strong>
 
-                <input type="text" name="cara_mendapat_salinan" class="form-control" placeholder="Cara Mendapat Salinan">
-
+                <!-- <input type="text" name="cara_mendapat_salinan" class="form-control" placeholder="Cara Mendapat Salinan"> -->
+                <tr>
+                    <br><td><input type="radio" name="cara_mendapat_salinan" value="Mengambil Langsung" /> Mengambil Langsung</td>
+                <tr>
+                    <td><br><input type="radio" name="cara_mendapat_salinan" value="Kurir" /> Kurir</td>
+                </tr>
+                <tr>
+                    <td><br><input type="radio" name="cara_mendapat_salinan" value="Pos" /> Pos</td>
+                </tr>
+                <tr>
+                    <td><br><input type="radio" name="cara_mendapat_salinan" value="Faximili" /> Faximili</td>
+                </tr>
+                <tr>
+                    <td><br><input type="radio" name="cara_mendapat_salinan" value="Email" /> Email</td>
+                </tr>
+                </tr>
             </div>
 
         </div>
@@ -166,8 +192,13 @@
 
                 <strong>Tujuan SKPD:</strong>
 
-                <input type="text" name="tujuan_skpd" class="form-control" placeholder="Tujuan">
-
+                <!-- <input type="text" name="tujuan_skpd" class="form-control" placeholder="Tujuan"> -->
+                <tr style="display: block;">
+                    <td><br><input type="radio" name="tujuan_skpd" value="Admin Kominfo"/> Admin Kominfo</td>
+                <tr><br>
+                    <td><input type="radio" name="tujuan_skpd" value="Admin PPID" /> Admin PPID</td>
+                </tr>
+                </tr>
             </div>
 
         </div>
@@ -198,13 +229,13 @@
 
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
 
-                <button type="submit" class="btn btn-primary">Buat</button>
+            <button type="submit" class="btn btn-primary">Buat</button>
 
         </div>
 
     </div>
 
-     
+
 
 </form>
 

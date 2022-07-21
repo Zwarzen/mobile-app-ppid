@@ -100,6 +100,7 @@
 
                 <strong>Ormas/Perorangan:</strong>
                 <input type="text" name="organisasi" value="{{ $product->organisasi }}" class="form-control" placeholder="Nama Organisasi">
+                
             </div>
 
         </div>
@@ -178,7 +179,7 @@
 
                 <strong>Tanggal:</strong>
 
-                <input type="date" name="date" value="{{ $product->date}}" class="form-control" placeholder="Name">
+                <input type="date" name="date" value="{{ $product->date}}" class="form-control">
 
             </div>
 
@@ -191,8 +192,8 @@
                 <strong>Image:</strong>
 
                 <input type="file" name="image" class="form-control" placeholder="image">
-
-                <img src="/image/{{ $product->image }}" width="300px">
+                <br>
+                <img src="/image/{{ $product->image }}" width="250px">
             </div>
 
         </div>
