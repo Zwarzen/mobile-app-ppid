@@ -86,7 +86,7 @@ class ProductController extends Controller
 
             'subjek' => 'required',
 
-            'organisasi' => 'required',
+            'organisasi',
 
             'alamat' => 'required',
 
@@ -210,7 +210,7 @@ class ProductController extends Controller
 
             'subjek' => 'required',
 
-            'organisasi' => 'required',
+            'organisasi',
 
             'alamat' => 'required',
 
@@ -292,5 +292,5 @@ class ProductController extends Controller
                         ->with('success','Data Berhasil dihapus!');
 
     }
-
+    
 }

@@ -1,4 +1,6 @@
 <?php
+
+
 // membaca data dari form
 $id = $_POST['id'];
 $nama = $_POST['nama'];

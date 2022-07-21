@@ -20,8 +20,11 @@
 
         </div>
 
-        <input type="submit" value="Print" action="surat.php"/>
+        <div class="pull-right">
 
+            <a class="btn btn-primary" action="surat.php">Print</a>
+        
+        </div>
     </div>
 
 </div>
@@ -93,7 +96,7 @@
 
         <div class="form-group">
 
-            <strong>Ormas/Perorangan:</strong>
+            <strong>Organisasi:</strong>
 
             {{ $product->organisasi }}
 

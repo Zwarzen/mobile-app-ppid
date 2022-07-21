@@ -110,14 +110,11 @@
 
             <div class="form-group">
 
-                <strong>Ormas/Perorangan:</strong><br>
+                <strong>Organisasi:</strong><br>
                 <!-- <input type="text" name="organisasi" class="form-control" placeholder="Nama Organisasi"> -->
-                <tr style="display: block;">
-                    <td><input type="radio" name="organisasi" value="Ormas" /> Ormas</td>
-                <tr>
-                    <td><br><input type="radio" name="organisasi" value="Perorangan" /> Perorangan</td>
-                </tr>
-                </tr>
+                
+                <input type="text" name="organisasi" class="form-control" placeholder="Nama Organisasi">
+                
             </div>
 
         </div>
