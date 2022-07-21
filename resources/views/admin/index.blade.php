@@ -3,6 +3,15 @@
 
 
 @section('content')
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<style>
+    @media screen and (max-width: 500px) {
+        .button-text {
+            display: none;
+        }
+    }
+</style>
 
 <div class="row">
 
@@ -70,7 +79,10 @@
 
             <form action="{{ route('products.destroy',$product->id) }}" method="POST">
 
-                <a class="btn btn-info" href="{{ route('products.show',$product->id) }}">Detail</a>
+                <a class="btn btn-info" href="{{ route('products.show',$product->id) }}">
+                    <i class="material-icons">visibility</i>
+                    <span class="button-text">Detail</span>
+                </a>
 
                 <!-- <a class="btn btn-primary" href="{{ route('products.edit',$product->id) }}">Edit</a> -->
 
@@ -78,7 +90,10 @@
 
                 @method('DELETE')
 
-                <button type="submit" class="btn btn-danger">Hapus</button>
+                <button type="submit" class="btn btn-danger">
+                    <i class="material-icons">delete</i>
+                    <span class="button-text">Hapus</span>
+                </button>
 
             </form>
 
