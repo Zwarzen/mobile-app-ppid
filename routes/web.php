@@ -13,7 +13,11 @@ use App\Http\Controllers\PedomanUmumController;
 use App\Http\Controllers\SopController;
 use App\Http\Controllers\AndroidController;
 use App\Http\Controllers\LaporanController;
-
+use App\Http\Controllers\AlurController;
+use App\Http\Controllers\InfoBerkalaController;
+use App\Http\Controllers\InfoSertaController;
+use App\Http\Controllers\InfoTiapSaatController;
+use App\Http\Controllers\InfoDikecualikanController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -40,6 +44,13 @@ Route::resource('pedomanumum', pedomanumumController::class);
 Route::resource('sop', SopController::class);
 Route::resource('android', AndroidController::class);
 Route::resource('laporan', LaporanController::class);
+Route::resource('alur', AlurController::class);
+Route::resource('infoberkala', InfoBerkalaController::class);
+Route::resource('infoserta', InfoSertaController::class);
+Route::resource('infotiapsaat', InfoTiapSaatController::class);
+Route::resource('infodikecualikan', InfoDikecualikanController::class);
+
+
 
 
 
