@@ -3,7 +3,7 @@
 
 
 @section('content')
-
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <div class="row" style="margin-top:20px;">
 
     <div class="col-lg-12 margin-tb" >
@@ -16,13 +16,13 @@
 
         <div class="pull-right" style="margin-bottom:10px;">
 
-            <a class="btn btn-primary" href="{{ route('admin.index') }}"> Back</a>
+            <a class="btn btn-primary" href="{{ route('admin.index') }}"> <i class="material-icons">arrow_back</i>Back</a>
 
         </div>
 
         <div class="pull-right" style="margin-right: 10px;" style="margin-bottom:10px;">
 
-            <a class="btn btn-success" action="surat.php">Print</a>
+            <a class="btn btn-success" action="surat.php"> <i class="material-icons">insert_drive_file</i>Print</a>
         
         </div>
     </div>
