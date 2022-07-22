@@ -10,6 +10,9 @@ use App\Http\Controllers\VisiMisiController;
 use App\Http\Controllers\KelembagaanController;
 use App\Http\Controllers\SkppidController;
 use App\Http\Controllers\PedomanUmumController;
+use App\Http\Controllers\SopController;
+use App\Http\Controllers\AndroidController;
+use App\Http\Controllers\LaporanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +37,9 @@ Route::resource('visimisi', visimisiController::class);
 Route::resource('kelembagaan', KelembagaanController::class);
 Route::resource('skppid', SkppidController::class);
 Route::resource('pedomanumum', pedomanumumController::class);
+Route::resource('sop', SopController::class);
+Route::resource('android', AndroidController::class);
+Route::resource('laporan', LaporanController::class);
 
 
 
