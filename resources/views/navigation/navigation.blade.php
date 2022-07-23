@@ -1,34 +1,9 @@
-<!DOCTYPE html>
+@extends('products.layout')
 
-<html>
-
-<head>
-
-    <title>PPID Kabupaten Banyuwangi</title>
-<!-- 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css" rel="stylesheet"> -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
-
-    <link href="https://ppid.banyuwangikab.go.id/assets/bootstrap-3.3.7/dist/css/bootstrap.min.bwi.css" rel="stylesheet">
-    <link href="https://ppid.banyuwangikab.go.id/assets/bootstrap-3.3.7/dist/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    <link href="https://ppid.banyuwangikab.go.id/assets/bootstrap-3.3.7/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-
-    <link href="https://ppid.banyuwangikab.go.id/assets/bootstrap-3.3.7/docs/examples/theme/theme.css" rel="stylesheet">
-
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="https://ppid.banyuwangikab.go.id/assets/bootstrap-3.3.7/assets/js/ie-emulation-modes-warning.js" type="754a473f674e89a72a7224c9-text/javascript"></script>
-    <script src="https://ppid.banyuwangikab.go.id/assets/bootstrap-3.3.7/js/jquery-1.8.3.min.js" type="754a473f674e89a72a7224c9-text/javascript"></script>
-
-</head>
+@section('navigation')
 
 <body>
+
     <nav style="" class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -91,13 +66,4 @@
 
 </body>
 
-<div class="container">
-    @yield('navigation')
-    @yield('content')
-</div>
-
-   
-
-</body>
-
-</html>
+@endsection

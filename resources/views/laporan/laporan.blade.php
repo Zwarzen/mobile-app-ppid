@@ -11,7 +11,7 @@
 
         <div class="pull-left" style="margin-top: 20px;">
 
-            <h2>Aplikasi Android</h2>
+            <h2>Laporan Akses Informasi PPID Kabupaten Banyuwangi :</h2>
 
         </div>
 
@@ -65,7 +65,6 @@
 
 <body>
     <br>
-    <p>Laporan Akses Informasi PPID Kabupaten Banyuwangi : </p>
     <center><iframe src="DATA_AKSES_INFORMASI_PPID_2016_-_Mei_2021.pdf" width="100%" height="600px;"></iframe></center>
 
 </body>
