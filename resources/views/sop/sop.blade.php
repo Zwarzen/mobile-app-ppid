@@ -65,7 +65,7 @@
 
 <body>
     <br>
-    <h6> A.1. SOP PERMOHONAN INFORMASI PUBLIK: </h6>
+    <h4> A.1. SOP PERMOHONAN INFORMASI PUBLIK: </h4>
     <center>
         <br>
         <img src="SOP1_Kab_2016.jpg" width="70%;">
@@ -73,7 +73,7 @@
         <img src="SOP2_Kab_2016.jpg" width="70%;">
         <br>
     </center>
-    <h6> A.2. SOP KEBERATAN ATAS PEMBERIAN INFORMASI: </h6>
+    <h4> A.2. SOP KEBERATAN ATAS PEMBERIAN INFORMASI: </h4>
     <center>
         <br>
         <img src="SOP3_Kab_2016.jpg" width="70%;">
@@ -81,7 +81,7 @@
         <img src="SOP4_Kab_2016.jpg" width="70%;">
         <br>
     </center>
-    <h6> A.3. SOP PENYUSUNAN DAFTAR INFORMASI PUBLIK: </h6>
+    <h4> A.3. SOP PENYUSUNAN DAFTAR INFORMASI PUBLIK: </h4>
     <center>
         <br>
         <img src="1._SOP_Penyusunan_DIP_PPID.jpg" width="70%;">
@@ -89,7 +89,7 @@
         <img src="1._Uraian_SOP_Penyusunan_DIP_PPID.jpg" width="70%;">
         <br>
     </center>
-    <h6> A.4. SOP PENANGANAN SENGKETA INFORMASI PUBLIK: </h6>
+    <h4> A.4. SOP PENANGANAN SENGKETA INFORMASI PUBLIK: </h4>
     <center>
         <br>
         <img src="2._SOP_Sengketa_Informasi.jpg" width="70%;">
@@ -97,7 +97,7 @@
         <img src="2._Uraian_SOP_Sengketa_Informasi.jpg" width="70%;">
         <br>
     </center>
-    <h6> A.5. SOP UJI KONSEKUENSI INFORMASI PUBLIK: </h6>
+    <h4> A.5. SOP UJI KONSEKUENSI INFORMASI PUBLIK: </h4>
     <center>
         <br>
         <img src="3._SOP_Informasi_Dikecualikan.jpg" width="70%;">

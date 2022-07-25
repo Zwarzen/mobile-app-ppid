@@ -65,10 +65,10 @@
 
 <body>
     <br>
-    <p>A. TATA CARA PERMOHONAN INFORMASI PUBLIK : </p>
+    <h4>A. TATA CARA PERMOHONAN INFORMASI PUBLIK : </h4> <br>
     <center><img src="tatacara.jpg"></center>
     <br>
-    <p>B. PROSEDUR PENGAJUAN KEBERATAN & PENYELESAIAN INFORMASI :</p>
+    <h4>B. PROSEDUR PENGAJUAN KEBERATAN & PENYELESAIAN INFORMASI :</h4> <br>
     <center><img src="prosedursengketainformasi.jpg"></center>
 </body>
 

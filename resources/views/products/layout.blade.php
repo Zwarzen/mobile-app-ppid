@@ -40,7 +40,7 @@
                 </button>
                 <a class="brand" href="https://ppid.banyuwangikab.go.id/">
                     <span></span>
-                    <img class="img-responsive" src="https://ppid.banyuwangikab.go.id/assets/icon/PPID_Logo_Header_2021.png" alt="Logo" /></a>
+                    <img class="img-responsive" src="https://ppid.banyuwangikab.go.id/assets/icon/PPID_Logo_Header_2021.png" alt="Logo" style="max-width: 70%;" /></a>
             </div>
             <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
