@@ -64,7 +64,7 @@
 
                 <strong>Nama:</strong>
 
-                <input type="text" name="nama" class="form-control" placeholder="Nama Pemohon">
+                <input type="text" name="nama" class="form-control" placeholder="Nama">
 
             </div>
 
