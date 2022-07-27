@@ -26,6 +26,11 @@
     <script src="https://ppid.banyuwangikab.go.id/assets/bootstrap-3.3.7/assets/js/ie-emulation-modes-warning.js" type="754a473f674e89a72a7224c9-text/javascript"></script>
     <script src="https://ppid.banyuwangikab.go.id/assets/bootstrap-3.3.7/js/jquery-1.8.3.min.js" type="754a473f674e89a72a7224c9-text/javascript"></script>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
 </head>
 
 <body>
@@ -38,52 +43,49 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="brand" href="https://ppid.banyuwangikab.go.id/">
+                <a class="brand" href="{{ url('dashboard') }}">
                     <span></span>
                     <img class="img-responsive" src="https://ppid.banyuwangikab.go.id/assets/icon/PPID_Logo_Header_2021.png" alt="Logo" style="width: 300px; max-width: 80%;" /></a>
             </div>
             <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="https://ppid.banyuwangikab.go.id/"><i class="glyphicon glyphicon-home"></i>&nbsp; Home</a></li>
+                    <li><a href="{{ url('dashboard') }}"><i class="glyphicon glyphicon-home"></i>&nbsp; Home</a></li>
                     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Profil &nbsp;<b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="https://ppid.banyuwangikab.go.id/home/instrument_kip">Instrument KIP</a></li>
-                            <li><a href="https://ppid.banyuwangikab.go.id/home/seputar_ppid">Seputar PPID</a></li>
-                            <li><a href="https://ppid.banyuwangikab.go.id/home/Visi_dan_Misi">Visi dan Misi</a></li>
-                            <li><a href="https://ppid.banyuwangikab.go.id/home/kelembagaan_ppid">Kelembagaan</a></li>
-                            <li><a href="https://ppid.banyuwangikab.go.id/home/sk_bupati">SK PPID Kab. Banyuwangi</a></li>
-                            <li class="disabled"><a href="https://ppid.banyuwangikab.go.id/">Pedoman Umum</a></li>
-                            <li><a href="https://ppid.banyuwangikab.go.id/home/pedoman_umum/maklumat-layanan">&nbsp;&nbsp; A. &nbsp; Maklumat Pelayanan Informasi Publik</a></li>
-                            <li><a href="https://ppid.banyuwangikab.go.id/home/pedoman_umum/pertimbangan-tertulis">&nbsp;&nbsp; B. &nbsp; Pertimbangan Tertulis</a></li>
-                            <li><a href="https://ppid.banyuwangikab.go.id/home/pedoman_umum/regulasi">&nbsp;&nbsp; C. &nbsp; Regulasi</a></li>
+                            <li><a href="{{ url('instrumen') }}">Instrument KIP</a></li>
+                            <li><a href="{{ url('seputar') }}">Seputar PPID</a></li>
+                            <li><a href="{{ url('visimisi') }}">Visi dan Misi</a></li>
+                            <li><a href="{{ url('kelembagaan') }}">Kelembagaan</a></li>
+                            <li><a href="{{ url('skppid') }}">SK PPID Kab. Banyuwangi</a></li>
+                            <li><a href="{{ url('pedomanumum') }}">Pedoman Umum</a></li>
                         </ul>
                     </li>
                     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">SOP &nbsp;<b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="https://ppid.banyuwangikab.go.id/home/ppid_sop_kabupaten">SOP PPID Kabupaten</a></li>
+                            <li><a href="{{ url('sop') }}">SOP PPID Kabupaten</a></li>
                         </ul>
                     </li>
                     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Android &nbsp;<b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="https://ppid.banyuwangikab.go.id/home/Apk_Android">Aplikasi Android</a></li>
+                            <li><a href="{{ url('android') }}">Aplikasi Android</a></li>
                         </ul>
                     </li>
-                    <li><a href="https://ppid.banyuwangikab.go.id/home/ppid_pembantu">&nbsp; PPID Pembantu</a></li>
+                    <li><a href="{{ url('ppidpembantu') }}">&nbsp; PPID Pembantu</a></li>
                     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Laporan &nbsp;<b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="https://ppid.banyuwangikab.go.id/home/laporan_akses_informasi">&nbsp; Laporan Akses Informasi</a></li>
+                            <li><a href="{{ url('laporan') }}">&nbsp; Laporan Akses Informasi</a></li>
                         </ul>
                     </li>
                     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Daftar Informasi &nbsp;<b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="https://ppid.banyuwangikab.go.id/home/ppid_dip/layanan-keberatan">Alur Layanan</a></li>
-                            <li><a href="https://ppid.banyuwangikab.go.id/home/ppid_dip/info-berkala">Informasi Berkala</a></li>
-                            <li><a href="https://ppid.banyuwangikab.go.id/home/ppid_dip/info-serta-merta">Informasi Serta - Merta</a></li>
-                            <li><a href="https://ppid.banyuwangikab.go.id/home/ppid_dip/info-setiap-saat">Informasi Setiap Saat</a></li>
-                            <li><a href="https://ppid.banyuwangikab.go.id/home/ppid_dip/info-dikecualikan">Informasi Dikecualikan</a></li>
+                            <li><a href="{{ url('alur') }}">Alur Layanan</a></li>
+                            <li><a href="{{ url('infoberkala') }}">Informasi Berkala</a></li>
+                            <li><a href="{{ url('infoserta') }}">Informasi Serta - Merta</a></li>
+                            <li><a href="{{ url('infotiapsaat') }}">Informasi Setiap Saat</a></li>
+                            <li><a href="{{ url('infodikecualikan') }}">Informasi Dikecualikan</a></li>
                         </ul>
                     </li>
-                    <li><a href="https://ppid.banyuwangikab.go.id/gallery/gallery">&nbsp; Galeri</a></li>
+                    <li><a href="{{ url('gallery') }}">&nbsp; Galeri</a></li>
                 </ul>
             </div>
         </div>

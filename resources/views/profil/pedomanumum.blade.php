@@ -11,7 +11,7 @@
 
         <div class="pull-left" style="margin-top: 20px;">
 
-            <h2>Kelembagaan</h2>
+            <h2>Pedoman Umum</h2>
 
         </div>
 

@@ -72,7 +72,7 @@
                 <div class="panel-body" style="margin-bottom:-29px; margin-top:-8px;">
                     <div class="list-group">
 
-                        <a href="https://ppid.banyuwangikab.go.id/assets/dokumen/blangko/form_permohonan.pdf" target="_blank" class="list-group-item">Permohonan Informasi</a>
+                        <a href="{{ route('products.create') }}" target="_blank" class="list-group-item">Permohonan Informasi</a>
                         <a href="https://ppid.banyuwangikab.go.id/assets/dokumen/blangko/pemberitahuan_tertulis.pdf" target="_blank" class="list-group-item">Permohonan Tertulis</a>
                         <a href="https://ppid.banyuwangikab.go.id/assets/dokumen/blangko/pernyataan_keberatan.pdf" target="_blank" class="list-group-item">Pernyataan Keberatan</a>
                         <a href="https://ppid.banyuwangikab.go.id/assets/dokumen/blangko/penolakan_permohonan.pdf" target="_blank" class="list-group-item">Penolakan Permohonan</a>
@@ -107,7 +107,7 @@
 
 
     </div>
-    <div class="panel panel-default">
+    <!-- <div class="panel panel-default">
         <div class="panel-heading">
             <h3 class="panel-title">Berita Daerah</h3>
         </div>
@@ -154,7 +154,7 @@
                 height: "300px"
             });
         });
-    </script>
+    </script> -->
     <div class="panel panel-default">
         <div class="panel-heading">
             <h3 class="panel-title">Berita PPID</h3>
