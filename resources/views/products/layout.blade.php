@@ -5,7 +5,7 @@
 <head>
 
     <title>PPID Kabupaten Banyuwangi</title>
-<!-- 
+    <!-- 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css" rel="stylesheet"> -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -96,7 +96,55 @@
     @yield('content')
 </div>
 
-   
+<div class="page-header">
+    <h5>Copyright &copy; Dinas Komunikasi, Informatika, dan Persandian 2022</h5>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" type="be83e06814c52ed26c44529f-text/javascript"></script>
+<script type="be83e06814c52ed26c44529f-text/javascript">
+    window.jQuery || document.write('<script src="https://ppid.banyuwangikab.go.id/assets/bootstrap-3.3.7/assets/js/vendor/jquery.min.js"><\/script>')
+</script>
+<script src="https://ppid.banyuwangikab.go.id/assets/bootstrap-3.3.7/dist/js/bootstrap.min.js" type="be83e06814c52ed26c44529f-text/javascript"></script>
+<script src="https://ppid.banyuwangikab.go.id/assets/bootstrap-3.3.7/assets/js/docs.min.js" type="be83e06814c52ed26c44529f-text/javascript"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="https://ppid.banyuwangikab.go.id/assets/bootstrap-3.3.7/assets/js/ie10-viewport-bug-workaround.js" type="be83e06814c52ed26c44529f-text/javascript"></script>
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="be83e06814c52ed26c44529f-|49" defer=""></script>
+<script>
+    (function() {
+        var js = "window['__CF$cv$params']={r:'73093877295a8980',m:'V..5VBDWjnB_Roa1tOD5dz0JYgBxPuuwynEebMUqKxs-1658797459-0-AbjE+4XvNVXwEU0w1DKOJWgRl4Fhv3UnxzHhPp56gpEKim556ZFr5IGESQkxCH5v51wnb5dMl48uJhFFbuHi4Pg0JlQp8Nn5zTBGTHpf16kPkOYwlurU0Q3BcW1Nc+90lw==',s:[0xf5118ce2eb,0x9b40d77ce2],u:'/cdn-cgi/challenge-platform/h/g'};var now=Date.now()/1000,offset=14400,ts=''+(Math.floor(now)-Math.floor(now%offset)),_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/h/g/scripts/alpha/invisible.js?ts='+ts,document.getElementsByTagName('head')[0].appendChild(_cpo);";
+        var _0xh = document.createElement('iframe');
+        _0xh.height = 1;
+        _0xh.width = 1;
+        _0xh.style.border = 'none';
+        _0xh.style.visibility = 'hidden';
+        document.body.appendChild(_0xh);
+
+        function handler() {
+            var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;
+            if (_0xi) {
+                var _0xj = _0xi.createElement('script');
+                _0xj.innerHTML = js;
+                _0xi.getElementsByTagName('head')[0].appendChild(_0xj);
+            }
+        }
+        if (document.readyState !== 'loading') {
+            handler();
+        } else if (window.addEventListener) {
+            document.addEventListener('DOMContentLoaded', handler);
+        } else {
+            var prev = document.onreadystatechange || function() {};
+            document.onreadystatechange = function(e) {
+                prev(e);
+                if (document.readyState !== 'loading') {
+                    document.onreadystatechange = prev;
+                    handler();
+                }
+            };
+        }
+    })();
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"73093877295a8980","token":"067fc07fd7884bf98dd4b4bd2dae1d55","version":"2022.6.0","si":100}' crossorigin="anonymous"></script>
 
 </body>
 

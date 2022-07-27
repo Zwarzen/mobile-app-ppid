@@ -18,6 +18,9 @@ use App\Http\Controllers\InfoBerkalaController;
 use App\Http\Controllers\InfoSertaController;
 use App\Http\Controllers\InfoTiapSaatController;
 use App\Http\Controllers\InfoDikecualikanController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\PpidPembantuController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,7 +33,7 @@ use App\Http\Controllers\InfoDikecualikanController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('dashboard/dashboard');
 });
 Route::resource('products', ProductController::class);
 Route::resource('admin', AdminController::class);
@@ -49,6 +52,11 @@ Route::resource('infoberkala', InfoBerkalaController::class);
 Route::resource('infoserta', InfoSertaController::class);
 Route::resource('infotiapsaat', InfoTiapSaatController::class);
 Route::resource('infodikecualikan', InfoDikecualikanController::class);
+Route::resource('dashboard', DashboardController::class);
+Route::resource('gallery', GalleryController::class);
+Route::resource('ppidpembantu', PpidPembantuController::class);
+
+
 
 
 
