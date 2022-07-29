@@ -55,6 +55,7 @@ Route::resource('infodikecualikan', InfoDikecualikanController::class);
 Route::resource('dashboard', DashboardController::class);
 Route::resource('gallery', GalleryController::class);
 Route::resource('ppidpembantu', PpidPembantuController::class);
+Route::get('/downloadPDF/{id}','ProductController@downloadPDF');
 
 
 

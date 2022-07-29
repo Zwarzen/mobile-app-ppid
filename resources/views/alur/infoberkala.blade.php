@@ -17,7 +17,7 @@
 
     <div class="col-lg-12 margin-tb">
 
-        <div class="pull-left" style="margin-top: -50px; margin-left:-250px;">
+        <div class="pull-left">
 
             <h2>Informasi Berkala : PPID Kabupaten Banyuwangi</h2>
 
@@ -73,7 +73,7 @@
 
 <body>
     <br>
-    <table border="1" style="width: 100%; margin-left:-150px; ">
+    <table border="1" style="width: 100%; ">
         <tbody>
             <tr>
                 <td style="width: .45in; border: solid windowtext 1.0pt; mso-border-alt: solid windowtext .5pt; padding: 0in 5.4pt 0in 5.4pt;" valign="top" width="43">

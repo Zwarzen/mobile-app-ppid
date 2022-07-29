@@ -1,16 +1,17 @@
 <?php
 
-  
+
 
 namespace App\Http\Controllers;
 
-  
+
 
 use App\Models\Product;
 
 use Illuminate\Http\Request;
+use PhpOffice\PhpWord\Writer\PDF;
 
-  
+
 
 class ProductController extends Controller
 
@@ -32,15 +33,14 @@ class ProductController extends Controller
 
         $products = Product::latest()->paginate(5);
 
-    
 
-        return view('products.create',compact('products'))
+
+        return view('products.create', compact('products'))
 
             ->with('i', (request()->input('page', 1) - 1) * 5);
-
     }
 
-   
+
 
     /**
 
@@ -57,10 +57,9 @@ class ProductController extends Controller
     {
 
         return view('products.create');
-
     }
 
-    
+
 
     /**
 
@@ -110,11 +109,11 @@ class ProductController extends Controller
 
         ]);
 
-  
+
 
         $input = $request->all();
 
-  
+
 
         if ($image = $request->file('image')) {
 
@@ -125,22 +124,20 @@ class ProductController extends Controller
             $image->move($destinationPath, $profileImage);
 
             $input['image'] = "$profileImage";
-
         }
 
-    
+
 
         Product::create($input);
 
-     
+
 
         return redirect()->route('products.index')
 
-                        ->with('success','Data berhasil dikirim!');
-
+            ->with('success', 'Data berhasil dikirim!');
     }
 
-     
+
 
     /**
 
@@ -158,11 +155,10 @@ class ProductController extends Controller
 
     {
 
-        return view('products.show',compact('product'));
-
+        return view('products.show', compact('product'));
     }
 
-     
+
 
     /**
 
@@ -180,11 +176,10 @@ class ProductController extends Controller
 
     {
 
-        return view('products.edit',compact('product'));
-
+        return view('products.edit', compact('product'));
     }
 
-    
+
 
     /**
 
@@ -235,11 +230,11 @@ class ProductController extends Controller
             'date' => 'required',
         ]);
 
-  
+
 
         $input = $request->all();
 
-  
+
 
         if ($image = $request->file('image')) {
 
@@ -250,26 +245,23 @@ class ProductController extends Controller
             $image->move($destinationPath, $profileImage);
 
             $input['image'] = "$profileImage";
-
-        }else{
+        } else {
 
             unset($input['image']);
-
         }
 
-          
+
 
         $product->update($input);
 
-    
+
 
         return redirect()->route('admin.index')
 
-                        ->with('success','Product updated successfully');
-
+            ->with('success', 'Product updated successfully');
     }
 
-  
+
 
     /**
 
@@ -289,16 +281,22 @@ class ProductController extends Controller
 
         $product->delete();
 
-     
+
 
         return redirect()->route('admin.index')
 
-                        ->with('success','Data Berhasil dihapus!');
-
+            ->with('success', 'Data Berhasil dihapus!');
     }
-    
+
+    public function downloadPDF($id)
+    {
+        $show = Product::find($id);
+        $pdf = PDF::loadView('pdf', compact('show'));
+
+        return $pdf->download('ppid'.$id.'.pdf');
+    }
     // public function generate(Request $request, Product $product)
-    
+
     // {
     //     // membaca data dari form
     //     $id = $_POST['id'];
