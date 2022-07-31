@@ -86,7 +86,9 @@
                         </ul>
                     </li>
                     <li><a href="{{ url('gallery') }}">&nbsp; Galeri</a></li>
+                    
                 </ul>
+                
             </div>
         </div>
     </nav>

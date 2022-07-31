@@ -96,13 +96,16 @@
                         <a href="https://corona.banyuwangikab.go.id/" target="_blank" class="list-group-item">Info Covid-19 Kabupaten Banyuwangi</a>
                         <a href="http://infocovid19.jatimprov.go.id/" target="_blank" class="list-group-item">Info Covid-19 Jawa Timur</a>
                         <a href="https://covid19.go.id/peta-sebaran" target="_blank" class="list-group-item">Info Covid-19 Indonesia</a>
+                        
 
                     </div>
+                    
 
 
                 </div>
-
+                
             </div>
+            <a class="btn btn-success" href="{{ url('login') }}"><i class="glyphicon glyphicon-user"></i>&nbsp; Login Admin</a>
         </div>
 
 

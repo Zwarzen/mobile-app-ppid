@@ -67,18 +67,18 @@
     
     <br>
 
-    <p>Maklumat Pelayanan Informasi Publik</p>
+    <h4>Maklumat Pelayanan Informasi Publik</h4>
     <center><iframe src="Maklumat Pelayanan Informasi Publik.pdf" width="100%" height="600px;"></center>
     
-    <p>Pertimbangan Tertulis</p>
+    <h4>Pertimbangan Tertulis</H4>
     <center><iframe src="Pertimbangan Tertulis.pdf" width="100%" height="600px;"></iframe></center> 
     <br>
 
-    <p>Pertimbangan Tertulis</p>
+    <H4>Pertimbangan Tertulis</H4>
     <center><iframe src="Pertimbangan Tertulis.pdf" width="100%" height="600px;"></iframe></center>
     <br>
 
-    <p>Regulasi : </p>
+    <H4>Regulasi : </H4>
     <center><iframe src="3._Perkip_No.1_2013.pdf" width="100%" height="600px;"></iframe></center>
     <br>
     <center><iframe src="2._Perkip_No.1_Tahun_2010.pdf" width="100%" height="600px;"></iframe></center>

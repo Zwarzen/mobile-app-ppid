@@ -21,6 +21,7 @@ use App\Http\Controllers\InfoDikecualikanController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\PpidPembantuController;
+use App\Http\Controllers\LoginController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -54,7 +55,10 @@ Route::resource('infotiapsaat', InfoTiapSaatController::class);
 Route::resource('infodikecualikan', InfoDikecualikanController::class);
 Route::resource('dashboard', DashboardController::class);
 Route::resource('gallery', GalleryController::class);
+Route::resource('login', LoginController::class);
 Route::resource('ppidpembantu', PpidPembantuController::class);
+Route::get('product', 'ProductController@create')->name('product.create');
+Route::post('product', 'ProductController@store')->name('product.store');
 Route::get('/downloadPDF/{id}','ProductController@downloadPDF');
 
 
