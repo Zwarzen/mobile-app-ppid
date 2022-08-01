@@ -84,7 +84,7 @@
             <div class="row">
                 <div class="login-form">
 
-                    <form action="https://ppid.banyuwangikab.go.id/auth/login" method="post" accept-charset="utf-8">
+                    <form action="login" method="post" accept-charset="utf-8">
                         <fieldset>
                             <div class="clearfix">
                                 <div class="input-prepend">
