@@ -61,7 +61,7 @@ Route::resource('login', LoginController::class);
 Route::resource('ppidpembantu', PpidPembantuController::class);
 Route::get('product', 'ProductController@create')->name('product.create');
 Route::post('product', 'ProductController@store')->name('product.store');
-Route::get('/downloadPDF/{id}','ProductController@downloadPDF');
+Route::get('/downloadPDF/{id}', 'ProductController@downloadPDF');
 
 // Route::get('register', [UserController::class, 'register'])->name('register');
 // Route::post('register', [UserController::class, 'register_action'])->name('register.action');
@@ -73,11 +73,7 @@ Route::get('/downloadPDF/{id}','ProductController@downloadPDF');
 // Route::post('password', [UserController::class, 'password_action'])->name('password.action');
 // Route::get('logout', [UserController::class, 'logout'])->name('logout');
 Route::get('login', [CustomAuthController::class, 'index'])->name('login');
-Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name('login.custom'); 
+Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name('login.custom');
 
-
-
-
-
-
-
+// Route::get('/login', 'CustomAuthController@show')->name('login.show');
+// Route::post('/login', 'CustomAuthController@login')->name('login.perform');

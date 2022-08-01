@@ -13,7 +13,7 @@ class CustomAuthController extends Controller
  
     public function index()
     {
-        return view('login.login');
+        return view('login/login');
     }  
        
  
@@ -66,14 +66,14 @@ class CustomAuthController extends Controller
     // }    
      
  
-    // public function dashboard()
-    // {
-    //     if(Auth::check()){
-    //         return view('dashboard');
-    //     }
+    public function dashboard()
+    {
+        if(Auth::check()){
+            return view('dashboard');
+        }
    
-    //     return redirect("login")->withSuccess('are not allowed to access');
-    // }
+        return redirect("login")->withSuccess('are not allowed to access');
+    }
      
  
     public function signOut() {
