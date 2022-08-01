@@ -22,7 +22,8 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\PpidPembantuController;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\UserController;
+// use App\Http\Controllers\UserController;
+use App\Http\Controllers\CustomAuthController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -65,12 +66,14 @@ Route::get('/downloadPDF/{id}','ProductController@downloadPDF');
 // Route::get('register', [UserController::class, 'register'])->name('register');
 // Route::post('register', [UserController::class, 'register_action'])->name('register.action');
 
-Route::post('login',[UserController::class, 'login'])->name('login');
+// Route::post('login',[UserController::class, 'login'])->name('login');
 // Route::get('login', [UserController::class, 'login'])->name('login');
 // Route::post('login', [UserController::class, 'login_action'])->name('login.action');
 // Route::get('password', [UserController::class, 'password'])->name('password');
 // Route::post('password', [UserController::class, 'password_action'])->name('password.action');
 // Route::get('logout', [UserController::class, 'logout'])->name('logout');
+Route::get('login', [CustomAuthController::class, 'index'])->name('login');
+Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name('login.custom'); 
 
 
 

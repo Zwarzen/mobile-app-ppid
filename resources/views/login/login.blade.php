@@ -1,14 +1,14 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <title>Login</title>
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content=""> -->
 
     <!-- Le styles -->
-    <link href="https://ppid.banyuwangikab.go.id/assets/css/bootstrap.css" rel="stylesheet">
+    <!-- <link href="https://ppid.banyuwangikab.go.id/assets/css/bootstrap.css" rel="stylesheet">
     <style type="text/css">
         /* Override some defaults */
         html,
@@ -69,8 +69,8 @@
         }
     </style>
     <script src="https://ppid.banyuwangikab.go.id/assets/js/vendor/jquery-1.9.1.min.js" type="d30458133b5aecaab97c75c2-text/javascript"></script>
-</head>
-
+</head> -->
+<!-- 
 <body>
     <div class="container">
         <div class="content" style="background-color:#21e273; font-weight:bold; border-top-right-radius: 10px; border-top-left-radius: 10px; border-bottom-left-radius: 0.8px; border-bottom-right-radius: 0.8px;">
@@ -103,12 +103,62 @@
                     </form>
                 </div>
             </div>
-        </div>
-    </div> <!-- /container -->
+        </div> -->
+    <!-- </div>  -->
+    <!-- /container -->
 
-    <script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="e736d57525dc99b6135f4776-|49" defer=""></script>
+    <!-- <script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="e736d57525dc99b6135f4776-|49" defer=""></script>
     <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"733585e5f8149e32","token":"067fc07fd7884bf98dd4b4bd2dae1d55","version":"2022.6.0","si":100}' crossorigin="anonymous"></script>
 </body>
 <script src="https://ppid.banyuwangikab.go.id/assets/js/vendor/bootstrap.min.js" type="e736d57525dc99b6135f4776-text/javascript"></script>
 
-</html>
+</html> -->
+
+@extends('products.layout')
+
+@section('content')
+
+<main class="login-form" style="margin-left: 40%; margin-top:15%; margin-bottom: 15%;">
+    <div class="cotainer">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="card">
+                    <h3 class="card-header text-center">Login Admin PPID</h3>
+                    <div class="card-body">
+                        <form method="POST" action="{{ route('login.custom') }}">
+                            @csrf
+                            <div class="form-group mb-3">
+                                <input type="text" placeholder="Email" id="email" class="form-control" name="email" required
+                                    autofocus>
+                                @if ($errors->has('email'))
+                                <span class="text-danger">{{ $errors->first('email') }}</span>
+                                @endif
+                            </div>
+ 
+                            <div class="form-group mb-3">
+                                <input type="password" placeholder="Password" id="password" class="form-control" name="password" required>
+                                @if ($errors->has('password'))
+                                <span class="text-danger">{{ $errors->first('password') }}</span>
+                                @endif
+                            </div>
+ 
+                            <!-- <div class="form-group mb-3">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="remember"> Remember Me
+                                    </label>
+                                </div>
+                            </div> -->
+ 
+                            <div class="d-grid mx-auto">
+                                <button type="submit" class="btn btn-dark btn-block">Masuk</button>
+                            </div>
+                        </form>
+ 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+@endsection
