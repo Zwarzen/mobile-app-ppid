@@ -136,7 +136,7 @@
             <div class="form-group">
 
                 <strong>Rincian Informasi yang dibutuhkan:</strong>
-                <textarea class="form-control" style="height:150px" name="detail_info_diminta" placeholder="Detail info yang diminta"></textarea>
+                <textarea class="form-control" style="height:150px" name="detail_info_diminta" placeholder="Detail info yang diminta.(Max 100 Huruf)" max="100"></textarea>
             </div>
 
         </div>
@@ -146,7 +146,7 @@
             <div class="form-group">
 
                 <strong>Tujuan Penggunaan Informasi:</strong>
-                <textarea class="form-control" style="height:150px" name="tujuan_penggunaan" placeholder="Tujuan Penggunaan"></textarea>
+                <textarea class="form-control" style="height:150px" name="tujuan_penggunaan" placeholder="Tujuan Penggunaan.(Max 100 Huruf)" max="100"></textarea>
             </div>
 
         </div>
@@ -218,7 +218,7 @@
 
                 <strong>Tanggal:</strong>
 
-                <input type="date" name="date" class="form-control" placeholder="Name">
+                <input type="date" name="date" class="form-control" value="<?php echo date("Y-m-d"); ?>">
 
             </div>
 
