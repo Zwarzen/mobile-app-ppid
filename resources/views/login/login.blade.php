@@ -152,6 +152,7 @@
  
                             <div class="d-grid mx-auto">
                                 <button type="submit" class="btn btn-dark btn-block">Masuk</button>
+                                <a href="{{ route('login') }}" class="btn btn-outline-light me-2">Login</a>
                             </div>
                         </form>
  

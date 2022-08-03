@@ -6,7 +6,7 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <div class="row" style="margin-top:20px;">
 
-    <div class="col-lg-12 margin-tb" >
+    <div class="col-lg-12 margin-tb">
 
         <div class="pull-left" style="margin-bottom:10px;">
 
@@ -22,8 +22,8 @@
 
         <div class="pull-right" style="margin-right: 10px;" style="margin-bottom:10px;">
 
-            <a class="btn btn-success" action="surat.php"> <i class="material-icons">insert_drive_file</i>Print</a>
-        
+            <a class="btn btn-success" href="{{route('downloadPDF', $product->id)}}" action="surat.php"> <i class="material-icons">insert_drive_file</i>Print</a>
+
         </div>
     </div>
 
@@ -50,7 +50,11 @@
 
             <strong>Tanggal:</strong>
 
-            {{ $product->date }}
+            {{  
+                $newDate = date("d F Y", strtotime($product->date));
+            }}
+
+
 
         </div>
 

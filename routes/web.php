@@ -61,8 +61,10 @@ Route::resource('login', LoginController::class);
 Route::resource('ppidpembantu', PpidPembantuController::class);
 Route::get('product', 'ProductController@create')->name('product.create');
 Route::post('product', 'ProductController@store')->name('product.store');
-Route::get('/downloadPDF/{id}', 'ProductController@downloadPDF');
-
+Route::get('/downloadPDF/{id}', [ProductController::class, 'downloadPDF'])->name('downloadPDF');
+Route::get('/pdf', function () {
+    return view('pdf.laporan');
+});
 // Route::get('register', [UserController::class, 'register'])->name('register');
 // Route::post('register', [UserController::class, 'register_action'])->name('register.action');
 

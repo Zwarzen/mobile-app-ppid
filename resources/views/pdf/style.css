@@ -1,0 +1,61 @@
+@page {
+    size: 8.5in 14in;
+    margin-left: 0.79in;
+    margin-right: 1.03in;
+    margin-top: 0.35in;
+    margin-bottom: 0.19in
+}
+
+p {
+    text-align: left;
+    orphans: 0; widows: 0;
+    background: transparent
+}
+
+p.western {
+    font-family: "Carlito", serif;
+    font-size: 11pt;
+    so-language: en-US
+}
+
+p.cjk {
+    font-family: "Carlito";
+    font-size: 11pt;
+    so-language: en-US
+}
+p.ctl {
+    font-family: "Carlito";
+    font-size: 11pt;
+    so-language: ar-SA
+}
+h1 {
+    text-align: center;
+    orphans: 0; widows: 0;
+    margin-left: 1.26in;
+    margin-right: 0.9in;
+    background: transparent
+}
+h1.western {
+    font-family: "Times New Roman", serif;
+    font-size: 14pt; so-language: en-US;
+    font-weight: bold
+}
+h1.cjk {
+    font-family: "Symbol";
+    font-size: 14pt;
+    so-language: en-US;
+    font-weight: bold
+}
+h1.ctl {
+    font-family: "Times New Roman";
+    font-size: 14pt; so-language: ar-SA;
+    font-weight: bold
+}
+a:link {
+    color: #000080;
+    so-language: zxx;
+    text-decoration: underline
+}
+.text-center{
+    text-align: center;
+}
