@@ -45,11 +45,7 @@ class CustomAuthController extends Controller
     {
         return redirect()->intended();
     }
-<<<<<<< HEAD
- 
-=======
 
->>>>>>> 6fa0483c4747115ce872aa214215bce015364ad4
     public function customLogin(Request $request)
     {
         $request->validate([
@@ -61,10 +57,8 @@ class CustomAuthController extends Controller
         if (Auth::attempt($credentials)) {
             return redirect()->intended('admin')
                         ->withSuccess('Signed in');
-        }
-<<<<<<< HEAD
-   
-        return back()->withErrors('Login details are not valid');
+        }      
+        return back()->withErrors('Username atau Password anda salah');
     }
 
     public function logout(Request $request)
@@ -77,49 +71,4 @@ class CustomAuthController extends Controller
     
         return redirect('/dashboard');
     }
- 
- 
- 
-    // public function registration()
-    // {
-    //     return view('auth.registration');
-    // }
-       
- 
-    // public function customRegistration(Request $request)
-    // {  
-    //     $request->validate([
-    //         'name' => 'required',
-    //         'email' => 'required|email|unique:users',
-    //         'password' => 'required|min:6',
-    //     ]);
-            
-    //     $data = $request->all();
-    //     $check = $this->create($data);
-          
-    //     return redirect("dashboard")->withSuccess('have signed-in');
-    // }
- 
- 
-    // public function create(array $data)
-    // {
-    //   return User::create([
-    //     'name' => $data['name'],
-    //     'email' => $data['email'],
-    //     'password' => Hash::make($data['password'])
-    //   ]);
-    // }    
-     
- 
-    // public function signOut() {
-    //     Session::flush();
-    //     Auth::logout();
-   
-    //     return Redirect('login');
-    // }
-=======
-        
-        return back()->withErrors('Username atau Password anda salah');
-    }
->>>>>>> 6fa0483c4747115ce872aa214215bce015364ad4
 }
