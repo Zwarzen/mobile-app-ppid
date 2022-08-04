@@ -19,7 +19,7 @@
 
         <div class="pull-left" style="margin-top: 20px;">
 
-            <h2>Admin Pusat PPID Kabupaten</h2>
+            <h2>Admin PPID KOMINFO Kabupaten</h2>
 
         </div>
 

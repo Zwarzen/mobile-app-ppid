@@ -24,6 +24,8 @@ use App\Http\Controllers\PpidPembantuController;
 use App\Http\Controllers\LoginController;
 // use App\Http\Controllers\UserController;
 use App\Http\Controllers\CustomAuthController;
+use App\Http\Controllers\KominfoController;
+use App\Http\Controllers\PpidController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -58,6 +60,8 @@ Route::resource('infodikecualikan', InfoDikecualikanController::class);
 Route::resource('dashboard', DashboardController::class);
 Route::resource('gallery', GalleryController::class);
 Route::resource('login', LoginController::class);
+Route::resource('ppidadmin', PpidController::class);
+Route::resource('kominfoadmin', KominfoController::class);
 Route::resource('ppidpembantu', PpidPembantuController::class);
 Route::get('product', 'ProductController@create')->name('product.create');
 Route::post('product', 'ProductController@store')->name('product.store');
