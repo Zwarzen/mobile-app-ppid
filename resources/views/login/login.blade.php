@@ -123,13 +123,22 @@
         <div class="row justify-content-center">
             <div class="col-md-4">
                 <div class="card">
+                    @if ($message = Session::get('errors'))
+
+                    <div class="alert alert-danger">
+
+                        <p>{{ $message }}</p>
+
+                    </div>
+
+                    @endif
                     <h3 class="card-header text-center">Login Admin PPID</h3>
                     <div class="card-body">
                         <form method="POST" action="{{ route('login.custom') }}">
                             @csrf
                             <div class="form-group mb-3">
                                 <input type="text" placeholder="Email" id="email" class="form-control" name="email" required
-                                    autofocus>
+                                autofocus>
                                 @if ($errors->has('username'))
                                 <span class="text-danger">{{ $errors->first('username') }}</span>
                                 @endif
@@ -152,10 +161,12 @@
  
                             <div class="d-grid mx-auto">
                                 <button type="submit" class="btn btn-dark btn-block">Masuk</button>
+<<<<<<< HEAD
                                 <!-- <a href="{{ route('login') }}" class="btn btn-outline-light me-2">Login</a> -->
+=======
+>>>>>>> 6fa0483c4747115ce872aa214215bce015364ad4
                             </div>
                         </form>
- 
                     </div>
                 </div>
             </div>

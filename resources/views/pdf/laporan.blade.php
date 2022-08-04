@@ -35,7 +35,7 @@
 					PERMOHONAN INFORMASI</u></h3>
 			<p class="western text-center" style=" text-align:center; line-height:0.5;">
 				No.
-				Pendaftaran * : {{$show->id}} /PPID/ {{$newDate = date("d m Y", strtotime($show->date));}}</p>
+				Pendaftaran * : {{ str_pad($show->id, 4, '0', STR_PAD_LEFT); }}/PPID/{{$newDate = date("d m Y", strtotime($show->date));}}</p>
 			<p class="western text-center" style="margin-top: 0in">
 
 			</p>
@@ -189,9 +189,35 @@
 			</table>
 			<p class="western" style=" margin-top:-300px;">
 				<center>Banyuwangi,
-					{{
-                		$newDate = date("d F Y", strtotime($show->date));
-					}}
+					<?php
+					function tanggal_indonesia($tanggal)
+					{
+						$bulan = array(
+							1 =>   'Januari',
+							'Februari',
+							'Maret',
+							'April',
+							'Mei',
+							'Juni',
+							'Juli',
+							'Agustus',
+							'September',
+							'Oktober',
+							'November',
+							'Desember'
+						);
+
+						$pecahkan = explode('-', $tanggal);
+
+						// variabel pecahkan 0 = tanggal
+						// variabel pecahkan 1 = bulan
+						// variabel pecahkan 2 = tahun
+
+						return $pecahkan[2] . ' ' . $bulan[(int)$pecahkan[1]] . ' ' . $pecahkan[0];
+					}
+
+					echo tanggal_indonesia($show->date); // Hasilnya menampilkan format tanggal 15 Februari 2004
+					?>
 				</center>
 			</p>
 
