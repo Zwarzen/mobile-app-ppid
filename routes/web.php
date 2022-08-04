@@ -39,7 +39,7 @@ Route::get('/', function () {
     return view('dashboard/dashboard');
 });
 Route::resource('products', ProductController::class);
-Route::resource('admin', AdminController::class);
+Route::resource('admin', AdminController::class)->middleware('auth');
 Route::resource('profil', ProfilController::class);
 Route::resource('instrumen', InstrumenController::class);
 Route::resource('seputar', SeputarController::class);
@@ -74,8 +74,16 @@ Route::get('/pdf', function () {
 // Route::get('password', [UserController::class, 'password'])->name('password');
 // Route::post('password', [UserController::class, 'password_action'])->name('password.action');
 // Route::get('logout', [UserController::class, 'logout'])->name('logout');
-Route::get('login', [CustomAuthController::class, 'index'])->name('login');
+Route::get('login', [CustomAuthController::class, 'index'])->name('login')->middleware('guest');
 Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name('login.custom');
+Route::post('/logout', [CustomAuthController::class, 'logout']);
+
+// Route::get('/login', function () {
+//     if (session()->has('user')){
+//         return redirect('admin');
+//     }
+//     return view('/login');
+// });
 
 // Route::get('/login', 'CustomAuthController@show')->name('login.show');
 // Route::post('/login', 'CustomAuthController@login')->name('login.perform');

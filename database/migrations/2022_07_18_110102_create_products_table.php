@@ -36,6 +36,8 @@ class CreateProductsTable extends Migration
 
             $table->integer('no_identitas');
 
+            $table->string('subjek');
+
             $table->text('organisasi');
 
             $table->text('alamat');
@@ -51,6 +53,8 @@ class CreateProductsTable extends Migration
             $table->text('cara_mendapat_salinan');
 
             $table->text('tujuan_skpd');
+
+            $table->date('date');
 
             $table->string('image');
 

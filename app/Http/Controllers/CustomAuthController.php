@@ -47,21 +47,32 @@ class CustomAuthController extends Controller
         return redirect()->intended();
     }
  
-    // public function customLogin(Request $request)
-    // {
-    //     $request->validate([
-    //         'email' => 'required',
-    //         'password' => 'required',
-    //     ]);
+    public function customLogin(Request $request)
+    {
+        $request->validate([
+            'email' => 'required',
+            'password' => 'required',
+        ]);
     
-    //     $credentials = $request->only('email', 'password');
-    //     if (Auth::attempt($credentials)) {
-    //         return redirect()->intended('admin')
-    //                     ->withSuccess('Signed in');
-    //     }
+        $credentials = $request->only('email', 'password');
+        if (Auth::attempt($credentials)) {
+            return redirect()->intended('admin')
+                        ->withSuccess('Signed in');
+        }
    
-    //     return redirect("login")->withSuccess('Login details are not valid');
-    // }
+        return back()->withErrors('Login details are not valid');
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+ 
+        $request->session()->invalidate();
+    
+        $request->session()->regenerateToken();
+    
+        return redirect('/dashboard');
+    }
  
  
  
