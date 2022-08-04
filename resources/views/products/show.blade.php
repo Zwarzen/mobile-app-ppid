@@ -38,7 +38,7 @@
 
             <strong>Nomor Surat:</strong>
 
-            {{ $product->id }}
+            {{ str_pad($product->id, 4, '0', STR_PAD_LEFT); }}
 
         </div>
 
@@ -49,10 +49,39 @@
         <div class="form-group">
 
             <strong>Tanggal:</strong>
+            <?php
+            function tanggal_indonesia($tanggal)
+            {
+                $bulan = array(
+                    1 =>   'Januari',
+                    'Februari',
+                    'Maret',
+                    'April',
+                    'Mei',
+                    'Juni',
+                    'Juli',
+                    'Agustus',
+                    'September',
+                    'Oktober',
+                    'November',
+                    'Desember'
+                );
 
+                $pecahkan = explode('-', $tanggal);
+
+                // variabel pecahkan 0 = tanggal
+                // variabel pecahkan 1 = bulan
+                // variabel pecahkan 2 = tahun
+
+                return $pecahkan[2] . ' ' . $bulan[(int)$pecahkan[1]] . ' ' . $pecahkan[0];
+            }
+
+            echo tanggal_indonesia($product->date); // Hasilnya menampilkan format tanggal 15 Februari 2004
+            ?>
+            <!-- 
             {{  
                 $newDate = date("d F Y", strtotime($product->date));
-            }}
+            }} -->
 
 
 
