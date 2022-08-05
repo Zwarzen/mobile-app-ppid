@@ -63,31 +63,13 @@ Route::resource('login', LoginController::class);
 Route::resource('ppidadmin', PpidController::class);
 Route::resource('kominfoadmin', KominfoController::class);
 Route::resource('ppidpembantu', PpidPembantuController::class);
+
 Route::get('product', 'ProductController@create')->name('product.create');
 Route::post('product', 'ProductController@store')->name('product.store');
 Route::get('/downloadPDF/{id}', [ProductController::class, 'downloadPDF'])->name('downloadPDF');
-Route::get('/pdf', function () {
-    return view('pdf.laporan');
-});
-// Route::get('register', [UserController::class, 'register'])->name('register');
-// Route::post('register', [UserController::class, 'register_action'])->name('register.action');
-
-// Route::post('login',[UserController::class, 'login'])->name('login');
-// Route::get('login', [UserController::class, 'login'])->name('login');
-// Route::post('login', [UserController::class, 'login_action'])->name('login.action');
-// Route::get('password', [UserController::class, 'password'])->name('password');
-// Route::post('password', [UserController::class, 'password_action'])->name('password.action');
-// Route::get('logout', [UserController::class, 'logout'])->name('logout');
 Route::get('login', [CustomAuthController::class, 'index'])->name('login')->middleware('guest');
 Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name('login.custom');
 Route::post('/logout', [CustomAuthController::class, 'logout']);
-
-// Route::get('/login', function () {
-//     if (session()->has('user')){
-//         return redirect('admin');
-//     }
-//     return view('/login');
-// });
-
-// Route::get('/login', 'CustomAuthController@show')->name('login.show');
-// Route::post('/login', 'CustomAuthController@login')->name('login.perform');
+Route::get('/pdf', function () {
+    return view('pdf.laporan');
+});
