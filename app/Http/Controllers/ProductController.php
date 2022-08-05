@@ -156,6 +156,8 @@ class ProductController extends Controller
     {
 
         return view('products.show', compact('product'));
+
+
     }
 
 
@@ -302,4 +304,15 @@ class ProductController extends Controller
 
         return $pdf->stream('ppid-'.$id.'.pdf');
     }
+
+    // public function filter(Request $request)
+    // {
+    //     ProductFilter::with('prodcut')->whereHas(
+    //         'product', function($query) 
+    //     {
+    //         $query->whereIn('products.tujuan_skpd',array('Kominfo'));
+    //     }
+        
+    //     )->get();
+    // }
 }
