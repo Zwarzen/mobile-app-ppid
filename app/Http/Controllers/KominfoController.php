@@ -1,65 +1,27 @@
 <?php
 
-
-
 namespace App\Http\Controllers;
 
-
-
+use Illuminate\Http\Request;
 use App\Models\Product;
 
-use Illuminate\Http\Request;
-use PDF;
-
-
-
-class ProductController extends Controller
-
+class KominfoController extends Controller
 {
-
-    /**
-
-     * Display a listing of the resource.
-
-     *
-
-     * @return \Illuminate\Http\Response
-
-     */
 
     public function index()
 
     {
 
-        $products = Product::latest()->paginate(5);
+        $products = Product::latest()->paginate(10);
 
+    
 
-
-        return view('products.create', compact('products'))
+        return view('admin.kominfo',compact('products'))
 
             ->with('i', (request()->input('page', 1) - 1) * 5);
+
     }
-
-
-
-    /**
-
-     * Show the form for creating a new resource.
-
-     *
-
-     * @return \Illuminate\Http\Response
-
-     */
-
-    public function create()
-
-    {
-
-        return view('products.create');
-    }
-
-
+    
 
     /**
 
@@ -79,15 +41,11 @@ class ProductController extends Controller
 
         $request->validate([
 
-            'id',
-
             'nama' => 'required',
 
             'no_identitas' => 'required',
 
-            'subjek' => 'required',
-
-            'organisasi',
+            'origanisasi' => 'required',
 
             'alamat' => 'required',
 
@@ -109,11 +67,11 @@ class ProductController extends Controller
 
         ]);
 
-
+  
 
         $input = $request->all();
 
-
+  
 
         if ($image = $request->file('image')) {
 
@@ -124,20 +82,22 @@ class ProductController extends Controller
             $image->move($destinationPath, $profileImage);
 
             $input['image'] = "$profileImage";
+
         }
 
-
+    
 
         Product::create($input);
 
+     
 
+        return redirect()->route('admin.kominfo')
 
-        return redirect()->route('products.index')
+                        ->with('success','Product created successfully.');
 
-            ->with('success', 'Data berhasil dikirim!');
     }
 
-
+     
 
     /**
 
@@ -155,12 +115,11 @@ class ProductController extends Controller
 
     {
 
-        return view('products.show', compact('product'));
-
+        return view('admin.show',compact('product'));
 
     }
 
-
+     
 
     /**
 
@@ -178,10 +137,11 @@ class ProductController extends Controller
 
     {
 
-        return view('products.edit', compact('product'));
+        return view('admin.edit',compact('product'));
+
     }
 
-
+    
 
     /**
 
@@ -203,15 +163,11 @@ class ProductController extends Controller
 
         $request->validate([
 
-            'id',
-
             'nama' => 'required',
 
             'no_identitas' => 'required',
 
-            'subjek' => 'required',
-
-            'organisasi',
+            'origanisasi' => 'required',
 
             'alamat' => 'required',
 
@@ -230,13 +186,14 @@ class ProductController extends Controller
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
 
             'date' => 'required',
+
         ]);
 
-
+  
 
         $input = $request->all();
 
-
+  
 
         if ($image = $request->file('image')) {
 
@@ -247,23 +204,26 @@ class ProductController extends Controller
             $image->move($destinationPath, $profileImage);
 
             $input['image'] = "$profileImage";
-        } else {
+
+        }else{
 
             unset($input['image']);
+
         }
 
-
+          
 
         $product->update($input);
 
+    
 
+        return redirect()->route('admin.kominfo')
 
-        return redirect()->route('admin.index')
+                        ->with('success','Product updated successfully');
 
-            ->with('success', 'Product updated successfully');
     }
 
-
+  
 
     /**
 
@@ -283,36 +243,12 @@ class ProductController extends Controller
 
         $product->delete();
 
+     
 
+        return redirect()->route('admin.kominfo')
 
-        return redirect()->route('admin.index')
+                        ->with('success','Data Berhasil dihapus!');
 
-            ->with('success', 'Data Berhasil dihapus!');
     }
-
-    public function downloadPDF($id)
-    {
-        
-        $show = Product::find($id);
-
-        $pdf = PDF::loadView('pdf.laporan', [
-            'title' => 'LaporanPDF',
-            'date' => date('m/d/Y'),
-            'id' => $id,
-            
-        ], compact('show'));
-
-        return $pdf->stream('ppid-'.$id.'.pdf');
-    }
-
-    // public function filter(Request $request)
-    // {
-    //     ProductFilter::with('prodcut')->whereHas(
-    //         'product', function($query) 
-    //     {
-    //         $query->whereIn('products.tujuan_skpd',array('Kominfo'));
-    //     }
-        
-    //     )->get();
-    // }
+    
 }

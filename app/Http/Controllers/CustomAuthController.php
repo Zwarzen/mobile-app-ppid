@@ -60,10 +60,13 @@ class CustomAuthController extends Controller
         }
 
    
-        return back()->withErrors('Login details are not valid');
+        return back()->withErrors('Username atau Password anda salah');
+    
+
     }
 
     public function logout(Request $request)
+   
     {
         Auth::logout();
  
@@ -73,6 +76,7 @@ class CustomAuthController extends Controller
     
         return redirect('/dashboard');
     }
+
  
  
  
