@@ -7,7 +7,7 @@ namespace App\Http\Controllers;
 
 
 use App\Models\Product;
-
+use App\Rules\Uppercase;
 use Illuminate\Http\Request;
 use PDF;
 
@@ -83,7 +83,7 @@ class ProductController extends Controller
 
             'nama' => 'required',
 
-            'no_identitas' => 'required',
+            'no_identitas' => new Uppercase,
 
             'subjek' => 'required',
 

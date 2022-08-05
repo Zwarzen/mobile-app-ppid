@@ -12,7 +12,7 @@
         }
     }
 </style>
-
+@foreach
 <div class="row">
 
     <div class="col-lg-12 margin-tb">
@@ -120,6 +120,6 @@
 
 </table>
 
-{!! $products->links() !!}
+<!-- {!! $products->links() !!} -->
 
 @endsection
