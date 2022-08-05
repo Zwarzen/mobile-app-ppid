@@ -22,20 +22,8 @@
             <h2>Admin PPID KOMINFO Kabupaten</h2>
 
         </div>
-
-        <!-- <div class="pull-left">
-
-                <a class="btn btn-success" href="{{ route('admin.create') }}"> Buat Pengaduan Baru</a>
-
-            </div> -->
     </div>
-
 </div>
-<!-- <div class="pull-left" style="margin-bottom: 20px;">
-
-    <a class="btn btn-success" href="{{ route('admin.create') }}"> Buat Pengaduan Baru</a>
-
-</div> -->
 
 
 
@@ -77,7 +65,7 @@
 
         <td>{{ $product->subjek  }}</td>
 
-        <td>{{ $product->tujuan_skpd}}</td>
+        <td>{{ $product->tujuan_skpd == 'KOMINFO'}}</td>
 
         <td>
 
@@ -87,9 +75,7 @@
                     <i class="material-icons">visibility</i>
                     <span class="button-text">Detail</span>
                 </a>
-
-                <!-- <a class="btn btn-primary" href="{{ route('products.edit',$product->id) }}">Edit</a> -->
-
+                
                 @csrf
 
                 @method('DELETE')
