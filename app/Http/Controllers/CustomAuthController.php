@@ -45,11 +45,7 @@ class CustomAuthController extends Controller
     {
         return redirect()->intended();
     }
-<<<<<<< HEAD
- 
-=======
 
->>>>>>> 6fa0483c4747115ce872aa214215bce015364ad4
     public function customLogin(Request $request)
     {
         $request->validate([
@@ -62,7 +58,7 @@ class CustomAuthController extends Controller
             return redirect()->intended('admin')
                         ->withSuccess('Signed in');
         }
-<<<<<<< HEAD
+
    
         return back()->withErrors('Login details are not valid');
     }
@@ -117,9 +113,5 @@ class CustomAuthController extends Controller
    
     //     return Redirect('login');
     // }
-=======
-        
-        return back()->withErrors('Username atau Password anda salah');
-    }
->>>>>>> 6fa0483c4747115ce872aa214215bce015364ad4
+
 }
