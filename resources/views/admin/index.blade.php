@@ -68,29 +68,7 @@
 
 <table class="table table-bordered" style="margin-top: 20px;">
 
-    <tr>
-
-        <th>No</th>
-
-        <th>Nama</th>
-
-        <th>Subjek</th>
-
-        <th width="280px">Action</th>
-
-    </tr>
-
-    @foreach ($products as $product)
-
-    <tr>
-
-        <td>{{ ++$i }}</td>
-
-        <td>{{ $product->nama }}</td>
-
-        <td>{{ $product->subjek  }}</td>
-
-        <td>
+    c
 
             <form action="{{ route('products.destroy',$product->id) }}" method="POST">
 
