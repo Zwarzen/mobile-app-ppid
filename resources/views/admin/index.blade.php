@@ -1,7 +1,5 @@
 @extends('products.layout')
 
-
-
 @section('content')
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -33,26 +31,8 @@
                 </div>
             </div>
         </form>
-        <!-- <div class="pull-left">
-            
-            <a class="btn btn-danger">
-                <i class="material-icons" >logout</i> 
-                <span class="button-text" >Keluar</span>
-            </a> 
-
-                <a class="btn btn-success" href="{{ route('admin.create') }}"> Buat Pengaduan Baru</a>
-
-            </div> -->
     </div>
-
 </div>
-<!-- <div class="pull-left" style="margin-bottom: 20px;">
-
-    <a class="btn btn-success" href="{{ route('admin.create') }}"> Buat Pengaduan Baru</a>
-
-</div> -->
-
-
 
 @if ($message = Session::get('success'))
 
@@ -68,7 +48,6 @@
 
 <table class="table table-bordered" style="margin-top: 20px;">
 
-    c
 
             <form action="{{ route('products.destroy',$product->id) }}" method="POST">
 
@@ -76,8 +55,6 @@
                     <i class="material-icons" >visibility</i>
                     <span class="button-text" >Detail</span>
                 </a>
-
-                <!-- <a class="btn btn-primary" href="{{ route('products.edit',$product->id) }}">Edit</a> -->
 
                 @csrf
 
