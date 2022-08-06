@@ -33,24 +33,9 @@
                 </div>
             </div>
         </form>
-        <!-- <div class="pull-left">
-            
-            <a class="btn btn-danger">
-                <i class="material-icons" >logout</i> 
-                <span class="button-text" >Keluar</span>
-            </a> 
-
-                <a class="btn btn-success" href="{{ route('admin.create') }}"> Buat Pengaduan Baru</a>
-
-            </div> -->
     </div>
 
 </div>
-<!-- <div class="pull-left" style="margin-bottom: 20px;">
-
-    <a class="btn btn-success" href="{{ route('admin.create') }}"> Buat Pengaduan Baru</a>
-
-</div> -->
 
 
 
@@ -120,6 +105,6 @@
 
 </table>
 
-<!-- {!! $products->links() !!} -->
+{!! $products->links() !!}
 
 @endsection

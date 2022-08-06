@@ -65,7 +65,7 @@
 
         <td>{{ $product->subjek  }}</td>
 
-        <td>{{ $product->tujuan_skpd == 'KOMINFO'}}</td>
+        <td>{{ $product->tujuan_skpd, value = 'KOMINFO'}}</td>
 
         <td>
 
