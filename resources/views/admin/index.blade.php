@@ -1,7 +1,5 @@
 @extends('products.layout')
 
-
-
 @section('content')
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -12,17 +10,13 @@
         }
     }
 </style>
-@foreach
+
 <div class="row">
-
     <div class="col-lg-12 margin-tb">
-
         <div class="pull-left" style="margin-top: 20px;">
-
-            <h2>Admin Pusat PPID Kabupaten</h2>
-
+            <h2>Admin PPID KOMINFO Kabupaten</h2>
         </div>
-        <form action="/logout" method="POST">
+        <form action="/logout" method="POST" style="margin-top: 20px;">
             @csrf
             <div class="col-lg-20 margin-tb">
                 <div class="pull-right" style="margin-top: 20px;">
@@ -34,7 +28,6 @@
             </div>
         </form>
     </div>
-
 </div>
 
 
@@ -61,6 +54,8 @@
 
         <th>Subjek</th>
 
+        <th>Tujuan</th>
+
         <th width="280px">Action</th>
 
     </tr>
@@ -75,6 +70,8 @@
 
         <td>{{ $product->subjek  }}</td>
 
+        <td>{{ $product->tujuan_skpd}}</td>
+
         <td>
 
             <form action="{{ route('products.destroy',$product->id) }}" method="POST">
@@ -83,9 +80,7 @@
                     <i class="material-icons">visibility</i>
                     <span class="button-text">Detail</span>
                 </a>
-
-                <!-- <a class="btn btn-primary" href="{{ route('products.edit',$product->id) }}">Edit</a> -->
-
+                
                 @csrf
 
                 @method('DELETE')
