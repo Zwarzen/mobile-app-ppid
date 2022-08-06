@@ -18,7 +18,7 @@
         </div>
         <form action="/logout" method="POST" style="margin-top: 20px;">
             @csrf
-            <div class="col-lg-20 margin-tb">
+            <div class="col-lg-20 margin-tb" >
                 <div class="pull-right" style="margin-top: 20px;">
                     <button type="submit" class="btn btn-danger">
                         <i class="material-icons">logout</i>
