@@ -11,8 +11,9 @@ class KominfoController extends Controller
     public function index()
 
     {
+        $products = Product::where('tujuan_skpd', 'KOMINFO')->paginate(10);
 
-        $products = Product::latest()->paginate(10);
+        // $products = Product::latest()->paginate(10);
 
     
 
