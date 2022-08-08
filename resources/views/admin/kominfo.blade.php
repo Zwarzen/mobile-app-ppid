@@ -38,7 +38,7 @@
             <div class="col-lg-20 margin-tb" >
                 <div class="pull-right" style="margin-top: 20px;">
                     <button type="submit" class="btn btn-info">
-                        <i class="material-icons">web</i>
+                        <i class="material-icons">domain</i>
                         <span class="button-text"><a href="{{ url('kominfoadmin') }}" style="text-decoration: none;">KOMINFO</a></span>
                     </button>
                 </div>
@@ -60,7 +60,7 @@
             <div class="col-lg-20 margin-tb" >
                 <div class="pull-right" style="margin-top: 20px;">
                     <button type="submit" class="btn btn-secondary">
-                        <i class="material-icons">web</i>
+                        <i class="material-icons">folder</i>
                         <span class="button-text" style="margin: 10px;"><a href="{{ url('admin') }}" style="text-decoration: none;">All</a></span>
                     </button>
                 </div>
