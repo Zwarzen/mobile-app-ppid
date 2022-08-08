@@ -50,7 +50,7 @@
                 <div class="pull-right" style="margin-top: 20px;">
                     <button type="submit" class="btn btn-success">
                         <i class="material-icons">web</i>
-                        <span class="button-text">PPID</span>
+                        <span class="button-text"><a href="{{ url('ppidadmin') }}" style="text-decoration: none;">PPID</a></span>
                     </button>
                 </div>
             </div>

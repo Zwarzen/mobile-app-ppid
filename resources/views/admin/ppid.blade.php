@@ -33,13 +33,13 @@
                 </div>
             </div>
         </form>
-        <form action="#" method="POST" style="margin-top: 20px;">
+        <form  style="margin-top: 20px;">
             @csrf
             <div class="col-lg-20 margin-tb" >
                 <div class="pull-right" style="margin-top: 20px;">
                     <button type="submit" class="btn btn-info">
-                        <i class="material-icons">web</i>
-                        <span class="button-text">KOMINFO</span>
+                        <i class="material-icons">domain</i>
+                        <span class="button-text"><a href="{{ url('kominfoadmin') }}" style="text-decoration: none;">KOMINFO</a></span>
                     </button>
                 </div>
             </div>
@@ -50,7 +50,18 @@
                 <div class="pull-right" style="margin-top: 20px;">
                     <button type="submit" class="btn btn-success">
                         <i class="material-icons">web</i>
-                        <span class="button-text">PPID</span>
+                        <span class="button-text"><a href="{{ url('ppidadmin') }}" style="text-decoration: none;">PPID</a></span>
+                    </button>
+                </div>
+            </div>
+        </form>
+        <form action="admin" method="POST" style="margin-top: 20px;">
+            @csrf
+            <div class="col-lg-20 margin-tb" >
+                <div class="pull-right" style="margin-top: 20px;">
+                    <button type="submit" class="btn btn-secondary">
+                        <i class="material-icons">folder</i>
+                        <span class="button-text" style="margin: 10px;"><a href="{{ url('admin') }}" style="text-decoration: none;">All</a></span>
                     </button>
                 </div>
             </div>
