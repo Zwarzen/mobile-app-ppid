@@ -35,7 +35,7 @@
 					PERMOHONAN INFORMASI</u></h3>
 			<p class="western text-center" style=" text-align:center; line-height:0.5;">
 				No.
-				Pendaftaran * : {{ str_pad($show->id, 4, '0', STR_PAD_LEFT); }}/PPID/{{$newDate = date("d m Y", strtotime($show->date));}}</p>
+				Pendaftaran * : {{ str_pad($show->id, 4, '0', STR_PAD_LEFT); }}/PPID/{{$newDate = date("m/Y", strtotime($show->date));}}</p>
 			<p class="western text-center" style="margin-top: 0in">
 
 			</p>
