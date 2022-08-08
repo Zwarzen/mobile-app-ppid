@@ -15,8 +15,14 @@
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left" style="margin-top: 20px;">
+<<<<<<< HEAD
             <h2>Admin PPID KOMINFO Banyuwangi</h2>
 
+=======
+
+            <h2>Admin PPID Kabupaten</h2>
+
+>>>>>>> d37c02d1560973aae71886585f46dba1659d568a
         </div>
         <form action="/logout" method="POST" style="margin-top: 20px;">
             @csrf
