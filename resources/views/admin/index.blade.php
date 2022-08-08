@@ -14,13 +14,9 @@
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left" style="margin-top: 20px;">
-<<<<<<< HEAD
 
-            <h2>Admin {{$name}} PPID Kabupaten</h2>
+            <h2>Admin PPID Kabupaten</h2>
 
-=======
-            <h2>Admin PPID KOMINFO Kabupaten</h2>
->>>>>>> 0075fcf26b49752f03ec8a40080b22b335464d55
         </div>
         <form action="/logout" method="POST" style="margin-top: 20px;">
             @csrf
