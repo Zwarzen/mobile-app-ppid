@@ -19,7 +19,7 @@
 
         <div class="pull-left" style="margin-top: 20px;">
 
-            <h2>Admin Pusat PPID Kabupaten</h2>
+            <h2>Admin PPID Kabupaten</h2>
 
         </div>
 
@@ -27,51 +27,46 @@
             @csrf
             <div class="col-lg-20 margin-tb" >
                 <div class="pull-right" style="margin-top: 20px;">
-                    <button type="submit" class="btn btn-danger">
-                        <i class="material-icons">logout</i>
-                        <span class="button-text">Keluar</span>
-                    </button>
+                <button type="submit" class="btn btn-danger">
+                    <i class="material-icons">logout</i>
+                    <span class="button-text">Keluar</span>
+                </button>
                 </div>
             </div>
         </form>
-        <form  style="margin-top: 20px;">
+        <form style="margin-top: 20px;">
             @csrf
-            <div class="col-lg-20 margin-tb" >
+            <div class="col-lg-20 margin-tb">
                 <div class="pull-right" style="margin-top: 20px;">
                     <button type="submit" class="btn btn-info">
-                        <i class="material-icons">domain</i>
+                        <i class="material-icons">business</i>
                         <span class="button-text"><a href="{{ url('kominfoadmin') }}" style="text-decoration: none;">KOMINFO</a></span>
                     </button>
                 </div>
             </div>
         </form>
-        <form action="#" method="POST" style="margin-top: 20px;">
+        <form method="POST" style="margin-top: 20px;">
             @csrf
-            <div class="col-lg-20 margin-tb" >
+            <div class="col-lg-20 margin-tb">
                 <div class="pull-right" style="margin-top: 20px;">
                     <button type="submit" class="btn btn-success">
-                        <i class="material-icons">web</i>
+                        <i class="material-icons">email</i>
                         <span class="button-text"><a href="{{ url('ppidadmin') }}" style="text-decoration: none;">PPID</a></span>
                     </button>
                 </div>
             </div>
         </form>
-        <form action="admin" method="POST" style="margin-top: 20px;">
+        <form method="POST" style="margin-top: 20px;">
             @csrf
-            <div class="col-lg-20 margin-tb" >
+            <div class="col-lg-20 margin-tb">
                 <div class="pull-right" style="margin-top: 20px;">
                     <button type="submit" class="btn btn-secondary">
-                        <i class="material-icons">folder</i>
+                        <i class="material-icons">web</i>
                         <span class="button-text" style="margin: 10px;"><a href="{{ url('admin') }}" style="text-decoration: none;">All</a></span>
                     </button>
                 </div>
             </div>
         </form>
-        <!-- <div class="pull-left">
-
-                <a class="btn btn-success" href="{{ route('admin.create') }}"> Buat Pengaduan Baru</a>
-
-            </div> -->
     </div>
 </div>
 
