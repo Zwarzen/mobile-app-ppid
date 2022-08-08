@@ -11,18 +11,53 @@
     }
 </style>
 
+
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left" style="margin-top: 20px;">
-            <h2>Admin PPID KOMINFO Kabupaten</h2>
+            <h2>Admin PPID KOMINFO Banyuwangi</h2>
+
         </div>
         <form action="/logout" method="POST" style="margin-top: 20px;">
             @csrf
             <div class="col-lg-20 margin-tb" >
                 <div class="pull-right" style="margin-top: 20px;">
-                    <button type="submit" class="btn btn-danger">
-                        <i class="material-icons">logout</i>
-                        <span class="button-text">Keluar</span>
+                <button type="submit" class="btn btn-danger">
+                    <i class="material-icons">logout</i>
+                    <span class="button-text">Keluar</span>
+                </button>
+                </div>
+            </div>
+        </form>
+        <form  style="margin-top: 20px;">
+            @csrf
+            <div class="col-lg-20 margin-tb" >
+                <div class="pull-right" style="margin-top: 20px;">
+                    <button type="submit" class="btn btn-info">
+                        <i class="material-icons">web</i>
+                        <span class="button-text"><a href="{{ url('kominfoadmin') }}" style="text-decoration: none;">KOMINFO</a></span>
+                    </button>
+                </div>
+            </div>
+        </form>
+        <form action="#" method="POST" style="margin-top: 20px;">
+            @csrf
+            <div class="col-lg-20 margin-tb" >
+                <div class="pull-right" style="margin-top: 20px;">
+                    <button type="submit" class="btn btn-success">
+                        <i class="material-icons">web</i>
+                        <span class="button-text">PPID</span>
+                    </button>
+                </div>
+            </div>
+        </form>
+        <form action="admin" method="POST" style="margin-top: 20px;">
+            @csrf
+            <div class="col-lg-20 margin-tb" >
+                <div class="pull-right" style="margin-top: 20px;">
+                    <button type="submit" class="btn btn-secondary">
+                        <i class="material-icons">web</i>
+                        <span class="button-text" style="margin: 10px;"><a href="{{ url('admin') }}" style="text-decoration: none;">All</a></span>
                     </button>
                 </div>
             </div>
@@ -77,8 +112,8 @@
             <form action="{{ route('products.destroy',$product->id) }}" method="POST">
 
                 <a class="btn btn-info" href="{{ route('products.show',$product->id) }}">
-                    <i class="material-icons">visibility</i>
-                    <span class="button-text">Detail</span>
+                    <i class="material-icons" >visibility</i>
+                    <span class="button-text" >Detail</span>
                 </a>
                 
                 @csrf
