@@ -22,6 +22,7 @@
             <h2>Admin Pusat PPID Kabupaten</h2>
 
         </div>
+
         <form action="/logout" method="POST" style="margin-top: 20px;">
             @csrf
             <div class="col-lg-20 margin-tb" >
@@ -72,13 +73,7 @@
 
             </div> -->
     </div>
-
 </div>
-<!-- <div class="pull-left" style="margin-bottom: 20px;">
-
-    <a class="btn btn-success" href="{{ route('admin.create') }}"> Buat Pengaduan Baru</a>
-
-</div> -->
 
 
 
@@ -130,9 +125,7 @@
                     <i class="material-icons">visibility</i>
                     <span class="button-text">Detail</span>
                 </a>
-
-                <!-- <a class="btn btn-primary" href="{{ route('products.edit',$product->id) }}">Edit</a> -->
-
+                
                 @csrf
 
                 @method('DELETE')

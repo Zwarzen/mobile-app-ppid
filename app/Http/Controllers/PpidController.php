@@ -1,18 +1,20 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
 use App\Models\Product;
+use Illuminate\Http\Request;
+
 
 class PpidController extends Controller
 {
     public function index()
 
     {
+      
 
         // return product::where('tujuan_skpd', 'ppid')->first();
         $products = Product::where('tujuan_skpd', 'PPID')->paginate(10);
+
 
 
         // $products = Product::latest()->paginate(10);
@@ -22,6 +24,7 @@ class PpidController extends Controller
         return view('admin.ppid',compact('products'))
 
             ->with('i', (request()->input('page', 1) - 1) * 5);
+
 
     }
 
@@ -238,6 +241,7 @@ class PpidController extends Controller
         return redirect()->route('admin.ppid')
 
                         ->with('success','Data Berhasil dihapus!');
+
 
     }
 }
