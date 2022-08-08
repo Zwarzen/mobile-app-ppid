@@ -26,6 +26,8 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\CustomAuthController;
 use App\Http\Controllers\KominfoController;
 use App\Http\Controllers\PpidController;
+use App\Http\Controllers\PpidAuthController;
+use App\Http\Controllers\KominfoAuthController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -70,6 +72,16 @@ Route::get('/downloadPDF/{id}', [ProductController::class, 'downloadPDF'])->name
 Route::get('login', [CustomAuthController::class, 'index'])->name('login')->middleware('guest');
 Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name('login.custom');
 Route::post('/logout', [CustomAuthController::class, 'logout']);
+
+// Route::resource('loginppid', LoginPpidController::class);
+Route::get('loginppid', [PpidAuthController::class, 'index'])->name('loginppid')->middleware('guest');
+Route::post('custom-loginppid', [PpidAuthController::class, 'customLogin'])->name('loginppid.custom');
+Route::post('/logout', [PpidAuthController::class, 'logout']);
+
+Route::get('loginkominfo', [KominfoAuthController::class, 'index'])->name('loginkominfo')->middleware('guest');
+Route::post('custom-loginkominfo', [KominfoAuthController::class, 'customLogin'])->name('loginkominfo.custom');
+Route::post('/logout', [KominfoAuthController::class, 'logout']);
+
 Route::get('/pdf', function () {
     return view('pdf.laporan');
 });

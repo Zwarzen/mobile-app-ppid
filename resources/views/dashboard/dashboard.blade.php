@@ -105,7 +105,9 @@
                 </div>
                 
             </div>
-            <a class="btn btn-success" href="{{ url('login') }}"><i class="glyphicon glyphicon-user"></i>&nbsp; Login Admin</a>
+            <a class="btn btn-success" href="{{ url('login') }}"><i class="glyphicon glyphicon-user"></i>&nbsp; Login Admin</a><br>
+            <a class="btn btn-success" href="{{ url('loginppid') }}"><i class="glyphicon glyphicon-user"></i>&nbsp; Login Admin PPID</a><br>
+            <a class="btn btn-success" href="{{ url('loginkominfo') }}"><i class="glyphicon glyphicon-user"></i>&nbsp; Login Admin Kominfo</a>
         </div>
 
 
