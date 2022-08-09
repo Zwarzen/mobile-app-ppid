@@ -298,11 +298,7 @@ class AdminController extends Controller
 
     }
 
-<<<<<<< HEAD
  
-
-}
-=======
     public function cari(Request $request)
 	{
 		// menangkap data pencarian
@@ -319,4 +315,3 @@ class AdminController extends Controller
 	}
 
 }
->>>>>>> 3ae17b8da9ff2926ceb25ae4760aabd193bb6ea3

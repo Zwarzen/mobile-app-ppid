@@ -18,6 +18,8 @@
         <div class="pull-left" style="margin-top: 20px;">
 
             <h2>Main Admin Pusat Banyuwangi</h2>
+
+            
             {{-- <form action="/admin" >
             <div class="input-group mb-3">
                 <input type="text" class="form-control" name="search" value="{{ request('search') }}">
@@ -25,10 +27,11 @@
                 </div>
             </form> --}}
             <form class="form" method="get" action="{{ route('search') }}">
-                <div class="form-group w-100 mb-3">
-                    <label for="search" class="d-block mr-2">Search</label>
+                <div class="form-group" style="display: inline;">
+                
                     <input type="text" name="search" class="form-control w-75 d-inline" id="search" placeholder="Masukkan keyword">
                     <button type="submit" class="btn btn-primary mb-1">Cari</button>
+                
                 </div>
             </form>
 
@@ -65,11 +68,6 @@
 
 @endif
 
-
-    <form action="{{ route('product.cari') }}" method="GET">
-        <input type="text" name="cari" placeholder="Cari Dari Nomor Surat" value="{{ old('cari') }}">
-        <input type="submit" value="CARI">
-    </form>
 
 <table class="table table-bordered" style="margin-top: 20px;">
 
