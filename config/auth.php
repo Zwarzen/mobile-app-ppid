@@ -44,6 +44,10 @@ return [
             'driver' => 'session',
             'provider' => 'kominfos',
         ],
+        'ppid' => [
+            'driver' => 'session',
+            'provider' => 'ppids',
+        ],
     ],
 
     /*
@@ -71,6 +75,10 @@ return [
         'kominfos' => [
             'driver' => 'eloquent',
             'model' => App\Models\Kominfo::class,
+        ],
+        'ppids' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Ppid::class,
         ],
         // 'users' => [
         //     'driver' => 'database',

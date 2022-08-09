@@ -53,7 +53,7 @@ class PpidAuthController extends Controller
         ]);
     
         $credentials = $request->only('email', 'password');
-        if (Auth::attempt($credentials)) {
+        if (Auth::guard('ppid')->attempt(['email' => $request->email, 'password' => $request->password])) {
             return redirect()->intended('ppidadmin')
                         ->withSuccess('Signed in');
         }
