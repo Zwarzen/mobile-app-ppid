@@ -40,6 +40,10 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'kominfo' => [
+            'driver' => 'session',
+            'provider' => 'kominfos',
+        ],
     ],
 
     /*
@@ -64,7 +68,10 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
-
+        'kominfos' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Kominfo::class,
+        ],
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',
