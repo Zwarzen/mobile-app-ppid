@@ -9,7 +9,7 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use App\Models\User;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\DB;
   
 
 class AdminController extends Controller
@@ -298,6 +298,25 @@ class AdminController extends Controller
 
     }
 
+<<<<<<< HEAD
  
 
 }
+=======
+    public function cari(Request $request)
+	{
+		// menangkap data pencarian
+		$cari = $request->cari;
+ 
+    		// mengambil data dari table pegawai sesuai pencarian data
+		$product = DB::table('products')
+		->where('id','like',"%".$cari."%")
+		->paginate();
+ 
+    		// mengirim data pegawai ke view index
+		return view('index',['products' => $product]);
+ 
+	}
+
+}
+>>>>>>> 3ae17b8da9ff2926ceb25ae4760aabd193bb6ea3

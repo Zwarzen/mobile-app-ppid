@@ -6,10 +6,12 @@ namespace App\Http\Controllers;
 
 
 
+use PDF;
 use App\Models\Product;
 use App\Rules\Uppercase;
 use Illuminate\Http\Request;
-use PDF;
+use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\DB;
 
 
 
@@ -305,14 +307,18 @@ class ProductController extends Controller
         return $pdf->stream('ppid-'.$id.'.pdf');
     }
 
-    // public function filter(Request $request)
-    // {
-    //     ProductFilter::with('prodcut')->whereHas(
-    //         'product', function($query) 
-    //     {
-    //         $query->whereIn('products.tujuan_skpd',array('Kominfo'));
-    //     }
-        
-    //     )->get();
-    // }
+    public function cari(Request $request)
+	{
+		// menangkap data pencarian
+		$cari = $request->cari;
+ 
+    		// mengambil data dari table pegawai sesuai pencarian data
+		$product = DB::table('products')
+		->where('id','like',"%".$cari."%")
+		->paginate();
+ 
+    		// mengirim data pegawai ke view index
+		return view('admin.index',['products' => $product]);
+ 
+	}
 }
