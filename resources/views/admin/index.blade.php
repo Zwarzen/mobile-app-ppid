@@ -28,14 +28,14 @@
             </form> --}}
             <form class="form" method="get" action="{{ route('search') }}">
                 <div class="form-group w-100 mb-3">
-                    
+
                     <input type="text" name="search" class="form-control w-75 d-inline" id="search" placeholder="Masukkan keyword">
                     <button type="submit" class="btn btn-primary mb-1">Cari</button>
                 
                 </div>
             </form>
 
-            
+                
         </div>
         
         <form action="/logout" method="POST" style="margin-top: 20px;">
@@ -89,7 +89,7 @@
 
     <tr>
 
-        <td>{{ $product->id }}</td>
+        <td>{{ $i++ }}</td>
 
         <td>{{ $product->nama }}</td>
 
