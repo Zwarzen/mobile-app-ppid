@@ -318,7 +318,7 @@ class ProductController extends Controller
 		->paginate();
  
     		// mengirim data pegawai ke view index
-		return view('admin.index',['products' => $product]);
+		return view('product.index',['products' => $product]);
  
 	}
 }
