@@ -81,7 +81,7 @@ Route::post('/logout', [PpidAuthController::class, 'logout']);
 Route::get('loginkominfo', [KominfoAuthController::class, 'index'])->name('loginkominfo')->middleware('guest');
 Route::post('custom-loginkominfo', [KominfoAuthController::class, 'customLogin'])->name('loginkominfo.custom');
 Route::post('/logout', [KominfoAuthController::class, 'logout']);
-
+Route::get('/search', [AdminController::class, 'search'])->name('search');
 Route::get('/pdf', function () {
     return view('pdf.laporan');
 });

@@ -14,11 +14,27 @@
 
 <div class="row" marg>
     <div class="col-lg-12 margin-tb">
+        
         <div class="pull-left" style="margin-top: 20px;">
 
             <h2>Main Admin Pusat Banyuwangi</h2>
+            {{-- <form action="/admin" >
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" name="search" value="{{ request('search') }}">
+                  <button class="btn btn-primary" type="submit">Search</button>
+                </div>
+            </form> --}}
+            <form class="form" method="get" action="{{ route('search') }}">
+                <div class="form-group w-100 mb-3">
+                    <label for="search" class="d-block mr-2">Search</label>
+                    <input type="text" name="search" class="form-control w-75 d-inline" id="search" placeholder="Masukkan keyword">
+                    <button type="submit" class="btn btn-primary mb-1">Cari</button>
+                </div>
+            </form>
 
+            
         </div>
+        
         <form action="/logout" method="POST" style="margin-top: 20px;">
             @csrf
             <div class="col-lg-20 margin-tb">
@@ -30,8 +46,12 @@
                 </div>
             </div>
         </form>
+
+        
     </div>
 </div>
+
+  
 
 
 
