@@ -15,13 +15,9 @@
 <div class="row" marg>
     <div class="col-lg-12 margin-tb">
         <div class="pull-left" style="margin-top: 20px;">
-<<<<<<< HEAD
-        
-            <h2>Admin Pusat PPID Kabupaten</h2>
 
-=======
             <h2>Main Admin Pusat Banyuwangi</h2>
->>>>>>> da5b571d757ac26b65de3b505fa449e604cd2104
+
         </div>
         <form action="/logout" method="POST" style="margin-top: 20px;">
             @csrf
