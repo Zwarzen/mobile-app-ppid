@@ -29,12 +29,13 @@ class AdminController extends Controller
     public function index()
 
     {
-
-        // return user::all();
-
-        $products = Product::latest()->paginate(10);
-
-    
+         // return user::all();
+         $products = Product::latest()->paginate(10);
+         
+        //  if (request('search')){
+        //     // dd(request('search'));
+        //     $products->where('nama', 'like', '%'. request('search'). '%');
+        // }
 
         return view('admin.index',compact('products'))
 
@@ -42,11 +43,16 @@ class AdminController extends Controller
 
     }
 
-   
+    public function search(Request $request)
+    {
+        $keyword = $request->search;
+        $products = Product::where('nama', 'like', "%" . $keyword . "%")->paginate(5);
+        return view('admin.index', compact('products'))->with('i', (request()->input('page', 1) - 1) * 5);
+    }
 
     /**
-
      * Show the form for creating a new resource.
+
 
      *
 
@@ -292,6 +298,11 @@ class AdminController extends Controller
 
     }
 
+<<<<<<< HEAD
+ 
+
+}
+=======
     public function cari(Request $request)
 	{
 		// menangkap data pencarian
@@ -308,3 +319,4 @@ class AdminController extends Controller
 	}
 
 }
+>>>>>>> 3ae17b8da9ff2926ceb25ae4760aabd193bb6ea3
