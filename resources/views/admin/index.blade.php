@@ -89,7 +89,7 @@
 
     <tr>
 
-        <td>{{ ++$i }}</td>
+        <td>{{ $product->id }}</td>
 
         <td>{{ $product->nama }}</td>
 
