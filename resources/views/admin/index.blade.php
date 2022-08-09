@@ -46,6 +46,10 @@
 @endif
 
 
+    <form action="{{ route('product.cari') }}" method="GET">
+        <input type="text" name="cari" placeholder="Cari Dari Nomor Surat" value="{{ old('cari') }}">
+        <input type="submit" value="CARI">
+    </form>
 
 <table class="table table-bordered" style="margin-top: 20px;">
 

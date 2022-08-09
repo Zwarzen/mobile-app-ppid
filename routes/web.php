@@ -66,6 +66,10 @@ Route::resource('ppidadmin', PpidController::class);
 Route::resource('kominfoadmin', KominfoController::class);
 Route::resource('ppidpembantu', PpidPembantuController::class);
 
+
+Route::get('product','ProductController@index');
+Route::get('/product/cari','ProductController@cari')->name('product.cari');
+
 Route::get('product', 'ProductController@create')->name('product.create');
 Route::post('product', 'ProductController@store')->name('product.store');
 Route::get('/downloadPDF/{id}', [ProductController::class, 'downloadPDF'])->name('downloadPDF');
