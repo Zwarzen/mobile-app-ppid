@@ -309,7 +309,7 @@ class AdminController extends Controller
 		$cari = $request->cari;
  
     		// mengambil data dari table pegawai sesuai pencarian data
-		$product = DB::table('products')
+		$product = Product::table('products')
 		->where('id','like',"%".$cari."%")
 		->paginate();
  
