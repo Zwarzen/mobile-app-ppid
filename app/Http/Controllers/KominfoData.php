@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product;
+use App\Models\DataKominfo;
 use App\Rules\Uppercase;
 use Barryvdh\DomPDF\PDF;
 use Illuminate\Http\Request;
@@ -25,7 +25,7 @@ class KominfoData extends Controller
 
     {
 
-        $products = Product::latest()->paginate(5);
+        $products = DataKominfo::latest()->paginate(5);
 
 
 
@@ -122,7 +122,7 @@ class KominfoData extends Controller
 
 
 
-        Product::create($input);
+        DataKominfo::create($input);
 
 
 
@@ -139,13 +139,13 @@ class KominfoData extends Controller
 
      *
 
-     * @param  \App\Product  $product
+     * @param  \App\DataKominfo  $product
 
      * @return \Illuminate\Http\Response
 
      */
 
-    public function show(Product $product)
+    public function show(DataKominfo $product)
 
     {
 
@@ -162,13 +162,13 @@ class KominfoData extends Controller
 
      *
 
-     * @param  \App\Product  $product
+     * @param  \App\DataKominfo  $product
 
      * @return \Illuminate\Http\Response
 
      */
 
-    public function edit(Product $product)
+    public function edit(DataKominfo $product)
 
     {
 
@@ -185,13 +185,13 @@ class KominfoData extends Controller
 
      * @param  \Illuminate\Http\Request  $request
 
-     * @param  \App\Product  $product
+     * @param  \App\DataKominfo  $product
 
      * @return \Illuminate\Http\Response
 
      */
 
-    public function update(Request $request, Product $product)
+    public function update(Request $request, DataKominfo $product)
 
     {
 
@@ -271,7 +271,7 @@ class KominfoData extends Controller
 
      */
 
-    public function destroy(Product $product)
+    public function destroy(DataKominfo $product)
 
     {
 
@@ -287,7 +287,7 @@ class KominfoData extends Controller
     public function downloadPDF($id)
     {
         
-        $show = Product::find($id);
+        $show = DataKominfo::find($id);
 
         $pdf = PDF::loadView('pdf.laporan', [
             'title' => 'LaporanPDF',

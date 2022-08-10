@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product;
+use App\Models\DataPPID;
 use App\Rules\Uppercase;
 use Barryvdh\DomPDF\PDF;
 use Illuminate\Http\Request;
@@ -25,7 +25,7 @@ class PPIDData extends Controller
 
     {
 
-        $products = Product::latest()->paginate(5);
+        $products = DataPPID::latest()->paginate(5);
 
 
 
@@ -122,7 +122,7 @@ class PPIDData extends Controller
 
 
 
-        Product::create($input);
+        DataPPID::create($input);
 
 
 
@@ -139,13 +139,13 @@ class PPIDData extends Controller
 
      *
 
-     * @param  \App\Product  $product
+     * @param  \App\DataPPID  $product
 
      * @return \Illuminate\Http\Response
 
      */
 
-    public function show(Product $product)
+    public function show(DataPPID $product)
 
     {
 
@@ -162,13 +162,13 @@ class PPIDData extends Controller
 
      *
 
-     * @param  \App\Product  $product
+     * @param  \App\DataPPID  $product
 
      * @return \Illuminate\Http\Response
 
      */
 
-    public function edit(Product $product)
+    public function edit(DataPPID $product)
 
     {
 
@@ -185,13 +185,13 @@ class PPIDData extends Controller
 
      * @param  \Illuminate\Http\Request  $request
 
-     * @param  \App\Product  $product
+     * @param  \App\DataPPID  $product
 
      * @return \Illuminate\Http\Response
 
      */
 
-    public function update(Request $request, Product $product)
+    public function update(Request $request, DataPPID $product)
 
     {
 
@@ -265,13 +265,13 @@ class PPIDData extends Controller
 
      *
 
-     * @param  \App\Product  $product
+     * @param  \App\DataPPID  $product
 
      * @return \Illuminate\Http\Response
 
      */
 
-    public function destroy(Product $product)
+    public function destroy(DataPPID $product)
 
     {
 
@@ -287,7 +287,7 @@ class PPIDData extends Controller
     public function downloadPDF($id)
     {
         
-        $show = Product::find($id);
+        $show = DataPPID::find($id);
 
         $pdf = PDF::loadView('pdf.laporan', [
             'title' => 'LaporanPDF',
