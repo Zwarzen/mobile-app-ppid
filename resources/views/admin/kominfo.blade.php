@@ -10,18 +10,27 @@
         .button-text {
             display: none;
         }
+
+        .search-bar{
+            max-width: 200px;
+        }
+
+        h2{
+            max-width: 200px;
+        }
     }
 </style>
 
-<div class="row">
 
+<div class="row" marg>
     <div class="col-lg-12 margin-tb">
 
         <div class="pull-left" style="margin-top: 20px;">
 
-            <h2>Admin KOMINFO Kabupaten</h2>
+            <h2>Admin KOMINFO Banyuwangi</h2>
 
         </div>
+
         <form action="/logout" method="POST" style="margin-top: 20px;">
             @csrf
             <div class="col-lg-20 margin-tb">
@@ -50,6 +59,7 @@
                 </div>
                 
             </form>
+
     </div>
 </div>
 
