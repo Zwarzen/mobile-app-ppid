@@ -62,8 +62,8 @@ Route::resource('infodikecualikan', InfoDikecualikanController::class);
 Route::resource('dashboard', DashboardController::class);
 Route::resource('gallery', GalleryController::class);
 Route::resource('login', LoginController::class);
-Route::resource('ppidadmin', PpidController::class);
-Route::resource('kominfoadmin', KominfoController::class);
+Route::resource('ppidadmin', PpidController::class)->middleware('auth');
+Route::resource('kominfoadmin', KominfoController::class)->middleware('auth');
 Route::resource('ppidpembantu', PpidPembantuController::class);
 
 
@@ -73,19 +73,23 @@ Route::get('/product/cari','ProductController@cari')->name('product.cari');
 Route::get('product', 'ProductController@create')->name('product.create');
 Route::post('product', 'ProductController@store')->name('product.store');
 Route::get('/downloadPDF/{id}', [ProductController::class, 'downloadPDF'])->name('downloadPDF');
+
 Route::get('login', [CustomAuthController::class, 'index'])->name('login')->middleware('guest');
 Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name('login.custom');
+Route::get('/search', [AdminController::class, 'search'])->name('search');
 Route::post('/logout', [CustomAuthController::class, 'logout']);
 
 // Route::resource('loginppid', LoginPpidController::class);
 Route::get('loginppid', [PpidAuthController::class, 'index'])->name('loginppid')->middleware('guest');
 Route::post('custom-loginppid', [PpidAuthController::class, 'customLogin'])->name('loginppid.custom');
+Route::get('/search', [PpidController::class, 'search'])->name('search');
 Route::post('/logout', [PpidAuthController::class, 'logout']);
 
 Route::get('loginkominfo', [KominfoAuthController::class, 'index'])->name('loginkominfo')->middleware('guest');
 Route::post('custom-loginkominfo', [KominfoAuthController::class, 'customLogin'])->name('loginkominfo.custom');
 Route::post('/logout', [KominfoAuthController::class, 'logout']);
-Route::get('/search', [AdminController::class, 'search'])->name('search');
+Route::get('/search', [KominfoController::class, 'search'])->name('search');
+
 Route::get('/pdf', function () {
     return view('pdf.laporan');
 });

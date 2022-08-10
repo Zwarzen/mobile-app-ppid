@@ -52,7 +52,7 @@
             </form> --}}
             <form class="form" method="get" action="{{ route('search') }}" style="display:inline;">
                 <div class="form-group" >
-                    <input type="text" class="search-bar" name="search"  id="search" placeholder="Masukkan Nomor Surat/Organisasi/Nama User" style="width: 350px; height: 35px;">
+                    <input type="text" class="search-bar" name="search"  id="search" placeholder="Masukkan Nomor Surat/Organisasi/Nama" style="width: 350px; height: 35px;">
                     <button type="submit" class="btn btn-primary">Cari</button>
                 </div>
                 
@@ -93,7 +93,7 @@
 
     <tr>
 
-        <td>{{ $i++ }}</td>
+        <td>{{ ++$i }}</td>
 
         <td>{{ $product->nama }}</td>
 

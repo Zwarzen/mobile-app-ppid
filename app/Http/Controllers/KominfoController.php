@@ -26,6 +26,13 @@ class KominfoController extends Controller
             ->with('i', (request()->input('page', 1) - 1) * 5);
 
     }
+
+    public function search(Request $request)
+    {
+        $keyword = $request->search;
+        $products = Product::where('nama', 'like', "%" . $keyword . "%")->orWhere('id', 'like', "%" . $keyword . "%")->orWhere('organisasi', 'like', "%" . $keyword . "%")->paginate(5);
+        return view('admin.index', compact('products'))->with('i', (request()->input('page', 1) - 1) * 5);
+    }
     
 
     /**
