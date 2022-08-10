@@ -53,7 +53,7 @@ class KominfoAuthController extends Controller
         ]);
     
         $credentials = $request->only('email', 'password');
-        if (Auth::guard('kominfo')->attempt(['email' => $request->email, 'password' => $request])) {
+        if (Auth::guard('kominfo')->attempt(['email' => $request->email, 'password' => $request->password])) {
             return redirect()->intended('kominfoadmin')
                         ->withSuccess('Signed in');
         }
