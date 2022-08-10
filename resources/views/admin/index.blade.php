@@ -8,6 +8,14 @@
         .button-text {
             display: none;
         }
+
+        .search-bar{
+            max-width: 200px;
+        }
+
+        h2{
+            max-width: 200px;
+        }
     }
 </style>
 
@@ -44,8 +52,8 @@
             </form> --}}
             <form class="form" method="get" action="{{ route('search') }}" style="display:inline;">
                 <div class="form-group" >
-                    <input type="text" name="search"  id="search" placeholder="Masukkan Nomor Surat/Organisasi/Nama User" style="width: 350px; height: 35px;">
-                    <button type="submit" class="btn btn-primary" style="position: absolute;">Cari</button>
+                    <input type="text" class="search-bar" name="search"  id="search" placeholder="Masukkan Nomor Surat/Organisasi/Nama User" style="width: 350px; height: 35px;">
+                    <button type="submit" class="btn btn-primary">Cari</button>
                 </div>
                 
             </form>
