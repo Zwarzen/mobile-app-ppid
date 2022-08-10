@@ -62,8 +62,8 @@ Route::resource('infodikecualikan', InfoDikecualikanController::class);
 Route::resource('dashboard', DashboardController::class);
 Route::resource('gallery', GalleryController::class);
 Route::resource('login', LoginController::class);
-Route::resource('ppidadmin', PpidController::class)->middleware('auth');
-Route::resource('kominfoadmin', KominfoController::class)->middleware('auth');
+Route::resource('ppidadmin', PpidController::class);
+Route::resource('kominfoadmin', KominfoController::class);
 Route::resource('ppidpembantu', PpidPembantuController::class);
 
 
@@ -87,8 +87,9 @@ Route::post('/logout', [PpidAuthController::class, 'logout']);
 
 Route::get('loginkominfo', [KominfoAuthController::class, 'index'])->name('loginkominfo')->middleware('guest');
 Route::post('custom-loginkominfo', [KominfoAuthController::class, 'customLogin'])->name('loginkominfo.custom');
-Route::post('/logout', [KominfoAuthController::class, 'logout']);
 Route::get('/search', [KominfoController::class, 'search'])->name('search');
+Route::post('/logout', [KominfoAuthController::class, 'logout']);
+
 
 Route::get('/pdf', function () {
     return view('pdf.laporan');
