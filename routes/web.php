@@ -75,11 +75,13 @@ Route::post('product', 'ProductController@store')->name('product.store');
 Route::get('/downloadPDF/{id}', [ProductController::class, 'downloadPDF'])->name('downloadPDF');
 Route::get('login', [CustomAuthController::class, 'index'])->name('login')->middleware('guest');
 Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name('login.custom');
+Route::get('/search', [AdminController::class, 'search'])->name('search');
 Route::post('/logout', [CustomAuthController::class, 'logout']);
 
 // Route::resource('loginppid', LoginPpidController::class);
 Route::get('loginppid', [PpidAuthController::class, 'index'])->name('loginppid')->middleware('guest');
 Route::post('custom-loginppid', [PpidAuthController::class, 'customLogin'])->name('loginppid.custom');
+Route::get('/search', [AdminController::class, 'search'])->name('search');
 Route::post('/logout', [PpidAuthController::class, 'logout']);
 
 Route::get('loginkominfo', [KominfoAuthController::class, 'index'])->name('loginkominfo')->middleware('guest');
