@@ -42,8 +42,10 @@ class AdminController extends Controller
                                 ->get(['kominfo_data_tb.*','ppid_data_tb.*','products.*']);
 
         return view('admin.index',compact('products'))
+        ->with('i', (request()->input('page', 1) - 1) * 5);;
+        // return view('admin.index',compact('products'))
 
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+        //     ->with('i', (request()->input('page', 1) - 1) * 5);
 
     }
 
