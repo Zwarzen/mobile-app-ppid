@@ -37,6 +37,10 @@ class AdminController extends Controller
         //     $products->where('nama', 'like', '%'. request('search'). '%');
         // }
 
+        // $data = Product::join('kominfo_data_tb', 'kominfo_data_tb.tujuan_skpd', '=', 'products.tujuan_skpd')
+        //                         ->join('ppid_data_tb', 'ppid_data_tb.tujuan_skpd', '=', 'products.tujuan_skpd' )
+        //                         ->get(['kominfo_data_tb.*','ppid_data_tb.*','products.*']);
+
         return view('admin.index',compact('products'))
 
             ->with('i', (request()->input('page', 1) - 1) * 5);

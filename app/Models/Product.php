@@ -18,7 +18,7 @@ class Product extends Model
 
     use HasFactory;
 
-  
+    protected $products = 'products';
 
     protected $fillable = [
 
