@@ -35,6 +35,10 @@ class ProductController extends Controller
 
         $products = Product::latest()->paginate(5);
 
+        // $data = Product::join('kominfo_data_tb', 'kominfo_data_tb.tujuan_skpd', '=', 'products.tujuan_skpd')
+        //                         ->join('ppid_data_tb', 'ppid_data_tb.tujuan_skpd', '=', 'products.tujuan_skpd' )
+        //                         ->get(['kominfo_data_tb.*','ppid_data_tb.*','products.*']);
+
         return view('products.create', compact('products'))
 
             ->with('i', (request()->input('page', 1) - 1) * 5);
