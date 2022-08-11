@@ -54,10 +54,13 @@ class CustomAuthController extends Controller
         ]);
     
         $credentials = $request->only('email', 'password');
-        if (Auth::attempt($credentials)) {
+        if (Auth::guard('user')->attempt(['email' => $request->email, 'password' => $request->password])) {
             return redirect()->intended('admin')
                         ->withSuccess('Signed in');
-        }
+        }elseif (Auth::guard('kominfo')->attempt(['email' => $request->email, 'password' => $request->password])) {
+            return redirect()->intended('kominfoadmin')
+                        ->withSuccess('Signed in');
+        }                
 
    
         return back()->withErrors('Username atau Password anda salah');
@@ -68,7 +71,11 @@ class CustomAuthController extends Controller
     public function logout(Request $request)
    
     {
-        Auth::logout();
+        if(Auth::guard('user')->check()){
+            Auth::guard('user')->logout();
+        }elseif(Auth::guard('kominfo')->check()){
+            Auth::guard('kominfo')->logout();
+        }
  
         $request->session()->invalidate();
     

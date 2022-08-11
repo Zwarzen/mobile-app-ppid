@@ -43,7 +43,7 @@ Route::get('/', function () {
     return view('dashboard/dashboard');
 });
 Route::resource('products', ProductController::class);
-Route::resource('admin', AdminController::class)->middleware('auth');
+// Route::resource('admin', AdminController::class)->middleware('auth');
 Route::resource('profil', ProfilController::class);
 Route::resource('instrumen', InstrumenController::class);
 Route::resource('seputar', SeputarController::class);
@@ -62,8 +62,8 @@ Route::resource('infodikecualikan', InfoDikecualikanController::class);
 Route::resource('dashboard', DashboardController::class);
 Route::resource('gallery', GalleryController::class);
 Route::resource('login', LoginController::class);
-Route::resource('ppidadmin', PpidController::class);
-Route::resource('kominfoadmin', KominfoController::class);
+// Route::resource('ppidadmin', PpidController::class);
+// Route::resource('kominfoadmin', KominfoController::class);
 Route::resource('ppidpembantu', PpidPembantuController::class);
 
 
@@ -89,6 +89,16 @@ Route::get('loginkominfo', [KominfoAuthController::class, 'index'])->name('login
 Route::post('custom-loginkominfo', [KominfoAuthController::class, 'customLogin'])->name('loginkominfo.custom');
 Route::get('/search', [KominfoController::class, 'search'])->name('search');
 Route::post('/logout', [KominfoAuthController::class, 'logout']);
+
+Route::group(['middleware' => ['auth:user']], function() {
+    route::get('admin', [AdminController::class, 'index']);
+});
+Route::group(['middleware' => ['auth:kominfo']], function() {
+    route::get('kominfoadmin', [AdminController::class, 'index']);
+});
+// Route::group(['middleware' => ['auth:ppid']], function() {
+//     route::get('admin', [AdminController::class, 'index'];)
+// });
 
 
 Route::get('/pdf', function () {
