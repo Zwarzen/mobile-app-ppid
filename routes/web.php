@@ -43,7 +43,7 @@ Route::get('/', function () {
     return view('dashboard/dashboard');
 });
 Route::resource('products', ProductController::class);
-
+// Route::resource('admin', AdminController::class);
 Route::resource('profil', ProfilController::class);
 Route::resource('instrumen', InstrumenController::class);
 Route::resource('seputar', SeputarController::class);
