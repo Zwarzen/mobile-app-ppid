@@ -22,6 +22,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\PpidPembantuController;
 use App\Http\Controllers\LoginController;
+// use App\Http\Controllers\UserController;
 use App\Http\Controllers\CustomAuthController;
 use App\Http\Controllers\KominfoController;
 use App\Http\Controllers\PpidController;
@@ -42,7 +43,6 @@ Route::get('/', function () {
     return view('dashboard/dashboard');
 });
 Route::resource('products', ProductController::class);
-// Route::resource('admin', AdminController::class);
 Route::resource('admin', AdminController::class);
 Route::resource('profil', ProfilController::class);
 Route::resource('instrumen', InstrumenController::class);
@@ -62,7 +62,6 @@ Route::resource('infodikecualikan', InfoDikecualikanController::class);
 Route::resource('dashboard', DashboardController::class);
 Route::resource('gallery', GalleryController::class);
 Route::resource('login', LoginController::class);
-
 // Route::resource('ppidadmin', PpidController::class);
 // Route::resource('kominfoadmin', KominfoController::class);
 Route::resource('ppidpembantu', PpidPembantuController::class);
@@ -88,13 +87,8 @@ Route::post('/logout', [PpidAuthController::class, 'logout']);
 
 Route::get('loginkominfo', [KominfoAuthController::class, 'index'])->name('loginkominfo')->middleware('guest');
 Route::post('custom-loginkominfo', [KominfoAuthController::class, 'customLogin'])->name('loginkominfo.custom');
-
 Route::get('/kominfoadmin/search', [KominfoController::class, 'search'])->name('searchkominfo');
 Route::post('/logout', [KominfoAuthController::class, 'logout']);
-
-Route::group(['middleware' => ['auth:user']], function () {
-    route::get('admin', [AdminController::class, 'index']);
-});
 
 Route::group(['middleware' => ['auth:kominfo']], function () {
     route::get('kominfoadmin', [KominfoController::class, 'index']);
@@ -103,6 +97,8 @@ Route::group(['middleware' => ['auth:kominfo']], function () {
 Route::group(['middleware' => ['auth:ppid']], function () {
     route::get('ppidadmin', [PpidController::class, 'index']);
 });
+
+
 
 Route::get('/pdf', function () {
     return view('pdf.laporan');
