@@ -56,7 +56,15 @@ class CustomAuthController extends Controller
         $credentials = $request->only('email', 'password');
         if (Auth::guard('user')->attempt(['email' => $request->email, 'password' => $request->password])) {
             return redirect()->intended('admin')
+<<<<<<< HEAD
                              ->withSuccess('Signed in');
+=======
+                        ->withSuccess('Signed in');
+        }elseif (Auth::guard('kominfo')->attempt(['email' => $request->email, 'password' => $request->password])) {
+            return redirect()->intended('kominfoadmin')
+                        ->withSuccess('Signed in');
+        }                
+>>>>>>> abeb06fedaf4ef4b409a3064bfe5c2907d867d78
 
         }elseif (Auth::guard('kominfo')->attempt(['email' => $request->email, 'password' => $request->password])) {
             return redirect()->intended('kominfoadmin')
@@ -76,11 +84,18 @@ class CustomAuthController extends Controller
     {
         if(Auth::guard('user')->check()){
             Auth::guard('user')->logout();
+<<<<<<< HEAD
         }elseif (Auth::guard('kominfo')->check()) {
             Auth::guard('kominfo')->logout();
         }elseif (Auth::guard('ppid')->check()) {
             Auth::guard('ppid')->logout();
         }
+=======
+        }elseif(Auth::guard('kominfo')->check()){
+            Auth::guard('kominfo')->logout();
+        }
+ 
+>>>>>>> abeb06fedaf4ef4b409a3064bfe5c2907d867d78
         $request->session()->invalidate();
     
         $request->session()->regenerateToken();

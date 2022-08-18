@@ -27,6 +27,7 @@ class KominfoController extends Controller
 
     }
 
+<<<<<<< HEAD
     // public function search(Request $request)
     // {
 
@@ -63,6 +64,14 @@ class KominfoController extends Controller
     //     // }
 
     // }
+=======
+    public function search(Request $request)
+    {
+        $keyword = $request->search;
+        $products = Product::where('nama', 'like', "%" . $keyword . "%")->orWhere('id', 'like', "%" . $keyword . "%")->orWhere('organisasi', 'like', "%" . $keyword . "%")->paginate(5);
+        return view('admin.kominfo', compact('products'))->with('i', (request()->input('page', 1) - 1) * 5);
+    }
+>>>>>>> abeb06fedaf4ef4b409a3064bfe5c2907d867d78
     
 
     /**

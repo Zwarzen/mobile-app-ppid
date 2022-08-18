@@ -1,21 +1,16 @@
 <?php
 
-  
-
 namespace App\Http\Controllers;
 
-  
-
-use App\Models\Product;
-use App\Models\User;
+use App\Models\DataPPID;
+use App\Rules\Uppercase;
+use Barryvdh\DomPDF\PDF;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\DB;
-  
 
-class AdminController extends Controller
-
+class PPIDData extends Controller
 {
-
     /**
 
      * Display a listing of the resource.
@@ -29,31 +24,21 @@ class AdminController extends Controller
     public function index()
 
     {
-         // return user::all();
-         $products = Product::latest()->paginate(10);
-         
-        //  if (request('search')){
-        //     // dd(request('search'));
-        //     $products->where('nama', 'like', '%'. request('search'). '%');
-        // }
 
-       
+        $products = DataPPID::latest()->paginate(5);
 
-        return view('admin.index',compact('products'))
-        ->with('i', (request()->input('page', 1) - 1) * 5);
 
+
+        return view('products.create', compact('products'))
+
+            ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
-    public function search(Request $request)
-    {
-        $keyword = $request->search;
-        $products = Product::where('nama', 'like', "%" . $keyword . "%")->orWhere('id', 'like', "%" . $keyword . "%")->orWhere('organisasi', 'like', "%" . $keyword . "%")->paginate(5);
-        return view('admin.index', compact('products'))->with('i', (request()->input('page', 1) - 1) * 5);
-    }
+
 
     /**
-     * Show the form for creating a new resource.
 
+     * Show the form for creating a new resource.
 
      *
 
@@ -65,11 +50,10 @@ class AdminController extends Controller
 
     {
 
-        return view('admin.create');
-
+        return view('products.create');
     }
 
-    
+
 
     /**
 
@@ -89,11 +73,15 @@ class AdminController extends Controller
 
         $request->validate([
 
+            'id',
+
             'nama' => 'required',
 
-            'no_identitas' => 'required',
+            'no_identitas' => new Uppercase,
 
-            'origanisasi' => 'required',
+            'subjek' => 'required',
+
+            'organisasi',
 
             'alamat' => 'required',
 
@@ -115,11 +103,11 @@ class AdminController extends Controller
 
         ]);
 
-  
+
 
         $input = $request->all();
 
-  
+
 
         if ($image = $request->file('image')) {
 
@@ -130,22 +118,20 @@ class AdminController extends Controller
             $image->move($destinationPath, $profileImage);
 
             $input['image'] = "$profileImage";
-
         }
 
-    
 
-        Product::create($input);
 
-     
+        DataPPID::create($input);
 
-        return redirect()->route('admin.index')
 
-                        ->with('success','Product created successfully.');
 
+        return redirect()->route('products.index')
+
+            ->with('success', 'Data berhasil dikirim!');
     }
 
-     
+
 
     /**
 
@@ -153,21 +139,22 @@ class AdminController extends Controller
 
      *
 
-     * @param  \App\Product  $product
+     * @param  \App\DataPPID  $product
 
      * @return \Illuminate\Http\Response
 
      */
 
-    public function show(Product $product)
+    public function show(DataPPID $product)
 
     {
 
-        return view('admin.show',compact('product'));
+        return view('products.show', compact('product'));
+
 
     }
 
-     
+
 
     /**
 
@@ -175,21 +162,20 @@ class AdminController extends Controller
 
      *
 
-     * @param  \App\Product  $product
+     * @param  \App\DataPPID  $product
 
      * @return \Illuminate\Http\Response
 
      */
 
-    public function edit(Product $product)
+    public function edit(DataPPID $product)
 
     {
 
-        return view('admin.edit',compact('product'));
-
+        return view('products.edit', compact('product'));
     }
 
-    
+
 
     /**
 
@@ -199,23 +185,27 @@ class AdminController extends Controller
 
      * @param  \Illuminate\Http\Request  $request
 
-     * @param  \App\Product  $product
+     * @param  \App\DataPPID  $product
 
      * @return \Illuminate\Http\Response
 
      */
 
-    public function update(Request $request, Product $product)
+    public function update(Request $request, DataPPID $product)
 
     {
 
         $request->validate([
 
+            'id',
+
             'nama' => 'required',
 
             'no_identitas' => 'required',
 
-            'origanisasi' => 'required',
+            'subjek' => 'required',
+
+            'organisasi',
 
             'alamat' => 'required',
 
@@ -234,14 +224,13 @@ class AdminController extends Controller
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
 
             'date' => 'required',
-
         ]);
 
-  
+
 
         $input = $request->all();
 
-  
+
 
         if ($image = $request->file('image')) {
 
@@ -252,26 +241,23 @@ class AdminController extends Controller
             $image->move($destinationPath, $profileImage);
 
             $input['image'] = "$profileImage";
-
-        }else{
+        } else {
 
             unset($input['image']);
-
         }
 
-          
+
 
         $product->update($input);
 
-    
+
 
         return redirect()->route('admin.index')
 
-                        ->with('success','Product updated successfully');
-
+            ->with('success', 'Product updated successfully');
     }
 
-  
+
 
     /**
 
@@ -279,40 +265,52 @@ class AdminController extends Controller
 
      *
 
-     * @param  \App\Product  $product
+     * @param  \App\DataPPID  $product
 
      * @return \Illuminate\Http\Response
 
      */
 
-    public function destroy(Product $product)
+    public function destroy(DataPPID $product)
 
     {
 
         $product->delete();
 
-     
+
 
         return redirect()->route('admin.index')
 
-                        ->with('success','Data Berhasil dihapus!');
-
+            ->with('success', 'Data Berhasil dihapus!');
     }
 
- 
+    public function downloadPDF($id)
+    {
+        
+        $show = DataPPID::find($id);
+
+        $pdf = PDF::loadView('pdf.laporan', [
+            'title' => 'LaporanPDF',
+            'date' => date('m/d/Y'),
+            'id' => $id,
+            
+        ], compact('show'));
+
+        return $pdf->stream('ppid-'.$id.'.pdf');
+    }
+
     public function cari(Request $request)
 	{
 		// menangkap data pencarian
 		$cari = $request->cari;
  
     		// mengambil data dari table pegawai sesuai pencarian data
-		$product = Product::table('products')
+		$product = DB::table('products')
 		->where('id','like',"%".$cari."%")
 		->paginate();
  
     		// mengirim data pegawai ke view index
-		return view('index',['products' => $product]);
+		return view('product.index',['products' => $product]);
  
 	}
-
 }
