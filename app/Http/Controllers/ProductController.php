@@ -136,7 +136,7 @@ class ProductController extends Controller
 
 
 
-        return redirect()->route('products.index')
+        return redirect('products')
 
             ->with('success', 'Data berhasil dikirim!');
     }
@@ -262,7 +262,7 @@ class ProductController extends Controller
 
 
 
-        return redirect()->route('admin.index')
+        return redirect('admin')
 
             ->with('success', 'Product updated successfully');
     }
@@ -289,7 +289,7 @@ class ProductController extends Controller
 
 
 
-        return redirect()->route('admin.index')
+        return redirect('admin')
 
             ->with('success', 'Data Berhasil dihapus!');
     }

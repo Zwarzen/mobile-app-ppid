@@ -44,12 +44,12 @@
         <br>
         <br>
         <br>
-        {{-- <form action="/admin" >
+       <!--  {{-- <form action="/admin" >
             <div class="input-group mb-3">
                 <input type="text" class="form-control" name="search" value="{{ request('search') }}">
                 <button class="btn btn-primary" type="submit">Search</button>
             </div>
-            </form> --}}
+            </form> --}} -->
             <form class="form" method="get" action="{{ route('search') }}" style="display:inline;">
                 <div class="form-group" >
                     <input type="text" class="search-bar" name="search"  id="search" placeholder="Masukkan Nomor Surat/Organisasi/Nama" style="width: 350px; height: 35px;">
@@ -83,6 +83,8 @@
 
         <th>Subjek</th>
 
+        <th>Organisasi</th>
+
         <th>Tujuan</th>
 
         <th width="280px">Action</th>
@@ -97,9 +99,11 @@
 
         <td>{{ $product->nama }}</td>
 
-        <td>{{ $product->subjek  }}</td>
+        <td>{{ $product->subjek }}</td>
 
-        <td>{{ $product->tujuan_skpd}}</td>
+        <td>{{ $product->organisasi }}</td>
+
+        <td>{{ $product->tujuan_skpd }}</td>
 
         <td>
 
