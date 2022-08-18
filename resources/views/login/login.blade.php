@@ -47,14 +47,6 @@
                             <div class="d-grid mx-auto" style="max-width: 250px;">
                                 <button type="submit" class="btn btn-dark btn-block">Masuk</button>
                             </div>
-
-                            <div class="d-grid mx-auto" style="margin: 10px;">
-                                <a href="{{ url('loginppid') }}">Login Admin PPID</a>
-                            </div>
-
-                            <div class="d-grid mx-auto" style="margin: 10px;">
-                                <a href="{{ url('loginkominfo') }}">Login Admin KOMINFO</a>
-                            </div>
                             </center>
                         </form>
                     </div>

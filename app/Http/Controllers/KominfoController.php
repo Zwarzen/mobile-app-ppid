@@ -27,12 +27,42 @@ class KominfoController extends Controller
 
     }
 
-    public function search(Request $request)
-    {
-        $keyword = $request->search;
-        $products = Product::where('nama', 'like', "%" . $keyword . "%")->orWhere('id', 'like', "%" . $keyword . "%")->orWhere('organisasi', 'like', "%" . $keyword . "%")->paginate(5);
-        return view('admin.index', compact('products'))->with('i', (request()->input('page', 1) - 1) * 5);
-    }
+    // public function search(Request $request)
+    // {
+
+    //     $keyword = $request->search;
+    //     $products = Product::where('nama', 'like', "%" . $keyword . "%")->paginate(5);
+
+    //     // if($request->search)
+    //     // {
+    //     //     return dd($request->search);
+    //     //     $products = Product::where('nama', 'like', "%" . $keyword . "%")->get();
+    //     // }
+
+    //     // if($request->filterkominfo)pkomnf
+    //     // {
+    //     //     return dd($request->filterkominfo);
+    //     //     $products = Product::Where('tujuan_skpd', 'like', "%" . $keyword . "%")->get();
+    //     // }
+
+    //     return view('admin.kominfo', compact('products'))->with('i', (request()->input('page', 1) - 1) * 5);
+
+
+    //     // return view('admin.kominfo', compact('products'))->with('i', (request()->input('page', 1) - 1) * 5);
+
+
+    //     // $keyword = $request->search;
+    //     // $products = Product::where('tujuan_skpd', 'like', "%" . $keyword . "%")->paginate(5);
+
+    //     // if($request->searchkominfo)
+    //     // {
+    //         // return dd($request->searchkominfo);
+    //     // $products = Product::where('tujuan_skpd', 'like', "%" . $keyword . "%")->paginate(5);
+
+    //     //     $result = Product::Where('nama', 'like', "%" . $keyword . "%")->get();
+    //     // }
+
+    // }
     
 
     /**

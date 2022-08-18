@@ -1,0 +1,5 @@
+public function search(){
+        $user_id = auth()->user()->id;
+        $user = User::find($user_id);
+        return view('search')->with('posts', $user->posts);
+}
