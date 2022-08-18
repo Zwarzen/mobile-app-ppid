@@ -42,11 +42,8 @@ Route::get('/', function () {
     return view('dashboard/dashboard');
 });
 Route::resource('products', ProductController::class);
-<<<<<<< HEAD
 // Route::resource('admin', AdminController::class);
-=======
 Route::resource('admin', AdminController::class);
->>>>>>> abeb06fedaf4ef4b409a3064bfe5c2907d867d78
 Route::resource('profil', ProfilController::class);
 Route::resource('instrumen', InstrumenController::class);
 Route::resource('seputar', SeputarController::class);
@@ -65,11 +62,9 @@ Route::resource('infodikecualikan', InfoDikecualikanController::class);
 Route::resource('dashboard', DashboardController::class);
 Route::resource('gallery', GalleryController::class);
 Route::resource('login', LoginController::class);
-<<<<<<< HEAD
+
 // Route::resource('ppidadmin', PpidController::class);
 // Route::resource('kominfoadmin', KominfoController::class);
-=======
->>>>>>> abeb06fedaf4ef4b409a3064bfe5c2907d867d78
 Route::resource('ppidpembantu', PpidPembantuController::class);
 
 
@@ -93,25 +88,13 @@ Route::post('/logout', [PpidAuthController::class, 'logout']);
 
 Route::get('loginkominfo', [KominfoAuthController::class, 'index'])->name('loginkominfo')->middleware('guest');
 Route::post('custom-loginkominfo', [KominfoAuthController::class, 'customLogin'])->name('loginkominfo.custom');
-<<<<<<< HEAD
-// Route::get('/kominfoadmin/search', [KominfoController::class, 'search'])->name('searchkominfo');
-=======
+
 Route::get('/kominfoadmin/search', [KominfoController::class, 'search'])->name('searchkominfo');
->>>>>>> abeb06fedaf4ef4b409a3064bfe5c2907d867d78
 Route::post('/logout', [KominfoAuthController::class, 'logout']);
 
-
-
-
-<<<<<<< HEAD
 Route::group(['middleware' => ['auth:user']], function () {
     route::get('admin', [AdminController::class, 'index']);
 });
-=======
-// Route::group(['middleware' => ['auth:user']], function () {
-//     route::get('admin', [AdminController::class, 'index']);
-// });
->>>>>>> abeb06fedaf4ef4b409a3064bfe5c2907d867d78
 
 Route::group(['middleware' => ['auth:kominfo']], function () {
     route::get('kominfoadmin', [KominfoController::class, 'index']);
@@ -120,8 +103,6 @@ Route::group(['middleware' => ['auth:kominfo']], function () {
 Route::group(['middleware' => ['auth:ppid']], function () {
     route::get('ppidadmin', [PpidController::class, 'index']);
 });
-
-
 
 Route::get('/pdf', function () {
     return view('pdf.laporan');
