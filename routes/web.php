@@ -43,7 +43,7 @@ Route::get('/', function () {
     return view('dashboard/dashboard');
 });
 Route::resource('products', ProductController::class);
-Route::resource('admin', AdminController::class);
+
 Route::resource('profil', ProfilController::class);
 Route::resource('instrumen', InstrumenController::class);
 Route::resource('seputar', SeputarController::class);
@@ -89,6 +89,13 @@ Route::get('loginkominfo', [KominfoAuthController::class, 'index'])->name('login
 Route::post('custom-loginkominfo', [KominfoAuthController::class, 'customLogin'])->name('loginkominfo.custom');
 Route::get('/kominfoadmin/search', [KominfoController::class, 'search'])->name('searchkominfo');
 Route::post('/logout', [KominfoAuthController::class, 'logout']);
+
+
+
+
+Route::group(['middleware' => ['auth:user']], function () {
+    route::get('admin', [AdminController::class, 'index']);
+});
 
 Route::group(['middleware' => ['auth:kominfo']], function () {
     route::get('kominfoadmin', [KominfoController::class, 'index']);

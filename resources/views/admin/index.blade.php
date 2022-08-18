@@ -57,7 +57,7 @@
                 </div>
                 
             </form>
-        <button type="submit" class="btn btn-danger">Hapus Semua</button>
+        <button type="submit" class="btn btn-danger" style="margin-bottom: 10px;">Hapus Semua</button>
     </div>
 </div>
 
