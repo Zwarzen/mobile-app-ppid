@@ -163,7 +163,7 @@ class AdminController extends Controller
 
     {
 
-        return view('admin.show',compact('product'));
+        return view('product.index',compact('product'));
 
     }
 

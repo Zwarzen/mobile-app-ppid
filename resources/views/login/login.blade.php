@@ -47,6 +47,10 @@
                             <div class="d-grid mx-auto" style="max-width: 250px;">
                                 <button type="submit" class="btn btn-dark btn-block">Masuk</button>
                             </div>
+<<<<<<< HEAD
+=======
+                            
+>>>>>>> 9e6a7b3a0377d28d47dc1b3de41bb3a4684ca82c
                             </center>
                         </form>
                     </div>
