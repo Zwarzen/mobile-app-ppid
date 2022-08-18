@@ -46,15 +46,15 @@
         <br>
         <br>
         <br>
-        {{-- <form action="/admin" >
+        <!-- {{-- <form action="/admin" >
             <div class="input-group mb-3">
-                <input type="text" class="form-control" name="search" value="{{ request('search') }}">
-                <button class="btn btn-primary" type="submit">Search</button>
+                <input type="text" class="form-control" name="searchppid" value="{{ request('searchppid') }}">
+                <button class="btn btn-primary" type="submit">Searchppid</button>
             </div>
-            </form> --}}
-            <form class="form" method="get" action="{{ route('search') }}" style="display:inline;">
+            </form> --}} -->
+            <form class="form" style="display:inline;">
                 <div class="form-group" >
-                    <input type="text" class="search-bar" name="search"  id="search" placeholder="Masukkan Nomor Surat/Organisasi/Nama" style="width: 350px; height: 35px;">
+                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Masukkan Nomor Surat/Organisasi/Nama" style="width: 350px; height: 35px;">
                     <button type="submit" class="btn btn-primary">Cari</button>
                 </div>
                 
@@ -75,7 +75,7 @@
 
 
 
-<table class="table table-bordered" style="margin-top: 20px;">
+<table class="table table-bordered" id="myTable" style="margin-top: 20px;">
 
     <tr>
 
@@ -84,6 +84,8 @@
         <th>Nama</th>
 
         <th>Subjek</th>
+
+        <th>Organisasi</th>
 
         <th>Tujuan</th>
 
@@ -99,9 +101,11 @@
 
         <td>{{ $product->nama }}</td>
 
-        <td>{{ $product->subjek  }}</td>
+        <td>{{ $product->subjek }}</td>
 
-        <td>{{ $product->tujuan_skpd}}</td>
+        <td>{{ $product->organisasi }}</td>
+
+        <td>{{ $product->tujuan_skpd }}</td>
 
         <td>
 
@@ -132,5 +136,29 @@
 </table>
 
 {!! $products->links() !!}
+
+<script>
+function myFunction() {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
 
 @endsection

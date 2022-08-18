@@ -16,7 +16,7 @@
 
         <div class="pull-right" style="margin-bottom:10px;">
 
-            <a class="btn btn-primary" href="{{ url('admin') }}"> <i class="material-icons">arrow_back</i>Back</a>
+            <a class="btn btn-primary" href="{{ url('kominfoadmin') }}"> <i class="material-icons">arrow_back</i>Back</a>
 
         </div>
 
