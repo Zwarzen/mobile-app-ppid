@@ -57,7 +57,7 @@
                 </div>
                 
             </form>
-
+        <button type="submit" class="btn btn-danger">Hapus Semua</button>
     </div>
 </div>
 
@@ -76,7 +76,7 @@
 <table class="table table-bordered" style="margin-top: 20px;">
 
     <tr>
-
+        
         <th>No</th>
 
         <th>Nama</th>
@@ -92,7 +92,7 @@
     @foreach ($products as $product)
 
     <tr>
-
+        
         <td>{{ ++$i }}</td>
 
         <td>{{ $product->nama }}</td>
