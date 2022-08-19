@@ -30,7 +30,7 @@ class AdminController extends Controller
 
     {
          // return user::all();
-         $products = Product::latest()->paginate(10);
+         $products = Product::latest()->paginate(5);
          
         //  if (request('search')){
         //     // dd(request('search'));
