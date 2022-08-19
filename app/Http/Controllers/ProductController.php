@@ -290,18 +290,18 @@ class ProductController extends Controller
             ->with('success', 'Data Berhasil dihapus!');
     }
 
-    public function destroyAll(Product $product)
+    // public function destroyAll(Product $product)
 
-    {
+    // {
 
-        $product->truncate();
+    //     $product->truncate();
 
         
 
-        return redirect('admin')
+    //     return redirect('admin')
 
-            ->with('success', 'Semua Data Berhasil dihapus!');
-    }
+    //         ->with('success', 'Semua Data Berhasil dihapus!');
+    // }
 
     public function downloadPDF($id)
     {

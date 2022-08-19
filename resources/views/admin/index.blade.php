@@ -33,7 +33,7 @@
             @csrf
             <div class="col-lg-20 margin-tb">
                 <div class="pull-right" style="margin-top: 20px;">
-                    <button type="submit" class="btn btn-danger">
+                    <button type="submit" class="btn btn-warning">
                         <i class="material-icons">logout</i>
                         <span class="button-text">Keluar</span>
                     </button>
@@ -50,14 +50,22 @@
                 <button class="btn btn-primary" type="submit">Search</button>
             </div>
             </form> --}} -->
-            <form class="form" method="get" action="{{ route('search') }}" style="display:inline;">
-                <div class="form-group" >
-                    <input type="text" class="search-bar" name="search"  id="search" placeholder="Masukkan Nomor Surat/Organisasi/Nama" style="width: 350px; height: 35px;">
-                    <button type="submit" class="btn btn-primary">Cari</button>
-                </div>
-                
-            </form>
-        <button type="submit" class="btn btn-danger" style="margin-bottom: 10px;">Hapus Semua</button>
+        <form class="form" method="get" action="{{ route('search') }}" style="display:inline;">
+            <div class="form-group">
+                <input type="text" class="search-bar" name="search" id="search" placeholder="Masukkan Nomor Surat/Organisasi/Nama" style="width: 350px; height: 35px;">
+                <button type="submit" class="btn btn-primary">Cari</button>
+            </div>
+
+        </form>
+        <form action="{{ route('deleteall') }}" method="POST">
+            <button type="submit" class="btn btn-danger" style="margin-bottom: 10px;">Hapus Semua</button>
+
+            @csrf
+
+        </form>
+        <form action="" method="POST">
+            <button type="button" class="btn btn-info">Backup Data</button>
+        </form>
     </div>
 </div>
 
