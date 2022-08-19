@@ -47,6 +47,7 @@ return [
                  * Example: base_path()
                  */
                 'relative_path' => null,
+                'database_dump_file_extension' => 'xlsx',
             ],
 
             /*

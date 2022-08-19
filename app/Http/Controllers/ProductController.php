@@ -319,12 +319,12 @@ class ProductController extends Controller
     }
 
 
-    public function deleteall(Request $request)
-    {
-        $product->all()->delete();
+    // public function deleteall(Request $request)
+    // {
+    //     $product->all()->delete();
 
-        return redirect('admin')
-    }
+    //     return redirect('admin')
+    // }
 
  //    public function cari(Request $request)
 	// {
