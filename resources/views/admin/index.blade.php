@@ -17,6 +17,10 @@
             max-width: 200px;
         }
     }
+
+    li {
+        display: inline;
+    }
 </style>
 
 
@@ -57,17 +61,21 @@
             </div>
 
         </form>
-        <form action="{{ route('deleteall') }}" method="POST">
-            <button type="submit" class="btn btn-danger" style="margin-bottom: 10px;">Hapus Semua</button>
 
-            @csrf
-
-        </form>
-        <form action="" method="POST">
-            <button type="button" class="btn btn-info">Backup Data</button>
-        </form>
     </div>
+
 </div>
+<form action="" method="POST">
+    <button type="button" class="btn btn-info" style="margin-bottom: 10px;">Backup Data</button>
+</form>
+
+<form action="{{ route('deleteall') }}" method="POST">
+    <button type="submit" class="btn btn-danger" style="margin-bottom: 10px;">Hapus Semua</button>
+
+    @csrf
+
+</form>
+
 
 
 @if ($message = Session::get('success'))
