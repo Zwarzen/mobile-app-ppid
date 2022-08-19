@@ -67,6 +67,7 @@ Route::resource('login', LoginController::class);
 Route::resource('ppidpembantu', PpidPembantuController::class);
 
 
+
 Route::get('product','ProductController@index');
 Route::get('/product/cari','ProductController@cari')->name('product.cari');
 
@@ -77,6 +78,7 @@ Route::get('/downloadPDF/{id}', [ProductController::class, 'downloadPDF'])->name
 Route::get('login', [CustomAuthController::class, 'index'])->name('login')->middleware('guest');
 Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name('login.custom');
 Route::get('admin/search', [AdminController::class, 'search'])->name('search');
+// Route::get('product', [ProductController::class, 'destroyAll'])->name('destroyAll');
 Route::post('/logout', [CustomAuthController::class, 'logout']);
 
 // Route::resource('loginppid', LoginPpidController::class);

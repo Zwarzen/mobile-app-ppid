@@ -9,11 +9,11 @@
             display: none;
         }
 
-        .search-bar{
+        .search-bar {
             max-width: 200px;
         }
 
-        h2{
+        h2 {
             max-width: 200px;
         }
     }
@@ -44,20 +44,23 @@
         <br>
         <br>
         <br>
-       <!--  {{-- <form action="/admin" >
+        <!--  {{-- <form action="/admin" >
             <div class="input-group mb-3">
                 <input type="text" class="form-control" name="search" value="{{ request('search') }}">
                 <button class="btn btn-primary" type="submit">Search</button>
             </div>
             </form> --}} -->
-            <form class="form" method="get" action="{{ route('search') }}" style="display:inline;">
-                <div class="form-group" >
-                    <input type="text" class="search-bar" name="search"  id="search" placeholder="Masukkan Nomor Surat/Organisasi/Nama" style="width: 350px; height: 35px;">
-                    <button type="submit" class="btn btn-primary">Cari</button>
-                </div>
-                
-            </form>
-        <button type="submit" class="btn btn-danger" style="margin-bottom: 10px;">Hapus Semua</button>
+        <form class="form" method="get" action="{{ route('search') }}" style="display:inline;">
+            <div class="form-group">
+                <input type="text" class="search-bar" name="search" id="search" placeholder="Masukkan Nomor Surat/Organisasi/Nama" style="width: 350px; height: 35px;">
+                <button type="submit" class="btn btn-primary">Cari</button>
+            </div>
+
+        </form>
+        <a class="btn btn-info" href="{{ route('products.destroyAll') }}">
+            <i class="material-icons">delete</i>
+            <span class="button-text">Hapus Semua</span>
+        </a>
     </div>
 </div>
 
@@ -76,7 +79,7 @@
 <table class="table table-bordered" style="margin-top: 20px;">
 
     <tr>
-        
+
         <th>No</th>
 
         <th>Nama</th>
@@ -94,7 +97,7 @@
     @foreach ($products as $product)
 
     <tr>
-        
+
         <td>{{ ++$i }}</td>
 
         <td>{{ $product->nama }}</td>
