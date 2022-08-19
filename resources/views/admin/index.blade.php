@@ -61,6 +61,12 @@
             </div>
 
         </form>
+        <form class="form" action="{{ route('deleteall') }}" method="POST" style="display:inline;">
+            <div class="form-group">
+                <button type="submit" class="btn btn-danger">Hapus Semua</button>
+                @csrf
+            </div>
+        </form>
 
     </div>
 
@@ -69,12 +75,7 @@
     <button type="button" class="btn btn-info" style="margin-bottom: 10px;">Backup Data</button>
 </form> -->
 
-<form action="{{ route('deleteall') }}" method="POST">
-    <button type="submit" class="btn btn-danger" style="margin-bottom: 10px;">Hapus Semua</button>
 
-    @csrf
-
-</form>
 
 
 
@@ -97,9 +98,7 @@
 
         <th>Nama</th>
 
-        <th>Subjek</th>
-
-        <th>Organisasi</th>
+        <!-- <th>Subjek</th> -->
 
         <th>Tujuan</th>
 
@@ -115,9 +114,7 @@
 
         <td>{{ $product->nama }}</td>
 
-        <td>{{ $product->subjek }}</td>
-
-        <td>{{ $product->organisasi }}</td>
+        <!-- <td>{{ $product->subjek }}</td> -->
 
         <td>{{ $product->tujuan_skpd }}</td>
 
