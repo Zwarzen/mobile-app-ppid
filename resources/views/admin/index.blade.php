@@ -65,9 +65,9 @@
     </div>
 
 </div>
-<form action="" method="POST">
+<!-- <form action="" method="POST">
     <button type="button" class="btn btn-info" style="margin-bottom: 10px;">Backup Data</button>
-</form>
+</form> -->
 
 <form action="{{ route('deleteall') }}" method="POST">
     <button type="submit" class="btn btn-danger" style="margin-bottom: 10px;">Hapus Semua</button>
