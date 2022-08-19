@@ -318,18 +318,26 @@ class ProductController extends Controller
         return $pdf->stream('ppid-'.$id.'.pdf');
     }
 
-    public function cari(Request $request)
-	{
-		// menangkap data pencarian
-		$cari = $request->cari;
+
+    public function deleteall(Request $request)
+    {
+        $product->all()->delete();
+
+        return redirect('admin')
+    }
+
+ //    public function cari(Request $request)
+	// {
+	// 	// menangkap data pencarian
+	// 	$cari = $request->cari;
  
-    		// mengambil data dari table pegawai sesuai pencarian data
-		$product = DB::table('products')
-		->where('id','like',"%".$cari."%")
-		->paginate();
+ //    		// mengambil data dari table pegawai sesuai pencarian data
+	// 	$product = DB::table('products')
+	// 	->where('id','like',"%".$cari."%")
+	// 	->paginate();
  
-    		// mengirim data pegawai ke view index
-		return view('product.index',['products' => $product]);
+ //    		// mengirim data pegawai ke view index
+	// 	return view('product.index',['products' => $product]);
  
-	}
+	// }
 }

@@ -108,6 +108,8 @@ Route::group(['middleware' => ['auth:ppid']], function () {
 });
 
 
+Route::post('deleteall', [AdminController::class, 'deleteall'])->name('deleteall');
+
 
 Route::get('/pdf', function () {
     return view('pdf.laporan');
