@@ -57,7 +57,13 @@
                 </div>
                 
             </form>
-        <button type="submit" class="btn btn-danger" style="margin-bottom: 10px;">Hapus Semua</button>
+
+            <form action="{{ route('deleteall') }}" method="POST">
+                <button type="submit" class="btn btn-danger" style="margin-bottom: 10px;">Hapus Semua</button>
+
+                @csrf
+
+            </form>
     </div>
 </div>
 

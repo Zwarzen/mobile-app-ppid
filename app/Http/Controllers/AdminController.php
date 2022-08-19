@@ -293,9 +293,19 @@ class AdminController extends Controller
 
      
 
-        return redirect()->route('admin.index')
+        return redirect('admin')
 
                         ->with('success','Data Berhasil dihapus!');
+
+    }
+
+    public function deleteall(Product $product)
+    {
+
+        $product->truncate();
+
+        return redirect('admin')
+            ->with('success', 'Semua Data Berhasil Dihapus!');
 
     }
 
