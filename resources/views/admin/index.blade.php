@@ -61,12 +61,12 @@
             </div>
 
         </form>
-        <form class="form" action="{{ route('deleteall') }}" method="POST" style="display:inline;">
+        <!-- <form class="form" action="{{ route('deleteall') }}" method="POST" style="display:inline;">
             <div class="form-group">
                 <button type="submit" class="btn btn-danger">Hapus Semua</button>
                 @csrf
             </div>
-        </form>
+        </form> -->
 
     </div>
 

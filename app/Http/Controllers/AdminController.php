@@ -29,15 +29,7 @@ class AdminController extends Controller
     public function index()
 
     {
-         // return user::all();
          $products = Product::latest()->paginate(5);
-         
-        //  if (request('search')){
-        //     // dd(request('search'));
-        //     $products->where('nama', 'like', '%'. request('search'). '%');
-        // }
-
-       
 
         return view('admin.index',compact('products'))
         ->with('i', (request()->input('page', 1) - 1) * 5);
