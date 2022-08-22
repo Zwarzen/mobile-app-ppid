@@ -251,7 +251,7 @@
 
                 <strong>Dokumen Pendukung:</strong>
 
-                <input type="file" name="image" class="form-control" placeholder="Dokumen Berformat PDF">
+                <input type="file" name="dokumen" class="form-control" placeholder="Dokumen Berformat PDF">
 
             </div>
 
@@ -261,9 +261,13 @@
 
             <div class="form-group">
 
+                <p>Tanda Tangan bisa dilakukan di <a href="https://signaturely.com/online-signature/draw/">sini.</a></p> 
+
                 <strong>Tanda Tangan:</strong>
 
-                <canvas id="signature-pad" class="signature-pad"></canvas>
+                <input type="file" name="ttd" class="form-control" placeholder="masukan gambar Tanda Tangan">
+
+                <!-- <canvas id="signature-pad" class="signature-pad"></canvas> -->
 
             </div>
 

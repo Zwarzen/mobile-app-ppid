@@ -235,7 +235,7 @@
 				Pemohon Informasi
 			</p>
 
-			<p class="western" style="margin-left: 540px; margin-right: 0.67in; ">
+			<p class="western" style="margin-left: 500px; margin-right: 0.67in; text-align:center;">
 			{{$show->nama}}</p>
 		</div>
 

@@ -103,7 +103,9 @@ class ProductController extends Controller
 
             'tujuan_skpd' => 'required',
 
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+
+            // 'dokumen' => 'pdf|mimes:pdf,jpeg,png,jpg,gif,svg',
 
             'date' => 'required',
 
@@ -228,6 +230,10 @@ class ProductController extends Controller
             'tujuan_skpd' => 'required',
 
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+
+            'ttd' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+
+            // 'dokumen' => 'pdf|mimes:pdf,jpeg,png,jpg,gif,svg',
 
             'date' => 'required',
         ]);
