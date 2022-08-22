@@ -4,6 +4,15 @@
 
 @section('content')
 
+<style>
+    canvas {
+                border: 1px solid #ccc;
+                border-radius: 0.5rem;
+                width: 100%;
+                height: 400px;
+            }
+</style>
+
 <div class="row">
 
     <div class="col-lg-12 margin-tb" style="margin-top: 30px;">
@@ -110,10 +119,10 @@
 
             <div class="form-group">
 
-                <strong>Organisasi:</strong><br>
+                <strong>Organisasi / Kuasa Hukum:</strong><br>
                 <!-- <input type="text" name="organisasi" class="form-control" placeholder="Nama Organisasi"> -->
                 
-                <input type="text" name="organisasi" class="form-control" placeholder="Nama Organisasi">
+                <input type="text" name="organisasi" class="form-control" placeholder="Nama Organisasi / Kuasa Hukum (isi ' - ' jika Perorangan)">
                 
             </div>
 
@@ -228,9 +237,33 @@
 
             <div class="form-group">
 
-                <strong>Image:</strong>
+                <strong>Foto KTP:</strong>
 
-                <input type="file" name="image" class="form-control" placeholder="image">
+                <input type="file" name="image" class="form-control" placeholder="masukan foto KTP">
+
+            </div>
+
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+
+            <div class="form-group">
+
+                <strong>Dokumen Pendukung:</strong>
+
+                <input type="file" name="image" class="form-control" placeholder="Dokumen Berformat PDF">
+
+            </div>
+
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+
+            <div class="form-group">
+
+                <strong>Tanda Tangan:</strong>
+
+                <canvas id="signature-pad" class="signature-pad"></canvas>
 
             </div>
 

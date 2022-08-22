@@ -79,7 +79,7 @@
 				<tr valign="top">
 					<td width="210" height="4" style="border: none; padding: 0in;">
 						<p style="orphans: 0; widows: 0; margin-left: 0.14in;margin-top:-12px; ">
-							Ormas/Perorangan</p>
+							Ormas/Perorangan/Kuasa Hukum</p>
 					</td>
 					<td width="6" style="border: none; padding: 0in">
 						<p style="orphans: 0; widows: 0; margin-left: 0.01in; line-heigth:0.3px; margin-top:-12px;">
@@ -235,8 +235,8 @@
 				Pemohon Informasi
 			</p>
 
-			<p class="western" style="margin-left: 500px; margin-right: 0.67in; ">
-				(...............................)</p>
+			<p class="western" style="margin-left: 540px; margin-right: 0.67in; ">
+			{{$show->nama}}</p>
 		</div>
 
 
