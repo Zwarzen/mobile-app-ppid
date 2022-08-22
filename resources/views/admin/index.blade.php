@@ -10,7 +10,7 @@
         }
 
         .search-bar {
-            max-width: 200px;
+            max-width: 230px;
         }
 
         h2 {
