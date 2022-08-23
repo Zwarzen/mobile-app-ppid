@@ -236,8 +236,10 @@
 			</p>
 			<!-- <iframe src="$show->ttd"></iframe> -->
 			<!-- <img src="{{ url('/ttd/$show->ttd') }}"> -->
-			<img src="{{$show['ttd']}}" style="margin-left: 520px; margin-right: 0.67in; width: 100px; height: 100px; margin-top:-115px;">
+			<!-- @php $img= asset('ttd/').$show['ttd']; @endphp -->
+			<!-- <img src="{{$img}}" style="margin-left: 520px; margin-right: 0.67in; width: 100px; height: 100px; margin-top:-115px;"> -->
 			<!-- {{$show->ttd}} -->
+			<img src="<?php echo $_SERVER["DOCUMENT_ROOT"].'/{{$show->ttd}}';?>"/>
 
 			
 			<p class="western" style="margin-left: 500px; margin-right: 0.67in; text-align:center; margin-top:-30px;">
