@@ -28,6 +28,8 @@ use App\Http\Controllers\KominfoController;
 use App\Http\Controllers\PpidController;
 use App\Http\Controllers\PpidAuthController;
 use App\Http\Controllers\KominfoAuthController;
+use App\Models\Product;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -114,3 +116,6 @@ Route::post('deleteall', [AdminController::class, 'deleteall'])->name('deleteall
 Route::get('/pdf', function () {
     return view('pdf.laporan');
 });
+
+// Route::get(str_replace('/ttd/', '../public/ttd/', $link));
+// Route::get('/url', function (){ return asset('public/storage/e-signatures'); });
