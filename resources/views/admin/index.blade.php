@@ -69,7 +69,7 @@
 
         <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data" action="surat.php">
             <div class="form-group">
-                <select class="form-control" id="penerima" name="penerima_permohonan">
+                <select class="form-control input-lg dynamic" data-dependent="penerima_permohonan" id="penerima" name="penerima_permohonan">
                     <option selected disabled>Pilih Penerima Permohonan</option>
                     <option name="penerima_permohonan" value="KOMINFO">KOMINFO</option>
                     <option name="penerima_permohonan" value="PPID">PPID</option>
