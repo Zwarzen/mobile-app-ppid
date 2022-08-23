@@ -141,6 +141,13 @@ class ProductController extends Controller
             $input['pdf'] = "$profileDokumen";
         }
 
+        // if ($pdf = Product::loadView('pdf.invoice', $data)) {
+
+        //     Product::put('public/pdf/invoice.pdf', $pdf->output());
+
+        //     return $pdf->download('invoice.pdf');
+        // }
+
         if ($ttd = $request->file('image')) {
 
             $destinationPath = 'ttd/';
@@ -181,8 +188,6 @@ class ProductController extends Controller
     {
 
         return view('products.show', compact('product'));
-
-
     }
 
 
@@ -353,7 +358,7 @@ class ProductController extends Controller
 
     //     $product->truncate();
 
-        
+
 
     //     return redirect('admin')
 
@@ -362,17 +367,17 @@ class ProductController extends Controller
 
     public function downloadPDF($id)
     {
-        
+
         $show = Product::find($id);
 
         $pdf = PDF::loadView('pdf.laporan', [
             'title' => 'LaporanPDF',
             'date' => date('m/d/Y'),
             'id' => $id,
-            
+
         ], compact('show'));
 
-        return $pdf->stream('ppid-'.$id.'.pdf');
+        return $pdf->stream('ppid-' . $id . '.pdf');
     }
 
 
@@ -383,18 +388,18 @@ class ProductController extends Controller
     //     return redirect('admin')
     // }
 
- //    public function cari(Request $request)
-	// {
-	// 	// menangkap data pencarian
-	// 	$cari = $request->cari;
- 
- //    		// mengambil data dari table pegawai sesuai pencarian data
-	// 	$product = DB::table('products')
-	// 	->where('id','like',"%".$cari."%")
-	// 	->paginate();
- 
- //    		// mengirim data pegawai ke view index
-	// 	return view('product.index',['products' => $product]);
- 
-	// }
+    //    public function cari(Request $request)
+    // {
+    // 	// menangkap data pencarian
+    // 	$cari = $request->cari;
+
+    //    		// mengambil data dari table pegawai sesuai pencarian data
+    // 	$product = DB::table('products')
+    // 	->where('id','like',"%".$cari."%")
+    // 	->paginate();
+
+    //    		// mengirim data pegawai ke view index
+    // 	return view('product.index',['products' => $product]);
+
+    // }
 }
