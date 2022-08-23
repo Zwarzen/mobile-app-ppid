@@ -105,7 +105,9 @@ class ProductController extends Controller
 
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
 
-            // 'dokumen' => 'pdf|mimes:pdf,jpeg,png,jpg,gif,svg',
+            'dokumen' => 'mimes:pdf,jpeg,png,jpg,gif,svg',
+
+            'ttd' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
 
             'date' => 'required',
 
@@ -128,6 +130,27 @@ class ProductController extends Controller
             $input['image'] = "$profileImage";
         }
 
+        if ($dokumen = $request->file('pdf')) {
+
+            $destinationPath = 'dokumen/';
+
+            $profileDokumen = date('YmdHis') . "." . $dokumen->getClientOriginalExtension();
+
+            $dokumen->move($destinationPath, $profileDokumen);
+
+            $input['pdf'] = "$profileDokumen";
+        }
+
+        if ($ttd = $request->file('image')) {
+
+            $destinationPath = 'ttd/';
+
+            $profileTtd = date('YmdHis') . "." . $ttd->getClientOriginalExtension();
+
+            $ttd->move($destinationPath, $profileTtd);
+
+            $input['image'] = "$profileTtd";
+        }
 
 
         Product::create($input);
@@ -229,11 +252,11 @@ class ProductController extends Controller
 
             'tujuan_skpd' => 'required',
 
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
 
-            'ttd' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'dokumen' => 'mimes:pdf,jpeg,png,jpg,gif,svg',
 
-            // 'dokumen' => 'pdf|mimes:pdf,jpeg,png,jpg,gif,svg',
+            'ttd' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
 
             'date' => 'required',
         ]);
@@ -253,6 +276,34 @@ class ProductController extends Controller
             $image->move($destinationPath, $profileImage);
 
             $input['image'] = "$profileImage";
+        } else {
+
+            unset($input['image']);
+        }
+
+        if ($dokumen = $request->file('pdf')) {
+
+            $destinationPath = 'dokumen/';
+
+            $profileDokumen = date('YmdHis') . "." . $dokumen->getClientOriginalExtension();
+
+            $dokumen->move($destinationPath, $profileDokumen);
+
+            $input['pdf'] = "$profileDokumen";
+        } else {
+
+            unset($input['pdf']);
+        }
+
+        if ($ttd = $request->file('image')) {
+
+            $destinationPath = 'ttd/';
+
+            $profileTtd = date('YmdHis') . "." . $ttd->getClientOriginalExtension();
+
+            $ttd->move($destinationPath, $profileTtd);
+
+            $input['image'] = "$profileTtd";
         } else {
 
             unset($input['image']);

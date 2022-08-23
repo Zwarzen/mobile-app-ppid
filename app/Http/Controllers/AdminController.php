@@ -5,7 +5,7 @@
 namespace App\Http\Controllers;
 
   
-
+use App\Rules\Uppercase;
 use App\Models\Product;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -81,11 +81,15 @@ class AdminController extends Controller
 
         $request->validate([
 
+            'id',
+
             'nama' => 'required',
 
-            'no_identitas' => 'required',
+            'no_identitas' => new Uppercase,
 
-            'origanisasi' => 'required',
+            'subjek' => 'required',
+
+            'organisasi',
 
             'alamat' => 'required',
 
@@ -101,17 +105,21 @@ class AdminController extends Controller
 
             'tujuan_skpd' => 'required',
 
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+
+            'dokumen' => 'mimes:pdf,jpeg,png,jpg,gif,svg',
+
+            'ttd' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
 
             'date' => 'required',
 
         ]);
 
-  
+
 
         $input = $request->all();
 
-  
+
 
         if ($image = $request->file('image')) {
 
@@ -122,7 +130,28 @@ class AdminController extends Controller
             $image->move($destinationPath, $profileImage);
 
             $input['image'] = "$profileImage";
+        }
 
+        if ($dokumen = $request->file('pdf')) {
+
+            $destinationPath = 'dokumen/';
+
+            $profileDokumen = date('YmdHis') . "." . $dokumen->getClientOriginalExtension();
+
+            $dokumen->move($destinationPath, $profileDokumen);
+
+            $input['pdf'] = "$profileDokumen";
+        }
+
+        if ($ttd = $request->file('image')) {
+
+            $destinationPath = 'ttd/';
+
+            $profileTtd = date('YmdHis') . "." . $ttd->getClientOriginalExtension();
+
+            $ttd->move($destinationPath, $profileTtd);
+
+            $input['image'] = "$profileTtd";
         }
 
     
@@ -203,11 +232,15 @@ class AdminController extends Controller
 
         $request->validate([
 
+            'id',
+
             'nama' => 'required',
 
             'no_identitas' => 'required',
 
-            'origanisasi' => 'required',
+            'subjek' => 'required',
+
+            'organisasi',
 
             'alamat' => 'required',
 
@@ -223,17 +256,20 @@ class AdminController extends Controller
 
             'tujuan_skpd' => 'required',
 
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+
+            'dokumen' => 'mimes:pdf,jpeg,png,jpg,gif,svg',
+
+            'ttd' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
 
             'date' => 'required',
-
         ]);
 
-  
+
 
         $input = $request->all();
 
-  
+
 
         if ($image = $request->file('image')) {
 
@@ -244,11 +280,37 @@ class AdminController extends Controller
             $image->move($destinationPath, $profileImage);
 
             $input['image'] = "$profileImage";
-
-        }else{
+        } else {
 
             unset($input['image']);
+        }
 
+        if ($dokumen = $request->file('pdf')) {
+
+            $destinationPath = 'dokumen/';
+
+            $profileDokumen = date('YmdHis') . "." . $dokumen->getClientOriginalExtension();
+
+            $dokumen->move($destinationPath, $profileDokumen);
+
+            $input['pdf'] = "$profileDokumen";
+        } else {
+
+            unset($input['pdf']);
+        }
+
+        if ($ttd = $request->file('image')) {
+
+            $destinationPath = 'ttd/';
+
+            $profileTtd = date('YmdHis') . "." . $ttd->getClientOriginalExtension();
+
+            $ttd->move($destinationPath, $profileTtd);
+
+            $input['image'] = "$profileTtd";
+        } else {
+
+            unset($input['image']);
         }
 
           
