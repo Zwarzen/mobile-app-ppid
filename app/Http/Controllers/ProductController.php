@@ -109,6 +109,8 @@ class ProductController extends Controller
 
             'ttd' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
 
+            'penerima_permohonan',
+
             'date' => 'required',
 
         ]);
@@ -264,6 +266,8 @@ class ProductController extends Controller
 
             'ttd' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
 
+            'penerima_permohonan',
+
             'date' => 'required',
         ]);
 
@@ -401,6 +405,20 @@ class ProductController extends Controller
 
     //    		// mengirim data pegawai ke view index
     // 	return view('product.index',['products' => $product]);
+
+    // }
+
+    // public function fetchStaff(Request $request)
+
+    // {
+
+    //     $data['products'] = Product::where("penandatangan", $request->penandatangan)
+
+    //                             ->get(["penandatangan", "id"]);
+
+  
+
+    //     return response()->json($data);
 
     // }
 }

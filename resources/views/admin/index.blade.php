@@ -69,19 +69,10 @@
 
         <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data" action="surat.php">
             <div class="form-group">
-                <select class="form-control" name="tujuan_skpd">
-                    <option selected disabled>Pilih Penandatangan</option>
-
-                    @foreach ($products as $key => $value)
-
-                    <option value="{{ $key }}" {{ ( $key == $selectedID) ? 'selected' : '' }}>
-
-                        {{ $value }}
-
-                    </option>
-
-                    @endforeach
-                    
+                <select class="form-control" id="penerima" name="penerima_permohonan">
+                    <option selected disabled>Pilih Penerima Permohonan</option>
+                    <option name="penerima_permohonan" value="KOMINFO">KOMINFO</option>
+                    <option name="penerima_permohonan" value="PPID">PPID</option>
                 </select>
             </div>
         </form>

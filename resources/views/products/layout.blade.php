@@ -219,6 +219,64 @@
             //     })
             // })
         </script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- <script>
+
+    $(document).ready(function () {
+
+
+
+        /*------------------------------------------
+
+        --------------------------------------------
+
+        Country Dropdown Change Event
+
+        --------------------------------------------
+
+        --------------------------------------------*/
+
+        $('#penerima').on('change', function () {
+
+            var idCountry = this.value;
+
+            $.ajax({
+
+                type: "POST",
+
+                data: {
+
+                    id: idSurat,
+
+                    _token: '{{csrf_token()}}'
+
+                },
+
+                dataType: 'json',
+
+                success: function (result) {
+
+                    $('#penerima').html('<option value="">-- Select State --</option>');
+
+                    $.each(result.states, function (key, value) {
+
+                        $("#penerima").append('<option value="' + value
+
+                            .id + '">' + value.name + '</option>');
+
+                    });
+
+                }
+
+            });
+
+        });
+
+    });
+
+</script> -->
 </body>
 
 </html>

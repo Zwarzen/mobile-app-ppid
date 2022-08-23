@@ -111,6 +111,8 @@ class AdminController extends Controller
 
             'ttd' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
 
+            'penerima_permohonan',
+
             'date' => 'required',
 
         ]);
@@ -261,6 +263,8 @@ class AdminController extends Controller
             'dokumen' => 'mimes:pdf,jpeg,png,jpg,gif,svg',
 
             'ttd' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+
+            'penerima_permohonan',
 
             'date' => 'required',
         ]);
