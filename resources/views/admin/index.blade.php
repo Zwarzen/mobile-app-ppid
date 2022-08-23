@@ -67,6 +67,18 @@
 
         <p>Admin bisa melakukan tanda tangan secara online menggunakan link berikut <a href="https://www.sejda.com/id/sign-pdf">https://www.sejda.com/id/sign-pdf</a></p>
 
+
+        <?php
+        if (isset($_SESSION['status'])) {
+        ?>
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Hey!</strong> <?php echo $_SESSION['status']; ?>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        <?php
+            unset($_SESSION['status']);
+        }
+        ?>
         <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data" action="surat.php">
             <div class="form-group">
                 <select class="form-control input-lg dynamic" data-dependent="penerima_permohonan" id="penerima" name="penerima_permohonan">
@@ -75,6 +87,7 @@
                     <option name="penerima_permohonan" value="PPID">PPID</option>
                 </select>
             </div>
+            <!-- <button type="submit" name="save_select" class="btn btn-primary">Simpan Penerima</button> -->
         </form>
 
         <!-- <form class="form" action="{{ route('deleteall') }}" method="POST" style="display:inline;">
