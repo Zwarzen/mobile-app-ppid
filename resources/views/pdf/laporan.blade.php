@@ -230,12 +230,15 @@
 				(...............................)</p>
 		</div>
 		<div id="Section2" dir="ltr" gutter="60" style="column-count: 2">
-			<p class="western" style="margin-left: 500px; margin-right: 0.01in; margin-top:-170px; margin-bottom:120px;">
+			<p class="western" style="margin-left: 430px; margin-right: 0.01in; margin-top:-170px; margin-bottom:120px;text-align:center;">
 				{{-- <p class="western" style="margin-left: 550px; margin-right: 12px; margin-top:-px; margin-bottom:50px;"> --}}
 				Pemohon Informasi
 			</p>
-
-			<p class="western" style="margin-left: 500px; margin-right: 0.67in; text-align:center;">
+			<!-- <iframe src="$show->ttd"></iframe> -->
+			<!-- <img src="{{ url('/ttd/$show->ttd') }}"> -->
+			<img src="{{ ('$show->ttd') }}" style="margin-left: 520px; margin-right: 0.67in; width: 100px; height: 100px; margin-top:-115px;">
+			<!-- {{$show->ttd}} -->
+			<p class="western" style="margin-left: 500px; margin-right: 0.67in; text-align:center; margin-top:-30px;">
 			{{$show->nama}}</p>
 		</div>
 
