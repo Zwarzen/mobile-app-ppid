@@ -209,14 +209,22 @@
             <div class="form-group">
 
                 <strong>Tujuan SKPD:</strong>
+                <div class="form-group">
+                    <select class="form-control" name="tujuan_skpd">
+                        <option selected disabled>Pilih Tujuan SKPD</option>
+                      <option  name="tujuan_skpd" value="KOMINFO">KOMINFO</option>
+                      <option  name="tujuan_skpd" value="PPID">PPID</option>
+                    </select>
+                  </div>
+                 
 
                 <!-- <input type="text" name="tujuan_skpd" class="form-control" placeholder="Tujuan"> -->
-                <tr style="display: block;">
+                {{-- <tr style="display: block;">
                     <td><br><input type="radio" name="tujuan_skpd" value="KOMINFO"/> KOMINFO</td>
                 <tr><br>
                     <td><input type="radio" name="tujuan_skpd" value="PPID" /> PPID</td>
                 </tr>
-                </tr>
+                </tr> --}}
             </div>
 
         </div>
