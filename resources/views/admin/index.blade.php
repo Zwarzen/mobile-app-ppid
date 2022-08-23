@@ -33,7 +33,7 @@
 
         </div>
 
-        
+
 
         <form action="/logout" method="POST" style="margin-top: 20px;">
             @csrf
@@ -63,7 +63,29 @@
             </div>
 
         </form>
+
+
         <p>Admin bisa melakukan tanda tangan secara online menggunakan link berikut <a href="https://www.sejda.com/id/sign-pdf">https://www.sejda.com/id/sign-pdf</a></p>
+
+        <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data" action="surat.php">
+            <div class="form-group">
+                <select class="form-control" name="tujuan_skpd">
+                    <option selected disabled>Pilih Penandatangan</option>
+
+                    @foreach ($products as $key => $value)
+
+                    <option value="{{ $key }}" {{ ( $key == $selectedID) ? 'selected' : '' }}>
+
+                        {{ $value }}
+
+                    </option>
+
+                    @endforeach
+                    
+                </select>
+            </div>
+        </form>
+
         <!-- <form class="form" action="{{ route('deleteall') }}" method="POST" style="display:inline;">
             <div class="form-group">
                 <button type="submit" class="btn btn-danger">Hapus Semua</button>

@@ -269,7 +269,7 @@
 
             <div class="form-group">
 
-                <p>Tanda Tangan bisa dilakukan di <a href="https://signaturely.com/online-signature/draw/">sini</a>, lalu unggah pada form dibawah.</p> 
+                <p>Tanda Tangan bisa dilakukan di <a href="https://signaturely.com/online-signature/draw/">sini</a>, lalu unggah pada form dibawah.( atau bisa menggunakan link <a href="https://signaturely.com/online-signature/draw/">https://signaturely.com/online-signature/draw/</a>)</p> 
 
                 <strong>Tanda Tangan:</strong>
 
@@ -281,11 +281,11 @@
 
         </div>
 
-        <div class="col-xs-12 col-sm-12 col-md-12 text-center" style="padding-bottom: 50px;">
+        <!-- <div class="col-xs-12 col-sm-12 col-md-12 text-center" style="padding-bottom: 50px;">
 
-            <button type="submit" class="btn btn-primary">Buat</button>
+            <button type="submit" class="btn btn-primary">OK</button>
 
-        </div>
+        </div> -->
 
     </div>
 

@@ -13,6 +13,7 @@
             <h2> Detail Pengaduan</h2>
 
         </div>
+        
 
         <div class="pull-right" style="margin-bottom:10px;">
 
@@ -25,6 +26,8 @@
             <a class="btn btn-success" href="{{route('downloadPDF', $product->id)}}" action="surat.php"> <i class="material-icons">insert_drive_file</i>Print</a>
 
         </div>
+
+        
     </div>
 
 </div>
