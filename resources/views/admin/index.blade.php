@@ -33,6 +33,8 @@
 
         </div>
 
+        
+
         <form action="/logout" method="POST" style="margin-top: 20px;">
             @csrf
             <div class="col-lg-20 margin-tb">
@@ -61,6 +63,7 @@
             </div>
 
         </form>
+        <p>Admin bisa melakukan tanda tangan secara online menggunakan link berikut <a href="https://www.sejda.com/id/sign-pdf">https://www.sejda.com/id/sign-pdf</a></p>
         <!-- <form class="form" action="{{ route('deleteall') }}" method="POST" style="display:inline;">
             <div class="form-group">
                 <button type="submit" class="btn btn-danger">Hapus Semua</button>
