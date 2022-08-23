@@ -27,7 +27,7 @@
 
         </div>
 
-        <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data" action="surat.php">
+        <!-- <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data" action="surat.php">
             <div class="form-group">
                 <select class="form-control input-lg dynamic" data-dependent="penerima_permohonan" id="penerima" name="penerima_permohonan">
                     <option selected disabled>Pilih Penerima Permohonan</option>
@@ -36,7 +36,7 @@
                 </select>
             </div>
             <button type="submit" name="save_select" class="btn btn-primary">Simpan Penerima</button>
-        </form>
+        </form> -->
         
 
         

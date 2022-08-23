@@ -65,7 +65,7 @@
         </form>
 
 
-        <p>Admin bisa melakukan tanda tangan secara online menggunakan link berikut <a href="https://www.sejda.com/id/sign-pdf">https://www.sejda.com/id/sign-pdf</a></p>
+        
 
 
         <?php
@@ -81,6 +81,7 @@
         ?>
         <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data" action="surat.php">
             <div class="form-group">
+                <label>Pilih Penerima Surat : </label>
                 <select class="form-control input-lg dynamic" data-dependent="penerima_permohonan" id="penerima" name="penerima_permohonan">
                     <option selected disabled>Pilih Penerima Permohonan</option>
                     <option name="penerima_permohonan" value="KOMINFO">KOMINFO</option>
@@ -88,6 +89,7 @@
                 </select>
             </div>
             <!-- <button type="submit" name="save_select" class="btn btn-primary">Simpan Penerima</button> -->
+            <p>Admin bisa melakukan tanda tangan secara online menggunakan link berikut <a href="https://www.sejda.com/id/sign-pdf">https://www.sejda.com/id/sign-pdf</a></p>
         </form>
 
         <!-- <form class="form" action="{{ route('deleteall') }}" method="POST" style="display:inline;">
