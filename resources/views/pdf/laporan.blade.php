@@ -234,14 +234,8 @@
 				{{-- <p class="western" style="margin-left: 550px; margin-right: 12px; margin-top:-px; margin-bottom:50px;"> --}}
 				Pemohon Informasi
 			</p>
-			<!-- <iframe src="$show->ttd"></iframe> -->
-			<!-- <img src="{{ url('/ttd/$show->ttd') }}"> -->
-			<!-- @php $img= asset('ttd/').$show['ttd']; @endphp -->
+			
 			<img src="{{public_path('ttd/'.$show->ttd)}}" style="margin-left: 330px; margin-right: 0.67in; width: 500px; height: 100px; margin-top:-135px;">
-			<!-- {{$show->ttd}} -->
-			<!-- <img src="<?php // echo $_SERVER["DOCUMENT_ROOT"].'/{{$show->ttd}}';?>"/> -->
-			<!-- <img src="public_path('ttd/$show->ttd')" alt=""> -->
-
 			
 			<p class="western" style="margin-left: 500px; margin-right: 0.67in; text-align:center; margin-top:-30px;">
 			{{$show->nama}}</p>
