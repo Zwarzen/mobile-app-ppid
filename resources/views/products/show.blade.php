@@ -241,7 +241,8 @@
             <strong>Dokumen:</strong>
             <br>
             <br>
-            <img src="{{ $product->dokumen }}" width="250px">
+            <iframe src="/dokumen/{{ $product->dokumen }}" width="100%" height="600px;"></iframe>
+            <!-- <img src="{{ $product->dokumen }}" width="250px"> -->
 
         </div>
 
