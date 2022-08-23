@@ -130,34 +130,35 @@ class ProductController extends Controller
             $input['image'] = "$profileImage";
         }
 
-        if ($dokumen = $request->file('pdf')) {
+        if ($dokumen = $request->file('dokumen')) {
 
-            $destinationPath = 'dokumen/';
+            $destinationPathA = 'dokumen/';
 
             $profileDokumen = date('YmdHis') . "." . $dokumen->getClientOriginalExtension();
 
-            $dokumen->move($destinationPath, $profileDokumen);
+            $dokumen->move($destinationPathA, $profileDokumen);
 
-            $input['pdf'] = "$profileDokumen";
+            $input['dokumen'] = "$profileDokumen";
         }
 
+        if ($ttd = $request->file('ttd')) {
+
+            $destinationPathB = 'ttd/';
+
+            $profileTtd = date('YmdHis') . "." . $ttd->getClientOriginalExtension();
+
+            $ttd->move($destinationPathB, $profileTtd);
+
+            $input['ttd'] = "$profileTtd";
+        }
+
+        
         // if ($pdf = Product::loadView('pdf.invoice', $data)) {
 
         //     Product::put('public/pdf/invoice.pdf', $pdf->output());
 
         //     return $pdf->download('invoice.pdf');
         // }
-
-        if ($ttd = $request->file('image')) {
-
-            $destinationPath = 'ttd/';
-
-            $profileTtd = date('YmdHis') . "." . $ttd->getClientOriginalExtension();
-
-            $ttd->move($destinationPath, $profileTtd);
-
-            $input['image'] = "$profileTtd";
-        }
 
 
         Product::create($input);
