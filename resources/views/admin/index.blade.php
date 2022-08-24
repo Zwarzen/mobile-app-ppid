@@ -65,7 +65,7 @@
         </form>
 
 
-        
+
 
 
         <?php
@@ -79,7 +79,7 @@
             unset($_SESSION['status']);
         }
         ?>
-        <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data" action="surat.php">
+        <!-- <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data" action="surat.php">
             <div class="form-group">
                 <label>Pilih Penerima Surat : </label>
                 <select class="form-control input-lg dynamic" data-dependent="penerima_permohonan" id="penerima" name="penerima_permohonan">
@@ -87,11 +87,11 @@
                     <option name="penerima_permohonan" value="KOMINFO">KOMINFO</option>
                     <option name="penerima_permohonan" value="PPID">PPID</option>
                 </select>
-            </div>
+            </div> -->
             <!-- <button type="submit" name="save_select" class="btn btn-primary">Simpan Penerima</button> -->
-            <p>Admin bisa melakukan tanda tangan secara online menggunakan link berikut <a href="https://www.sejda.com/id/sign-pdf">https://www.sejda.com/id/sign-pdf</a></p>
-        </form>
 
+        <!-- </form> -->
+        <p>Admin bisa melakukan tanda tangan secara online menggunakan link berikut <a href="https://www.sejda.com/id/sign-pdf">https://www.sejda.com/id/sign-pdf</a></p>
         <!-- <form class="form" action="{{ route('deleteall') }}" method="POST" style="display:inline;">
             <div class="form-group">
                 <button type="submit" class="btn btn-danger">Hapus Semua</button>

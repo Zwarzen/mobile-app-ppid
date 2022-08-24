@@ -251,7 +251,7 @@
 		<ul>
 			<li>
 				<p style="margin-top: 0in">Diisi Oleh petugas berdasarkan nomor
-					registrasipermohonan Informasi<span style="letter-spacing: -0.5pt">
+					registrasi permohonan Informasi<span style="letter-spacing: -0.5pt">
 					</span>Publik</p>
 		</ul>
 		<p class="western" style="margin-left: 0.21in; margin-top:-25px;">** Pilih salah satu
