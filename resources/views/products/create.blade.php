@@ -281,16 +281,16 @@
 
         </div>
         
-        <a href="{{ url('/prnpriview') }}" class="btnprn btn">Print Preview</a>
+        <!-- <a href="{{ url('/prnpriview') }}" class="btnprn btn">Print Preview</a>
         <script type="text/javascript">
             $(document).ready(function() {
                 $('.btnprn').printPage();
             });
-        </script>
+        </script> -->
 
         <div class="col-xs-12 col-sm-12 col-md-12 text-center" style="padding-bottom: 50px;">
 
-            <button type="submit" class="btn btn-primary">Buat</button>
+            <button type="submit" class="btn btn-primary" >Buat</button>
 
         </div>
 
