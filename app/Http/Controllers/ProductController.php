@@ -167,7 +167,7 @@ class ProductController extends Controller
 
 
 
-        return view('bukti')
+        return view('products.bukti')
 
             ->with('success', 'Data berhasil dikirim!');
     }
