@@ -56,6 +56,10 @@ class CreateProductsTable extends Migration
 
             $table->date('date');
 
+            $table->string('dokumen');
+
+            $table->string('ttd');
+
             $table->string('image');
 
             $table->timestamps();

@@ -74,6 +74,9 @@ Route::resource('keberatan', Keberatan::class);
 
 
 Route::get('product','ProductController@index');
+
+Route::get('bukti', [ProductController::class, 'bukti'])->name('bukti');
+
 Route::get('/product/cari','ProductController@cari')->name('product.cari');
 
 Route::get('product', 'ProductController@create')->name('product.create');
