@@ -65,7 +65,7 @@
                 </div>
                 
             </form>
-
+            <p>Admin bisa melakukan tanda tangan secara online menggunakan link berikut <a href="https://www.sejda.com/id/sign-pdf">https://www.sejda.com/id/sign-pdf</a></p>
     </div>
 </div>
 
