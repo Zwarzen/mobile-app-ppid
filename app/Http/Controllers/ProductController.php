@@ -161,22 +161,23 @@ class ProductController extends Controller
 
         //     return $pdf->download('invoice.pdf');
         // }
-        
+
 
         Product::create($input);
 
-        // Product::request($id);
+        dd($input);
 
-        return view('products.showUser')
+
+
+        return view('products.showUser', ['id'])
             ->with('product', $product)
             ->with('success', 'Data berhasil dikirim!');
-
     }
 
     public function bukti(Product $product)
     {
 
-        return view('products.showUser', compact('product')); 
+        return view('products.bukti', compact('product')); 
     
     }
 
@@ -444,11 +445,4 @@ class ProductController extends Controller
     //     return response()->json($data);
 
     // }
-
-    public function showUser(Product $product)
-
-    {
-        route('products.show',$product->id);
-        return view('products.showUser', compact('product'));
-    }
 }

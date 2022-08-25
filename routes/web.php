@@ -132,6 +132,9 @@ Route::get('/print','PrintView@index');
 Route::get('/prnpriview','PrintView@prnpriview');
 // Route::post('api/fetch-states', [DropdownController::class, 'fetchState']);
 
+
+Route::get('/bukti/{id}', 'ProductController@show', 'bukti')->name('bukti');
+
 // Route::get(str_replace('/ttd/', '../public/ttd/', $link));
 // Route::get('/url', function (){ return asset('public/storage/e-signatures'); });
 
