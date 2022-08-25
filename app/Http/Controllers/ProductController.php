@@ -443,4 +443,11 @@ class ProductController extends Controller
     //     return response()->json($data);
 
     // }
+
+    public function showUser(Product $product)
+
+    {
+        route('products.show',$product->id);
+        return view('products.showUser', compact('product'));
+    }
 }
