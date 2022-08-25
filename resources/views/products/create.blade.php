@@ -280,12 +280,12 @@
             </div>
 
         </div>
+        
+        <div class="col-xs-12 col-sm-12 col-md-12 text-center" style="padding-bottom: 50px;">
 
-        <!-- <div class="col-xs-12 col-sm-12 col-md-12 text-center" style="padding-bottom: 50px;">
+            <button type="submit" class="btn btn-primary">Buat</button>
 
-            <button type="submit" class="btn btn-primary">OK</button>
-
-        </div> -->
+        </div>
 
     </div>
 

@@ -109,7 +109,7 @@ class ProductController extends Controller
 
             'ttd' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
 
-            'penerima_permohonan',
+            // 'penerima_permohonan',
 
             'date' => 'required',
 
@@ -266,7 +266,7 @@ class ProductController extends Controller
 
             'ttd' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
 
-            'penerima_permohonan',
+            // 'penerima_permohonan',
 
             'date' => 'required',
         ]);
@@ -384,6 +384,21 @@ class ProductController extends Controller
 
         return $pdf->stream('ppid-' . $id . '.pdf');
     }
+
+    // public function downloadPDFkeberatan($id)
+    // {
+
+    //     $show = Product::find($id);
+
+    //     $pdf = PDF::loadView('pdf.keberatan', [
+    //         'title' => 'LaporanKeberatanPDF',
+    //         'date' => date('m/d/Y'),
+    //         'id' => $id,
+
+    //     ], compact('show'));
+
+    //     return $pdf->stream('keberatan-ppid-' . $id . '.pdf');
+    // }
 
 
     // public function deleteall(Request $request)

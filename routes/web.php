@@ -29,6 +29,7 @@ use App\Http\Controllers\PpidController;
 use App\Http\Controllers\PpidAuthController;
 use App\Http\Controllers\KominfoAuthController;
 use App\Models\Product;
+use App\Http\Controllers\Keberatan;
 
 /*
 |--------------------------------------------------------------------------
@@ -67,6 +68,7 @@ Route::resource('login', LoginController::class);
 // Route::resource('ppidadmin', PpidController::class);
 // Route::resource('kominfoadmin', KominfoController::class);
 Route::resource('ppidpembantu', PpidPembantuController::class);
+Route::resource('keberatan', Keberatan::class);
 
 
 
@@ -115,6 +117,10 @@ Route::post('deleteall', [AdminController::class, 'deleteall'])->name('deleteall
 
 Route::get('/pdf', function () {
     return view('pdf.laporan');
+});
+
+Route::get('/pdf', function () {
+    return view('pdf.keberatan');
 });
 
 // Route::post('api/fetch-states', [DropdownController::class, 'fetchState']);

@@ -23,7 +23,7 @@ class Product extends Model
     protected $fillable = [
 
         'nama', 'no_identitas', 'subjek', 'organisasi', 'alamat', 'kontak', 'detail_info_diminta', 'tujuan_penggunaan', 'cara_memperoleh_info', 
-        'cara_mendapat_salinan', 'tujuan_skpd',  'date', 'image', 'dokumen', 'ttd', 'penerima_permohonan'
+        'cara_mendapat_salinan', 'tujuan_skpd',  'date', 'image', 'dokumen', 'ttd'
 
     ];
     
