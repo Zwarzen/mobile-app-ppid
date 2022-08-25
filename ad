@@ -1,0 +1,987 @@
+[33mcommit 3ba2f612623fcf4837f8c218f6b579f680b465fd[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Thu Aug 25 07:30:06 2022 +0700
+
+    trial run
+
+[33mcommit 1cdcb5a8f426b48b71d98c616bcd814d7a7e5f0a[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Wed Aug 24 11:10:28 2022 +0700
+
+    fixed
+
+[33mcommit cecfd45cacfb076f6b2ca26d147a3dee6abf7cb4[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Tue Aug 23 21:30:46 2022 +0700
+
+    trial input dropdown
+
+[33mcommit 7a799e0d2945031d5abfd2397c0fcef51245431f[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Tue Aug 23 16:01:32 2022 +0700
+
+    trial pilih penerima gagal
+
+[33mcommit cf24c5dd1be2143e35dcddb3397b27bbd2db65e3[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Tue Aug 23 15:46:41 2022 +0700
+
+    trial dependent data dropdown fail
+
+[33mcommit 96d7ee05f44a66b03f11eabdf60bb1f65a9fb906[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Tue Aug 23 15:28:55 2022 +0700
+
+    trial dropdown piih staff gagal
+
+[33mcommit 669a37d4a40fbf6f5346cbfa3af6d6bd080f3b68[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Tue Aug 23 14:27:52 2022 +0700
+
+    trial nama
+
+[33mcommit 1ee6c48c101d95390289b7f55186c8a248ec5fdc[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Tue Aug 23 11:47:56 2022 +0700
+
+    all done
+
+[33mcommit f7ba4e5da64968b0ec2f29fb69266100441cf844[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Tue Aug 23 11:32:46 2022 +0700
+
+    fixed pdf
+
+[33mcommit 3211b28a31b3dbdf95316f070810916deeba32ee[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Tue Aug 23 11:32:26 2022 +0700
+
+    fixed pdf
+
+[33mcommit eeac5adbfeabfa39f6a8ac9c5381d1ef4a3bf761[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Tue Aug 23 11:05:22 2022 +0700
+
+    trial image gagal
+
+[33mcommit 13be0c8656f23bfe9014382ce176ff16a0dad485[m
+Merge: 13f47ed cd7b253
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Tue Aug 23 10:21:55 2022 +0700
+
+    Merge branch 'main' of https://github.com/Zwarzen/mobile-app-ppid
+
+[33mcommit 13f47edfaf5eb0f380a3fc3b33b17630834260df[m
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Tue Aug 23 10:21:31 2022 +0700
+
+    'dropwown'
+
+[33mcommit cd7b253327389ae2aa437f774b8067916c6c3ba3[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Tue Aug 23 10:14:23 2022 +0700
+
+    trial show img
+
+[33mcommit 389e450505e8ef3f8876d61b8cfb8df63ccda49c[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Tue Aug 23 10:01:26 2022 +0700
+
+    show image failed
+
+[33mcommit 4b22a1d8906f582443ce8bac4c6b557ad557b07d[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Tue Aug 23 09:13:05 2022 +0700
+
+    all done
+
+[33mcommit 518cb297196ebab8d1ac7d4a4ce479ad7f9e0f36[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Tue Aug 23 09:07:50 2022 +0700
+
+    finish
+
+[33mcommit e82d1e377b8d67392a6f88c8595a3e8eaac0e16c[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Tue Aug 23 08:51:52 2022 +0700
+
+    trial insert
+
+[33mcommit 8f83c958f3a09b595ee9c720fc3b8ef9feef0f4c[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Tue Aug 23 07:30:04 2022 +0700
+
+    not working pdf inser
+
+[33mcommit e77c4f9197979d882ff55ecca1d30c98558bd12a[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Tue Aug 23 07:22:34 2022 +0700
+
+    trial tambah pdf error
+
+[33mcommit 128d5ac392dee713e6f1282feff83f58f119eb67[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Mon Aug 22 10:08:44 2022 +0700
+
+    desain ulang
+
+[33mcommit 0d9ab67221df9997365ecd0be24335bf1999a736[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Mon Aug 22 09:22:06 2022 +0700
+
+    pad TTD
+
+[33mcommit f0fe7dce63013219b62f5d722bfa7d66fba36908[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Mon Aug 22 07:43:01 2022 +0700
+
+    redesign
+
+[33mcommit 32f6b4126e4e3a622c63801b8135ef737c5b4ce7[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Mon Aug 22 07:03:49 2022 +0700
+
+    search bar redesign
+
+[33mcommit c5eb99b730098ba30d3bc9c02ff8d88a7a940a15[m
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Sat Aug 20 07:56:44 2022 +0700
+
+    'backup'
+
+[33mcommit be909b16c40515ed140a99a40d3a5225b93f5dc0[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Fri Aug 19 14:15:47 2022 +0700
+
+    paginate 5
+
+[33mcommit 37746c4398220f3e4736962fa3a3f2277b8df5c8[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Fri Aug 19 13:37:19 2022 +0700
+
+    perbaikan view Admin
+
+[33mcommit e416467b83c99e14342a408714b7c65d5b84a8ed[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Fri Aug 19 13:26:22 2022 +0700
+
+    hapus backup button
+
+[33mcommit 0c74bfa4d990eb832470bcd218a6b528e28a468b[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Fri Aug 19 10:46:23 2022 +0700
+
+    trial backup data
+
+[33mcommit fae499a9db4f53e9b27322c97cdfd6465b42e73a[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Fri Aug 19 08:36:41 2022 +0700
+
+    backup button
+
+[33mcommit eea01e1a920597560593c9dd6ba2cefcbde2e8e7[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Fri Aug 19 08:28:18 2022 +0700
+
+    admin update desain
+
+[33mcommit cdf9c23f0af9a78c791a866e1d080f4ae58ecddd[m
+Merge: 3b56abb b4bf6f3
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Fri Aug 19 08:17:16 2022 +0700
+
+    Merge branch 'main' of https://github.com/Zwarzen/mobile-app-ppid
+
+[33mcommit 3b56abbb986b30586a423deed7e1fba9526d044b[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Fri Aug 19 08:08:27 2022 +0700
+
+    trial destroyAll
+
+[33mcommit b4bf6f300fd42fdf290107269a085ae20ece2959[m
+Merge: 906f13c 892e865
+Author: Zodiact <oktaviantrisabana@gmail.com>
+Date:   Fri Aug 19 08:02:10 2022 +0700
+
+    delete all
+
+[33mcommit 906f13cf75cd9e221a7d542c005e9ac7bbae0b1a[m
+Author: Zodiact <oktaviantrisabana@gmail.com>
+Date:   Fri Aug 19 08:00:16 2022 +0700
+
+    delete all
+
+[33mcommit 892e86594789316bda6656f1712ef5d0488f9d39[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Fri Aug 19 07:51:47 2022 +0700
+
+    truncate function
+
+[33mcommit aeb7b6ad014e96f3e73719ff123a362d192fd725[m
+Merge: 30de480 9e6a7b3
+Author: Zodiact <oktaviantrisabana@gmail.com>
+Date:   Thu Aug 18 13:58:20 2022 +0700
+
+    search && delete
+
+[33mcommit 30de48066e596217e811f9c0dca9bc3f60fb3d98[m
+Author: Zodiact <oktaviantrisabana@gmail.com>
+Date:   Thu Aug 18 13:57:30 2022 +0700
+
+    search && delete
+
+[33mcommit be8e8910470dd01a45d3b6ebf66fbb50610c3115[m
+Author: Zodiact <oktaviantrisabana@gmail.com>
+Date:   Thu Aug 18 13:56:59 2022 +0700
+
+    search && delete
+
+[33mcommit 9e6a7b3a0377d28d47dc1b3de41bb3a4684ca82c[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Thu Aug 18 11:46:42 2022 +0700
+
+    search broken
+
+[33mcommit dfeda9d2e99c19755c0731a62c05f506a8783b1d[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Thu Aug 18 11:20:21 2022 +0700
+
+    fix login, search, etc
+
+[33mcommit c2a270f66f78600bf57f6856d6d2bf57c7191857[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Thu Aug 18 10:47:37 2022 +0700
+
+    fix error
+
+[33mcommit 20c5c661bb8465a02e4a878670bbff3e5ce903f8[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Thu Aug 18 08:52:54 2022 +0700
+
+    backup trial
+
+[33mcommit 8a02f9638948416268ad30fe59e4e3cb0a3a1e58[m
+Merge: 9847674 da84471
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Thu Aug 18 08:35:07 2022 +0700
+
+    Merge branch 'main' of https://github.com/Zwarzen/mobile-app-ppid
+
+[33mcommit da84471c0100ad0e8d0476bca3fe870fb00b8b3b[m
+Merge: 58d2b39 abeb06f
+Author: Zodiact <oktaviantrisabana@gmail.com>
+Date:   Thu Aug 18 08:33:44 2022 +0700
+
+    search filter
+
+[33mcommit 58d2b39800493928bccfe5ba836a9706b0e5dbc1[m
+Author: Zodiact <oktaviantrisabana@gmail.com>
+Date:   Thu Aug 18 08:32:49 2022 +0700
+
+    search filter
+
+[33mcommit 98476743711812796316b3158f92a52296cbcc35[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Thu Aug 18 08:20:13 2022 +0700
+
+    trial backup data
+
+[33mcommit abeb06fedaf4ef4b409a3064bfe5c2907d867d78[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Mon Aug 15 15:37:58 2022 +0700
+
+    finish
+
+[33mcommit edfa348bb550d754214f13d9e69f64b1af7a95a9[m
+Merge: 7b118a1 0df7af9
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Thu Aug 11 16:08:28 2022 +0700
+
+    Merge branch 'main' of https://github.com/Zwarzen/mobile-app-ppid
+
+[33mcommit 7b118a17593176fcc5d55f80fdcfc81b12872680[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Thu Aug 11 16:08:18 2022 +0700
+
+    trial search
+
+[33mcommit 0df7af932421c9243ffc22f571381bc95647540d[m
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Thu Aug 11 09:36:50 2022 +0700
+
+    update login
+
+[33mcommit 20477ce5346076ba90852431bf7ee4183af41051[m
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Thu Aug 11 09:29:55 2022 +0700
+
+    1 login
+
+[33mcommit 95b33cd2b9f3fbfaad4ccb0bf2ef1019ff921bb6[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Thu Aug 11 08:16:01 2022 +0700
+
+    trial join table
+
+[33mcommit 55eaba1819614d4953f1a29a7f27019fe2689dd5[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Thu Aug 11 07:58:11 2022 +0700
+
+    trial join table fail
+
+[33mcommit 9b757c95c0ecf26647595bb81e6dcbec042933db[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Wed Aug 10 18:44:41 2022 +0700
+
+    connect Controller to model
+
+[33mcommit fc7def3dfeacd84ff1f5e1dfbe00088049b13589[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Wed Aug 10 18:41:09 2022 +0700
+
+    make controller ppid kominfo
+
+[33mcommit a41f3a1da188e73b6950aaf511ade78e157bb992[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Wed Aug 10 18:31:17 2022 +0700
+
+    make migration
+
+[33mcommit 7159d064da7f246468aafc2248f696f87e1d9458[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Wed Aug 10 09:57:52 2022 +0700
+
+    kominfo + ppid fix
+
+[33mcommit 6ff4045a8005c866d1559527773d0d007d054331[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Wed Aug 10 09:52:22 2022 +0700
+
+    ppid admin fix
+
+[33mcommit ac6f81308ac50d603e44826ac42681f39d2d9aa4[m
+Author: Zodiact <oktaviantrisabana@gmail.com>
+Date:   Wed Aug 10 08:53:47 2022 +0700
+
+    fixing
+
+[33mcommit d4c41c252aa7d7d92776cf524a4ce3cafeb2e98f[m
+Merge: 9875a58 097ba90
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Wed Aug 10 08:42:28 2022 +0700
+
+    Merge branch 'main' of https://github.com/Zwarzen/mobile-app-ppid
+
+[33mcommit 9875a58a964efe9a80cd05c16ee592e887dee069[m
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Wed Aug 10 08:42:07 2022 +0700
+
+    'update'
+
+[33mcommit 097ba90b96cd6a3abfa3a3aba4a3f70dda12d3c5[m
+Author: Zodiact <oktaviantrisabana@gmail.com>
+Date:   Wed Aug 10 08:32:20 2022 +0700
+
+    fix
+
+[33mcommit 2e47448be86475ad0a8be5d90d63384996c90c18[m
+Author: Zodiact <oktaviantrisabana@gmail.com>
+Date:   Wed Aug 10 08:21:48 2022 +0700
+
+    search kominfo ppid
+
+[33mcommit 80edfd30660db1cc6bbcb9d27478745c7ced6bc9[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Wed Aug 10 07:34:53 2022 +0700
+
+    mobile responsive
+
+[33mcommit 412cd74316a5330fe8bfd75bf52d17c21cf846a1[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Wed Aug 10 07:31:08 2022 +0700
+
+    search bar fixed
+
+[33mcommit dcb99b388134c5f4a0dda2fc48b2bb6fc669e175[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Tue Aug 9 15:17:23 2022 +0700
+
+    done
+
+[33mcommit 16d32e869fe74bed2c9e8443ecfbb3cc56c15a9d[m
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Tue Aug 9 15:03:52 2022 +0700
+
+    search berdasarkan organisasi
+
+[33mcommit 9aa52e6fd766aa072dff782f269d802ccb6292a4[m
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Tue Aug 9 14:59:06 2022 +0700
+
+    search id sama nama
+
+[33mcommit 3324be115614350d68ea90c376ef579aa12dfeae[m
+Merge: 36cafc6 58cf9ba
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Tue Aug 9 14:44:29 2022 +0700
+
+    trial serachbar
+
+[33mcommit 36cafc6c02d34d24fba7e54c9c6f5a61a8d4349f[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Tue Aug 9 14:42:25 2022 +0700
+
+    cleans code
+
+[33mcommit 58cf9ba178b5488cc20ae7fb10916a978cbed7c9[m
+Merge: 62ddce9 a091c0c
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Tue Aug 9 14:33:08 2022 +0700
+
+    Merge branch 'main' of https://github.com/Zwarzen/mobile-app-ppid
+
+[33mcommit a091c0c3bb77fa4750a4fb6403ab2cdecbab4bb5[m
+Merge: a2fbd5e 130777d
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Tue Aug 9 14:32:42 2022 +0700
+
+    Merge branch 'main' of https://github.com/Zwarzen/mobile-app-ppid
+
+[33mcommit a2fbd5e80ed075698e4f114ef2a5d725dc914bff[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Tue Aug 9 14:32:38 2022 +0700
+
+    trial searchbar
+
+[33mcommit 62ddce96360011997ee1f1cb0112054e097c9cc8[m
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Tue Aug 9 14:32:36 2022 +0700
+
+    update search admin
+
+[33mcommit 130777d05c228fc60bcef3e3ffeabf17c43bfb3f[m
+Merge: 20ea945 3ae17b8
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Tue Aug 9 14:22:53 2022 +0700
+
+    searchadmin
+
+[33mcommit 20ea9457f71dce21e2c298a597a8a838f19443c5[m
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Tue Aug 9 14:22:11 2022 +0700
+
+    searchadmin
+
+[33mcommit 3ae17b8da9ff2926ceb25ae4760aabd193bb6ea3[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Tue Aug 9 12:21:33 2022 +0700
+
+    searchbar trial
+
+[33mcommit 66e3c24c1c65e21467a0bd9dbb8c89fa45a256a4[m
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Tue Aug 9 11:24:15 2022 +0700
+
+    loginppid
+
+[33mcommit 0ab01d33e3325e435d80b3c7dd658af2cf86723a[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Tue Aug 9 11:16:29 2022 +0700
+
+    no change
+
+[33mcommit 19a54b788c885be0e61706605a748be42ed118b2[m
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Tue Aug 9 11:09:30 2022 +0700
+
+    loginkominfo
+
+[33mcommit 336da62395125ff4a9f5e07e77a6b4cd1d0e71e4[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Tue Aug 9 08:23:28 2022 +0700
+
+    ui changes
+
+[33mcommit 58784484caf440f15b2299a85616b6f36af2753f[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Tue Aug 9 08:22:24 2022 +0700
+
+    ui changes
+
+[33mcommit 5c11ce7aeb76b9ceebed19c7c1fa6ca069e7ee45[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Tue Aug 9 08:13:25 2022 +0700
+
+    trial backup
+
+[33mcommit 5c1e595a897b4d16ffffc81830e93f74ec9ea0e8[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Tue Aug 9 07:49:36 2022 +0700
+
+    change admin interface
+
+[33mcommit 42c84279a6a2e47a8d7c7564ac3106d413fc02ff[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Tue Aug 9 07:43:52 2022 +0700
+
+    login change
+
+[33mcommit 06a5beafaa0b1484b4c40ba00cb3759746e9123d[m
+Merge: 38d9c07 da5b571
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Mon Aug 8 13:35:32 2022 +0700
+
+    'loginokta'
+
+[33mcommit 38d9c076caee68f47a49dac4d9de01a499df1a05[m
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Mon Aug 8 13:33:11 2022 +0700
+
+    'fb''
+
+[33mcommit da5b571d757ac26b65de3b505fa449e604cd2104[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Mon Aug 8 10:18:29 2022 +0700
+
+    date fix
+
+[33mcommit 0a6abc29888dbf05bcb91577ddd7796715a26493[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Mon Aug 8 10:07:24 2022 +0700
+
+    desain select admin
+
+[33mcommit b26e855dd5cff2e48108fafcaebb96fa47906d1a[m
+Merge: 63744d5 90f35fd
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Mon Aug 8 09:36:04 2022 +0700
+
+    Merge branch 'main' of https://github.com/Zwarzen/mobile-app-ppid
+
+[33mcommit 63744d58b33268bbf79ce015d057713f08327a43[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Mon Aug 8 09:36:00 2022 +0700
+
+    PPID Routes
+
+[33mcommit 90f35fd373eb73d2d43be179e8e4bed61bace330[m
+Merge: dbf899c d37c02d
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Mon Aug 8 09:33:58 2022 +0700
+
+    'tujuan_skpd'
+
+[33mcommit dbf899c9e88594d01032c868a325e61b3ef29cf1[m
+Merge: 02ca94e 82209d5
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Mon Aug 8 09:32:42 2022 +0700
+
+    'tujuan_skpd'
+
+[33mcommit d37c02d1560973aae71886585f46dba1659d568a[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Mon Aug 8 09:29:51 2022 +0700
+
+    test
+
+[33mcommit 3e7704a246291ee350de2129928dc843dd0301dc[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Mon Aug 8 09:18:18 2022 +0700
+
+    post modul
+
+[33mcommit 02ca94e522f2445b4013133f862833f37b3a7084[m
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Mon Aug 8 09:10:37 2022 +0700
+
+    'aq'
+
+[33mcommit 509dd0089f84b4400f9fb5d2e77c8bfc9158f051[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Sat Aug 6 20:48:35 2022 +0700
+
+    redesain admin
+
+[33mcommit ae003b9357e9187e66ebb40692935b370c444035[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Sat Aug 6 20:43:42 2022 +0700
+
+    DONT TOUCH ADMIN
+
+[33mcommit bfbe89374c5d6746e533ccad36824ee24528fcd2[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Sat Aug 6 20:27:12 2022 +0700
+
+    clear unused code
+
+[33mcommit 82209d52d7571188a3c83c0dcbfff101833d378d[m
+Merge: 7aa7f9f 0075fcf
+Author: Zodiact <oktaviantrisabana@gmail.com>
+Date:   Fri Aug 5 16:46:16 2022 +0700
+
+    tujuan SKPD
+
+[33mcommit 0075fcf26b49752f03ec8a40080b22b335464d55[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Mon Aug 8 08:52:54 2022 +0700
+
+    add icons route
+
+[33mcommit 5600cc03037f6eea95dc8505a3cc91090dc7e209[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Mon Aug 8 08:45:31 2022 +0700
+
+    trial filter
+
+[33mcommit 343478cf07d004d5746cd8eee2e1e4c552774b7b[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Mon Aug 8 07:55:07 2022 +0700
+
+    fix
+
+[33mcommit 7aa7f9fa88bdf15630d2ed3d86b23dd114d2b88d[m
+Author: Zodiact <oktaviantrisabana@gmail.com>
+Date:   Fri Aug 5 16:45:28 2022 +0700
+
+    tujuan SKPD
+
+[33mcommit 0c0dce73d638695543b27d9bf2c0c5e7b11002a3[m
+Merge: 0bb6280 6760d5a
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Fri Aug 5 15:49:21 2022 +0700
+
+    Merge branch 'main' of https://github.com/Zwarzen/mobile-app-ppid
+
+[33mcommit 6760d5a40bfbe8a124e44d16c101fb228d386bce[m
+Merge: 555063b d1bad1c
+Author: Zodiact <oktaviantrisabana@gmail.com>
+Date:   Fri Aug 5 14:28:22 2022 +0700
+
+    Merge branch 'main' of https://github.com/Zwarzen/mobile-app-ppid
+
+[33mcommit 555063bca78105255357ed9a2b7b16187af4b9f5[m
+Merge: 2c5849a 23d0720
+Author: Zodiact <oktaviantrisabana@gmail.com>
+Date:   Fri Aug 5 14:28:17 2022 +0700
+
+    update
+
+[33mcommit d1bad1c1f8f6b3d15530257a9f612da866f4dcec[m
+Merge: 199fda9 5dea177
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Fri Aug 5 14:23:26 2022 +0700
+
+    Merge branch 'main' of https://github.com/Zwarzen/mobile-app-ppid
+
+[33mcommit 199fda9da57063814884f462adcf946d06d9445d[m
+Author: echa <echaazwaputrialvianti@gmail.com>
+Date:   Fri Aug 5 14:23:22 2022 +0700
+
+    update
+
+[33mcommit 0bb62808148c7624dae0270bc5d2ae4e58295e3e[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Fri Aug 5 14:19:29 2022 +0700
+
+    trial search kominfo
+
+[33mcommit 5dea1773c62a224bed292725e7dc0f9c98febff9[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Fri Aug 5 12:57:18 2022 +0700
+
+    fix listing
+
+[33mcommit 2c5849a8115e25d4350b051aafca6174865c88b9[m
+Author: Zodiact <oktaviantrisabana@gmail.com>
+Date:   Fri Aug 5 12:56:07 2022 +0700
+
+    update
+
+[33mcommit 23d0720c1b41ab581204bcecbfeed919b4d7a9bc[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Fri Aug 5 12:53:02 2022 +0700
+
+    trial filter
+
+[33mcommit ff0d8de7e1ae6c21e008d5d2518ba5b92b159cc2[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Fri Aug 5 10:04:41 2022 +0700
+
+    trial req filter kominfo
+
+[33mcommit 7b4c03a2fe6f854b842327e73a30d3053e4d8c19[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Fri Aug 5 08:24:22 2022 +0700
+
+    trial filter kominfo
+
+[33mcommit c4e3c530915da2d42c4725964e82b6aaa2fee46a[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Fri Aug 5 06:51:13 2022 +0700
+
+    test kominfo
+
+[33mcommit 3900f95caa890d536095b88f9ed574f5cf48c84b[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Thu Aug 4 15:11:29 2022 +0700
+
+    trials
+
+[33mcommit 6f3f2e1c807f9213e048e757405486261add3d99[m
+Merge: 65c6566 6fa0483
+Author: Zodiact <oktaviantrisabana@gmail.com>
+Date:   Thu Aug 4 11:21:01 2022 +0700
+
+    auth login
+
+[33mcommit 65c656690f4779363e6abcab69bb1fa9c2a85262[m
+Author: Zodiact <oktaviantrisabana@gmail.com>
+Date:   Thu Aug 4 11:15:16 2022 +0700
+
+    auth login
+
+[33mcommit 6fa0483c4747115ce872aa214215bce015364ad4[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Thu Aug 4 08:02:15 2022 +0700
+
+    date indo fixed
+
+[33mcommit c0e0b2289257f65333857606c3805ffc2e461175[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Thu Aug 4 07:31:27 2022 +0700
+
+    trial login
+
+[33mcommit e2dceedebf469cf5ca23ece35f08447045f408ca[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Wed Aug 3 09:07:01 2022 +0700
+
+    limit input
+
+[33mcommit 4eccb28e962a41feb55c4596b6edc4a3d61d7f7a[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Wed Aug 3 08:44:39 2022 +0700
+
+    print output done
+
+[33mcommit a8bee27aff4c3a9b6f34f8dc3b516f45108f7c24[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Mon Aug 1 11:53:56 2022 +0700
+
+    trial login admin
+
+[33mcommit 4c0de0b2155fcc7ebf9754e853abb51834e9173d[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Mon Aug 1 11:14:39 2022 +0700
+
+    trial login admin
+
+[33mcommit 6e9f96967109b25c6dabe971f7479e10944304e5[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Mon Aug 1 08:48:18 2022 +0700
+
+    trial session
+
+[33mcommit fd5ab42851169d6ea7a40680a5534ce1ace69e2c[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Sun Jul 31 19:20:13 2022 +0700
+
+    crate user migration
+
+[33mcommit a2697e67c5d74c56b617f6baf9ab80efb7463e64[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Sun Jul 31 17:08:40 2022 +0700
+
+    create Login
+
+[33mcommit 8614e8169df0f7e51df17dd4520678b601ebf115[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Fri Jul 29 09:54:39 2022 +0700
+
+    new sql
+
+[33mcommit e1360f4ef8543124c32a9adf04ae78b78f8e9976[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Fri Jul 29 08:46:42 2022 +0700
+
+    trial create pdf
+
+[33mcommit 3cece70a551b1cb74880a7a77fd57010a8cab508[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Wed Jul 27 09:02:32 2022 +0700
+
+    navbar done
+
+[33mcommit e4aed1b41a2a81dd67b186307430a268d4416e0c[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Wed Jul 27 08:01:34 2022 +0700
+
+    dashboard, pembantu ppid, Galeri done
+
+[33mcommit 3d66b03a001c57f9ab6ad28ab3e39ebbb995b113[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Mon Jul 25 11:00:12 2022 +0700
+
+    navbar rep
+
+[33mcommit 01e632e779c7b1d7c27b0ad3788562ab6b5da55a[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Mon Jul 25 07:36:38 2022 +0700
+
+    navbar rep
+
+[33mcommit 961052f58d097db03890938cccc3ca226f39e8c8[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Mon Jul 25 07:33:22 2022 +0700
+
+    navbar responsive
+
+[33mcommit 6ee8d2c313269077802fa2b79e8f16894c441368[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Sat Jul 23 16:35:45 2022 +0700
+
+    navigation design done
+
+[33mcommit 85f018d496d81f3d3c22405dac74c4fdb115527b[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Fri Jul 22 10:55:09 2022 +0700
+
+    daftar informasi - not done
+
+[33mcommit af49f18256711dd244c350bbc57888c8624e9276[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Fri Jul 22 10:17:20 2022 +0700
+
+    Sop and Laporan done
+
+[33mcommit e862a5ebd52995be48a55279efd12ab7014bb58d[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Fri Jul 22 09:23:40 2022 +0700
+
+    Profil Page done
+
+[33mcommit 3e9aa8a6bff8ed89462d1356fa0e9ce552669c93[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Thu Jul 21 14:52:51 2022 +0700
+
+    trial print pdf/word doc
+
+[33mcommit bb9b7144cd910ef998f86985b9bb2246a3a0dd75[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Thu Jul 21 13:51:02 2022 +0700
+
+    trial print data
+
+[33mcommit 9690acb106c83d7004004856e020d4bcff4e46b9[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Thu Jul 21 10:54:50 2022 +0700
+
+    trial generate surat
+
+[33mcommit b6c259a6500cfd65c63f0bf0a8514248f02b20da[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Thu Jul 21 10:18:47 2022 +0700
+
+    trial create data
+
+[33mcommit e37c6ad58306a22d4235bc9aa0959afa5d868435[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Thu Jul 21 10:07:18 2022 +0700
+
+    icon working
+
+[33mcommit 38f715959a563beac8c9fd6f9473eda59c92bca9[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Thu Jul 21 09:39:25 2022 +0700
+
+    trial add icon failed
+
+[33mcommit 237ad38922f8e5e6676a3e28707f4c82ccdeb1d0[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Thu Jul 21 09:27:22 2022 +0700
+
+    add icons
+
+[33mcommit 3896de367d99a5a5cc3b9e5217983f077ead1354[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Thu Jul 21 08:52:33 2022 +0700
+
+    add phpword
+
+[33mcommit 9a54cac5d84bff3199b6d81a238fe51c8bfa207c[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Thu Jul 21 08:45:32 2022 +0700
+
+    add subjek
+
+[33mcommit 4043ac4c11b3326667621840a8ba2a60be2f1766[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Thu Jul 21 08:18:54 2022 +0700
+
+    redesain form
+
+[33mcommit a1aaa9c5c61884bab35b5238c8540f1640dee187[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Thu Jul 21 07:41:41 2022 +0700
+
+    Fillable Form and Admin done
+
+[33mcommit 24dc425447a89dd686b7a5bb4eeb6d51c19a5d19[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Wed Jul 20 07:31:13 2022 +0700
+
+    edit and show func done
+
+[33mcommit ca042ce742a0951402c54fc49b021d5a6efdd533[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Tue Jul 19 14:57:56 2022 +0700
+
+    new Database
+
+[33mcommit 8e555bba5fe37188b34afbf2c80234290bdd7ac6[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Tue Jul 19 14:56:38 2022 +0700
+
+    New Database Update, Edit and Detail still in progress
+
+[33mcommit 9d338ad6fc54cfc9faa13fef3dd79da2b95b3ae1[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Tue Jul 19 13:47:40 2022 +0700
+
+    routing form to admin done
+
+[33mcommit d5a37167a56f1a76cd06f6fcc7cba6b86bdc8bb6[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Tue Jul 19 11:17:53 2022 +0700
+
+    public img
+
+[33mcommit 609793fcaa0a41152a7d63140a7a93b77825290f[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Tue Jul 19 10:55:40 2022 +0700
+
+    2 login ver
+
+[33mcommit eedd0284c8be9c4932b98878e51d871e92780a30[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Tue Jul 19 09:00:38 2022 +0700
+
+    trial user page
+
+[33mcommit b62cfbe5345ed537178737024efed6e5543ae4a0[m
+Author: Risang <56747783+Zwarzen@users.noreply.github.com>
+Date:   Tue Jul 19 08:45:27 2022 +0700
+
+    add sql
+
+[33mcommit 0249e466181c0997bcec8e85b3a96568e47b68d8[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Tue Jul 19 08:42:58 2022 +0700
+
+    test
+
+[33mcommit 338a955bffaacee27f786d7cacc689240a81defd[m
+Author: Risang Daniswara <akurisang12@gmail.com>
+Date:   Tue Jul 19 07:25:26 2022 +0700
+
+    first commit

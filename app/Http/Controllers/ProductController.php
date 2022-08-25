@@ -167,9 +167,16 @@ class ProductController extends Controller
 
 
 
-        return redirect('products')
+        return view('bukti')
 
             ->with('success', 'Data berhasil dikirim!');
+    }
+
+    public function bukti(Product $product)
+    {
+
+        return view('products.bukti', compact('product')); 
+    
     }
 
 
