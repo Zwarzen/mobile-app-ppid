@@ -134,3 +134,4 @@ Route::get('/prnpriview','PrintView@prnpriview');
 
 // Route::get(str_replace('/ttd/', '../public/ttd/', $link));
 // Route::get('/url', function (){ return asset('public/storage/e-signatures'); });
+

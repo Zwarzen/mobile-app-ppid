@@ -73,7 +73,7 @@ class ProductController extends Controller
 
      */
 
-    public function store(Request $request)
+    public function store(Request $request, Product $product)
 
     {
 
@@ -161,23 +161,24 @@ class ProductController extends Controller
 
         //     return $pdf->download('invoice.pdf');
         // }
-
+        
 
         Product::create($input);
 
-
+        // Product::request($id);
 
         return view('products.showUser')
-
+            ->with('product', $product)
             ->with('success', 'Data berhasil dikirim!');
+
     }
 
-    // public function bukti(Product $product)
-    // {
+    public function bukti(Product $product)
+    {
 
-    //     return view('products.showUser', compact('product')); 
+        return view('products.showUser', compact('product')); 
     
-    // }
+    }
 
 
 
