@@ -167,7 +167,7 @@ class ProductController extends Controller
 
 
 
-        return view('products.bukti')
+        return view('products.showUser')
 
             ->with('success', 'Data berhasil dikirim!');
     }
@@ -175,7 +175,7 @@ class ProductController extends Controller
     public function bukti(Product $product)
     {
 
-        return view('products.bukti', compact('product')); 
+        return view('products.showUser', compact('product')); 
     
     }
 
