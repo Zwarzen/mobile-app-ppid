@@ -6,11 +6,11 @@
 
 <style>
     canvas {
-                border: 1px solid #ccc;
-                border-radius: 0.5rem;
-                width: 100%;
-                height: 400px;
-            }
+        border: 1px solid #ccc;
+        border-radius: 0.5rem;
+        width: 100%;
+        height: 400px;
+    }
 </style>
 
 <div class="row">
@@ -66,6 +66,15 @@
 
 
     <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12" style="margin-top: 20px;">
+
+            <div class="form-group">
+
+                <input type="hidden" name="id" class="form-control">
+
+            </div>
+
+        </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12" style="margin-top: 20px;">
 
@@ -121,9 +130,9 @@
 
                 <strong>Organisasi / Kuasa Hukum:</strong><br>
                 <!-- <input type="text" name="organisasi" class="form-control" placeholder="Nama Organisasi"> -->
-                
+
                 <input type="text" name="organisasi" class="form-control" placeholder="Nama Organisasi / Kuasa Hukum (isi ' - ' jika Perorangan)">
-                
+
             </div>
 
         </div>
@@ -168,7 +177,7 @@
 
                 <!-- <input type="text" name="cara_memperoleh_info" class="form-control" placeholder="Cara Memperoleh Informasi"> -->
                 <tr style="display: block;">
-                    <td><input type="radio" name="cara_memperoleh_info" value="Melihat/Membaca/Mendengar/Mencatat"/> Melihat/Membaca/Mendengar/Mencatat</td>
+                    <td><input type="radio" name="cara_memperoleh_info" value="Melihat/Membaca/Mendengar/Mencatat" /> Melihat/Membaca/Mendengar/Mencatat</td>
                 <tr><br>
                     <td><input type="radio" name="cara_memperoleh_info" value="Mendapat Salinan Informasi(Hard Copy/Soft Copy)" /> Mendapat Salinan Informasi(Hard Copy/Soft Copy)</td>
                 </tr>
@@ -186,7 +195,8 @@
 
                 <!-- <input type="text" name="cara_mendapat_salinan" class="form-control" placeholder="Cara Mendapat Salinan"> -->
                 <tr>
-                    <br><td><input type="radio" name="cara_mendapat_salinan" value="Mengambil Langsung" /> Mengambil Langsung</td>
+                    <br>
+                    <td><input type="radio" name="cara_mendapat_salinan" value="Mengambil Langsung" /> Mengambil Langsung</td>
                 <tr>
                     <td><br><input type="radio" name="cara_mendapat_salinan" value="Kurir" /> Kurir</td>
                 </tr>
@@ -212,11 +222,11 @@
                 <div class="form-group">
                     <select class="form-control" name="tujuan_skpd">
                         <option selected disabled>Pilih Tujuan SKPD</option>
-                      <option  name="tujuan_skpd" value="KOMINFO">KOMINFO</option>
-                      <option  name="tujuan_skpd" value="PPID">PPID</option>
+                        <option name="tujuan_skpd" value="KOMINFO">KOMINFO</option>
+                        <option name="tujuan_skpd" value="PPID">PPID</option>
                     </select>
-                  </div>
-                 
+                </div>
+
 
                 <!-- <input type="text" name="tujuan_skpd" class="form-control" placeholder="Tujuan"> -->
                 {{-- <tr style="display: block;">
@@ -269,7 +279,7 @@
 
             <div class="form-group">
 
-                <p>Tanda Tangan bisa dilakukan di <a href="https://signaturely.com/online-signature/draw/">sini</a>, lalu unggah pada form dibawah.( atau bisa menggunakan link <a href="https://signaturely.com/online-signature/draw/">https://signaturely.com/online-signature/draw/</a>)</p> 
+                <p>Tanda Tangan bisa dilakukan di <a href="https://signaturely.com/online-signature/draw/">sini</a>, lalu unggah pada form dibawah.( atau bisa menggunakan link <a href="https://signaturely.com/online-signature/draw/">https://signaturely.com/online-signature/draw/</a>)</p>
 
                 <strong>Tanda Tangan:</strong>
 
@@ -280,7 +290,7 @@
             </div>
 
         </div>
-        
+
         <!-- <a href="{{ url('/prnpriview') }}" class="btnprn btn">Print Preview</a>
         <script type="text/javascript">
             $(document).ready(function() {
@@ -290,7 +300,7 @@
 
         <div class="col-xs-12 col-sm-12 col-md-12 text-center" style="padding-bottom: 50px;">
 
-            <button type="submit" class="btn btn-primary" >Buat</button>
+            <button type="submit" class="btn btn-primary">Buat</button>
 
         </div>
 

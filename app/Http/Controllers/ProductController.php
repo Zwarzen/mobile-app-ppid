@@ -165,7 +165,7 @@ class ProductController extends Controller
 
         Product::create($input);
 
-        // dd($input);
+        dd($input);
 
 
 
