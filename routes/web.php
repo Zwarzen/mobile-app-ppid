@@ -30,6 +30,7 @@ use App\Http\Controllers\PpidAuthController;
 use App\Http\Controllers\KominfoAuthController;
 use App\Models\Product;
 use App\Http\Controllers\Keberatan;
+use App\Http\Controllers\PrintView;
 
 /*
 |--------------------------------------------------------------------------
@@ -123,6 +124,9 @@ Route::get('/pdf', function () {
     return view('pdf.keberatan');
 });
 
+
+Route::get('/print','PrintView@index');
+Route::get('/prnpriview','PrintView@prnpriview');
 // Route::post('api/fetch-states', [DropdownController::class, 'fetchState']);
 
 // Route::get(str_replace('/ttd/', '../public/ttd/', $link));
