@@ -165,7 +165,7 @@ class ProductController extends Controller
 
         Product::create($input);
 
-        dd($input);
+        // dd($input);
 
 
 
@@ -392,6 +392,21 @@ class ProductController extends Controller
         ], compact('show'));
 
         return $pdf->stream('ppid-' . $id . '.pdf');
+    }
+
+    public function downloadPDFuser($id)
+    {
+
+        $show = Product::find($id);
+
+        $pdf = PDF::loadView('pdf.laporan', [
+            'title' => 'LaporanPDF',
+            'date' => date('m/d/Y'),
+            'id' => $id,
+
+        ], compact('show'));
+
+        return $pdf->stream('ppid-' . $_token . '.pdf');
     }
 
     // public function downloadPDFkeberatan($id)

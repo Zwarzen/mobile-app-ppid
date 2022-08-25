@@ -82,6 +82,7 @@ Route::get('/product/cari','ProductController@cari')->name('product.cari');
 Route::get('product', 'ProductController@create')->name('product.create');
 Route::post('product', 'ProductController@store')->name('product.store');
 Route::get('/downloadPDF/{id}', [ProductController::class, 'downloadPDF'])->name('downloadPDF');
+Route::get('/downloadPDFuser/{id}', [ProductController::class, 'downloadPDFuser'])->name('downloadPDFuser');
 
 Route::get('login', [CustomAuthController::class, 'index'])->name('login')->middleware('guest');
 Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name('login.custom');

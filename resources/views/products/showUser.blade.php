@@ -23,7 +23,7 @@
 
         <div class="pull-right" style="margin-right: 10px;" style="margin-bottom:10px;">
 
-            <a class="btn btn-success" href="{{route('downloadPDF', $product->id)}}" action="surat.php"> <i class="material-icons">insert_drive_file</i>Print</a>
+            <a class="btn btn-success" href="{{route('downloadPDFuser')}}" action="surat.php"> <i class="material-icons">insert_drive_file</i>Print</a>
 
         </div>
 
@@ -65,33 +65,33 @@
 
             <strong>Tanggal:</strong>
             <?php
-            function tanggal_indonesia($tanggal)
-            {
-                $bulan = array(
-                    1 =>   'Januari',
-                    'Februari',
-                    'Maret',
-                    'April',
-                    'Mei',
-                    'Juni',
-                    'Juli',
-                    'Agustus',
-                    'September',
-                    'Oktober',
-                    'November',
-                    'Desember'
-                );
+            // function tanggal_indonesia($tanggal)
+            // {
+            //     $bulan = array(
+            //         1 =>   'Januari',
+            //         'Februari',
+            //         'Maret',
+            //         'April',
+            //         'Mei',
+            //         'Juni',
+            //         'Juli',
+            //         'Agustus',
+            //         'September',
+            //         'Oktober',
+            //         'November',
+            //         'Desember'
+            //     );
 
-                $pecahkan = explode('-', $tanggal);
+            //     $pecahkan = explode('-', $tanggal);
 
-                // variabel pecahkan 0 = tanggal
-                // variabel pecahkan 1 = bulan
-                // variabel pecahkan 2 = tahun
+            //     // variabel pecahkan 0 = tanggal
+            //     // variabel pecahkan 1 = bulan
+            //     // variabel pecahkan 2 = tahun
 
-                return $pecahkan[2] . ' ' . $bulan[(int)$pecahkan[1]] . ' ' . $pecahkan[0];
-            }
+            //     return $pecahkan[2] . ' ' . $bulan[(int)$pecahkan[1]] . ' ' . $pecahkan[0];
+            // }
 
-            echo tanggal_indonesia($product->date); // Hasilnya menampilkan format tanggal 15 Februari 2004
+            // echo tanggal_indonesia($product->date); // Hasilnya menampilkan format tanggal 15 Februari 2004
             ?>
             <!-- 
             {{  
