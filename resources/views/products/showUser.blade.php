@@ -249,19 +249,19 @@
 
     </div>
 
-    <div class="col-xs-12 col-sm-12 col-md-12">
+    <!-- <div class="col-xs-12 col-sm-12 col-md-12">
 
         <div class="form-group">
 
             <strong>Dokumen:</strong>
             <br>
             <br>
-            <iframe src="/dokumen/{{ $product->dokumen }}" width="100%" height="600px;"></iframe>
+            <iframe src="/dokumen/{{ $product->dokumen }}" width="100%" height="600px;"></iframe> -->
             <!-- <img src="{{ $product->dokumen }}" width="250px"> -->
 
-        </div>
+        <!-- </div>
 
-    </div>
+    </div> -->
     
 </div>
 

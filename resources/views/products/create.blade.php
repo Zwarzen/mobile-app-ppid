@@ -70,7 +70,7 @@
 
             <div class="form-group">
 
-                <input type="hidden" name="id" class="form-control">
+                <input type="hidden" name="id" >
 
             </div>
 

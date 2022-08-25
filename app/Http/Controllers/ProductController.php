@@ -165,7 +165,7 @@ class ProductController extends Controller
 
         Product::create($input);
 
-        dd($input);
+        // dd($input);
 
 
 
@@ -197,7 +197,8 @@ class ProductController extends Controller
 
     public function show(Product $product)
 
-    {
+    {   
+        // dd($product);
 
         return view('products.show', compact('product'));
     }
@@ -406,7 +407,7 @@ class ProductController extends Controller
 
         ], compact('show'));
 
-        return $pdf->stream('ppid-' . $_token . '.pdf');
+        return $pdf->stream('ppid-' . $id . '.pdf');
     }
 
     // public function downloadPDFkeberatan($id)
