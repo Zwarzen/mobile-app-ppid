@@ -172,7 +172,7 @@ class ProductController extends Controller
         // $lastInsertId = DB::table('reports')->insertGetId(['id' => $id]);
 
 
-        // dd($input);
+        //dd($input);
 
 
 
