@@ -23,7 +23,7 @@
 
         <div class="pull-right" style="margin-right: 10px;" style="margin-bottom:10px;">
         @if($product->id)
-            <a class="btn btn-success" href="{{route('downloadPDFuser'.$product->id)}}" action="surat.php"> <i class="material-icons">insert_drive_file</i>Print</a>
+            <a class="btn btn-success" href="{{route('downloadPDFuser',[$product->id])}}" action="surat.php"> <i class="material-icons">insert_drive_file</i>Print</a>
         @endif
         </div>
 
