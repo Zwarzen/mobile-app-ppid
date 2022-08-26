@@ -174,7 +174,7 @@ class ProductController extends Controller
 
         //dd($input);
 
-
+        return DB::table('products')->latest('id')->first();
 
         return view('products.showUser', ['id'])
             ->with('product', $product)
