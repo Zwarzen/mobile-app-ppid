@@ -63,7 +63,7 @@
 
     @csrf
 
-
+    <!-- route('products.show',$product->id) -->
 
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12" style="margin-top: 20px;">

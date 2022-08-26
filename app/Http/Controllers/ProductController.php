@@ -162,8 +162,15 @@ class ProductController extends Controller
         //     return $pdf->download('invoice.pdf');
         // }
 
-
+        
         Product::create($input);
+        
+        // Product::table('products')-> WHERE ('id','=', $id)->get();
+
+        // $query = DB::table('products')->select('id');
+        // $id = $query->addSelect('id')->get();
+        // $lastInsertId = DB::table('reports')->insertGetId(['id' => $id]);
+
 
         // dd($input);
 
