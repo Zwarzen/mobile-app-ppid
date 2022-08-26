@@ -174,9 +174,9 @@ class ProductController extends Controller
 
         //dd($input);
 
-        return DB::table('products')->latest('id')->first();
+        // return DB::table('products')->latest('id')->first();
 
-        return view('products.showUser', ['id'])
+        return view('products.create', ['id'])
             ->with('product', $product)
             ->with('success', 'Data berhasil dikirim!');
     }
