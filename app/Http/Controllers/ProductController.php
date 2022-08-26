@@ -176,8 +176,8 @@ class ProductController extends Controller
 
         // return DB::table('products')->latest('id')->first();
 
-        return view('products.create', ['id'])
-            ->with('product', $product)
+        return redirect('products')
+
             ->with('success', 'Data berhasil dikirim!');
     }
 
