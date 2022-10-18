@@ -63,5 +63,13 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+
+        'kominfo' => \App\Http\Middleware\Kominfo::class,
     ];
+
+    // protected function schedule(Schedule $schedule)
+    // {
+    //     $schedule->command('backup:clean')->daily()->at('01:00');
+    //     $schedule->command('backup:run')->daily()->at('01:30');
+    // }
 }

@@ -149,6 +149,135 @@
     })();
 </script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"73093877295a8980","token":"067fc07fd7884bf98dd4b4bd2dae1d55","version":"2022.6.0","si":100}' crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+        <script>
+            // script di dalam ini akan dijalankan pertama kali saat dokumen dimuat
+            document.addEventListener('DOMContentLoaded', function () {
+                resizeCanvas();
+            })
+    
+            //script ini berfungsi untuk menyesuaikan tanda tangan dengan ukuran canvas
+            function resizeCanvas() {
+                var ratio = Math.max(window.devicePixelRatio || 1, 1);
+                canvas.width = canvas.offsetWidth * ratio;
+                canvas.height = canvas.offsetHeight * ratio;
+                canvas.getContext("2d").scale(ratio, ratio);
+            }
+    
+    
+            var canvas = document.getElementById('signature-pad');
+    
+            //warna dasar signaturepad
+            var signaturePad = new SignaturePad(canvas, {
+                backgroundColor: 'rgb(255, 255, 255)'
+            });
+    
+            //saat tombol clear diklik maka akan menghilangkan seluruh tanda tangan
+            document.getElementById('clear').addEventListener('click', function () {
+                signaturePad.clear();
+            });
+    
+            //saat tombol undo diklik maka akan mengembalikan tanda tangan sebelumnya
+            // document.getElementById('undo').addEventListener('click', function () {
+            //     var data = signaturePad.toData();
+            //     if (data) {
+            //         data.pop(); // remove the last dot or line
+            //         signaturePad.fromData(data);
+            //     }
+            // });
+    
+            //saat tombol change color diklik maka akan merubah warna pena
+            // document.getElementById('change-color').addEventListener('click', function () {
+    
+            //     //jika warna pena biru maka buat menjadi hitam dan sebaliknya
+            //     if(signaturePad.penColor == "rgba(0, 0, 255, 1)"){
+    
+            //         signaturePad.penColor = "rgba(0, 0, 0, 1)";
+            //     }else{
+            //         signaturePad.penColor = "rgba(0, 0, 255, 1)";
+            //     }
+            // })
+    
+            //fungsi untuk menyimpan tanda tangan dengan metode ajax
+            // $(document).on('click', '#btn-submit', function () {
+            //     var signature = signaturePad.toDataURL();
+    
+            //     $.ajax({
+            //         url: "proses.php",
+            //         data: {
+            //             foto: signature,
+            //         },
+            //         method: "POST",
+            //         success: function () {
+            //             location.reload();
+            //             alert('Tanda Tangan Berhasil Disimpan');
+            //         }
+    
+            //     })
+            // })
+        </script>
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+<!-- <script>
+
+    $(document).ready(function () {
+
+
+
+        /*------------------------------------------
+
+        --------------------------------------------
+
+        Country Dropdown Change Event
+
+        --------------------------------------------
+
+        --------------------------------------------*/
+
+        $('#penerima').on('change', function () {
+
+            var idCountry = this.value;
+
+            $.ajax({
+
+                type: "POST",
+
+                data: {
+
+                    id: idSurat,
+
+                    _token: '{{csrf_token()}}'
+
+                },
+
+                dataType: 'json',
+
+                success: function (result) {
+
+                    $('#penerima').html('<option value="">-- Select State --</option>');
+
+                    $.each(result.states, function (key, value) {
+
+                        $("#penerima").append('<option value="' + value
+
+                            .id + '">' + value.name + '</option>');
+
+                    });
+
+                }
+
+            });
+
+        });
+
+    });
+
+</script> -->
+
 
 </body>
 

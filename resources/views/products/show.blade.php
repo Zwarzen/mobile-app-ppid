@@ -13,10 +13,11 @@
             <h2> Detail Pengaduan</h2>
 
         </div>
+        
 
         <div class="pull-right" style="margin-bottom:10px;">
 
-            <a class="btn btn-primary" href="{{ route('admin.index') }}"> <i class="material-icons">arrow_back</i>Back</a>
+            <a class="btn btn-primary" href="{{ url('admin') }}"> <i class="material-icons">arrow_back</i>Back</a>
 
         </div>
 
@@ -25,6 +26,20 @@
             <a class="btn btn-success" href="{{route('downloadPDF', $product->id)}}" action="surat.php"> <i class="material-icons">insert_drive_file</i>Print</a>
 
         </div>
+
+        <!-- <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data" action="surat.php">
+            <div class="form-group">
+                <select class="form-control input-lg dynamic" data-dependent="penerima_permohonan" id="penerima" name="penerima_permohonan">
+                    <option selected disabled>Pilih Penerima Permohonan</option>
+                    <option name="penerima_permohonan" value="KOMINFO">KOMINFO</option>
+                    <option name="penerima_permohonan" value="PPID">PPID</option>
+                </select>
+            </div>
+            <button type="submit" name="save_select" class="btn btn-primary">Simpan Penerima</button>
+        </form> -->
+        
+
+        
     </div>
 
 </div>
@@ -38,7 +53,7 @@
 
             <strong>Nomor Surat:</strong>
 
-            {{ $product->id }}
+            {{ str_pad($product->id, 4, '0', STR_PAD_LEFT); }}
 
         </div>
 
@@ -49,10 +64,39 @@
         <div class="form-group">
 
             <strong>Tanggal:</strong>
+            <?php
+            function tanggal_indonesia($tanggal)
+            {
+                $bulan = array(
+                    1 =>   'Januari',
+                    'Februari',
+                    'Maret',
+                    'April',
+                    'Mei',
+                    'Juni',
+                    'Juli',
+                    'Agustus',
+                    'September',
+                    'Oktober',
+                    'November',
+                    'Desember'
+                );
 
+                $pecahkan = explode('-', $tanggal);
+
+                // variabel pecahkan 0 = tanggal
+                // variabel pecahkan 1 = bulan
+                // variabel pecahkan 2 = tahun
+
+                return $pecahkan[2] . ' ' . $bulan[(int)$pecahkan[1]] . ' ' . $pecahkan[0];
+            }
+
+            echo tanggal_indonesia($product->date); // Hasilnya menampilkan format tanggal 15 Februari 2004
+            ?>
+            <!-- 
             {{  
                 $newDate = date("d F Y", strtotime($product->date));
-            }}
+            }} -->
 
 
 
@@ -205,6 +249,20 @@
 
     </div>
 
+    <div class="col-xs-12 col-sm-12 col-md-12">
+
+        <div class="form-group">
+
+            <strong>Dokumen:</strong>
+            <br>
+            <br>
+            <iframe src="/dokumen/{{ $product->dokumen }}" width="100%" height="600px;"></iframe>
+            <!-- <img src="{{ $product->dokumen }}" width="250px"> -->
+
+        </div>
+
+    </div>
+    
 </div>
 
 @endsection

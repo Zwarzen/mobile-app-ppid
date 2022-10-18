@@ -7,9 +7,11 @@ namespace App\Http\Controllers;
 
 
 use App\Models\Product;
-
-use Illuminate\Http\Request;
+use App\Rules\Uppercase;
 use PDF;
+use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\DB;
 
 
 
@@ -32,8 +34,6 @@ class ProductController extends Controller
     {
 
         $products = Product::latest()->paginate(5);
-
-
 
         return view('products.create', compact('products'))
 
@@ -73,7 +73,7 @@ class ProductController extends Controller
 
      */
 
-    public function store(Request $request)
+    public function store(Request $request, Product $product)
 
     {
 
@@ -83,7 +83,7 @@ class ProductController extends Controller
 
             'nama' => 'required',
 
-            'no_identitas' => 'required',
+            'no_identitas' => new Uppercase,
 
             'subjek' => 'required',
 
@@ -103,7 +103,13 @@ class ProductController extends Controller
 
             'tujuan_skpd' => 'required',
 
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+
+            'dokumen' => 'mimes:pdf,jpeg,png,jpg,gif,svg',
+
+            'ttd' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+
+            // 'penerima_permohonan',
 
             'date' => 'required',
 
@@ -126,15 +132,60 @@ class ProductController extends Controller
             $input['image'] = "$profileImage";
         }
 
+        if ($dokumen = $request->file('dokumen')) {
 
+            $destinationPathA = 'dokumen/';
 
+            $profileDokumen = date('YmdHis') . "." . $dokumen->getClientOriginalExtension();
+
+            $dokumen->move($destinationPathA, $profileDokumen);
+
+            $input['dokumen'] = "$profileDokumen";
+        }
+
+        if ($ttd = $request->file('ttd')) {
+
+            $destinationPathB = 'ttd/';
+
+            $profileTtd = date('YmdHis') . "." . $ttd->getClientOriginalExtension();
+
+            $ttd->move($destinationPathB, $profileTtd);
+
+            $input['ttd'] = "$profileTtd";
+        }
+
+        
+        // if ($pdf = Product::loadView('pdf.invoice', $data)) {
+
+        //     Product::put('public/pdf/invoice.pdf', $pdf->output());
+
+        //     return $pdf->download('invoice.pdf');
+        // }
+
+        
         Product::create($input);
+        
+        // Product::table('products')-> WHERE ('id','=', $id)->get();
+
+        // $query = DB::table('products')->select('id');
+        // $id = $query->addSelect('id')->get();
+        // $lastInsertId = DB::table('reports')->insertGetId(['id' => $id]);
 
 
+        //dd($input);
 
-        return redirect()->route('products.index')
+        // return DB::table('products')->latest('id')->first();
+
+        return redirect('products')
 
             ->with('success', 'Data berhasil dikirim!');
+    }
+
+    public function bukti(Product $product)
+    {
+
+        return view('products.bukti', compact('product')); 
+    
     }
 
 
@@ -153,7 +204,8 @@ class ProductController extends Controller
 
     public function show(Product $product)
 
-    {
+    {   
+        // dd($product);
 
         return view('products.show', compact('product'));
     }
@@ -225,7 +277,13 @@ class ProductController extends Controller
 
             'tujuan_skpd' => 'required',
 
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+
+            'dokumen' => 'mimes:pdf,jpeg,png,jpg,gif,svg',
+
+            'ttd' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+
+            // 'penerima_permohonan',
 
             'date' => 'required',
         ]);
@@ -250,13 +308,41 @@ class ProductController extends Controller
             unset($input['image']);
         }
 
+        if ($dokumen = $request->file('pdf')) {
+
+            $destinationPath = 'dokumen/';
+
+            $profileDokumen = date('YmdHis') . "." . $dokumen->getClientOriginalExtension();
+
+            $dokumen->move($destinationPath, $profileDokumen);
+
+            $input['pdf'] = "$profileDokumen";
+        } else {
+
+            unset($input['pdf']);
+        }
+
+        if ($ttd = $request->file('image')) {
+
+            $destinationPath = 'ttd/';
+
+            $profileTtd = date('YmdHis') . "." . $ttd->getClientOriginalExtension();
+
+            $ttd->move($destinationPath, $profileTtd);
+
+            $input['image'] = "$profileTtd";
+        } else {
+
+            unset($input['image']);
+        }
+
 
 
         $product->update($input);
 
 
 
-        return redirect()->route('admin.index')
+        return redirect('admin')
 
             ->with('success', 'Product updated successfully');
     }
@@ -283,23 +369,103 @@ class ProductController extends Controller
 
 
 
-        return redirect()->route('admin.index')
+        return redirect('admin')
 
             ->with('success', 'Data Berhasil dihapus!');
     }
 
+    // public function destroyAll(Product $product)
+
+    // {
+
+    //     $product->truncate();
+
+
+
+    //     return redirect('admin')
+
+    //         ->with('success', 'Semua Data Berhasil dihapus!');
+    // }
+
     public function downloadPDF($id)
     {
-        
+
         $show = Product::find($id);
 
         $pdf = PDF::loadView('pdf.laporan', [
             'title' => 'LaporanPDF',
             'date' => date('m/d/Y'),
             'id' => $id,
-            
+
         ], compact('show'));
 
-        return $pdf->stream('ppid-'.$id.'.pdf');
+        return $pdf->stream('ppid-' . $id . '.pdf');
     }
+
+    public function downloadPDFuser($id)
+    {
+
+        $show = Product::find($id);
+
+        $pdf = PDF::loadView('pdf.laporan', [
+            'title' => 'LaporanPDF',
+            'date' => date('m/d/Y'),
+            'id' => $id,
+
+        ], compact('show'));
+
+        return $pdf->stream('ppid-' . $id . '.pdf');
+    }
+
+    // public function downloadPDFkeberatan($id)
+    // {
+
+    //     $show = Product::find($id);
+
+    //     $pdf = PDF::loadView('pdf.keberatan', [
+    //         'title' => 'LaporanKeberatanPDF',
+    //         'date' => date('m/d/Y'),
+    //         'id' => $id,
+
+    //     ], compact('show'));
+
+    //     return $pdf->stream('keberatan-ppid-' . $id . '.pdf');
+    // }
+
+
+    // public function deleteall(Request $request)
+    // {
+    //     $product->all()->delete();
+
+    //     return redirect('admin')
+    // }
+
+    //    public function cari(Request $request)
+    // {
+    // 	// menangkap data pencarian
+    // 	$cari = $request->cari;
+
+    //    		// mengambil data dari table pegawai sesuai pencarian data
+    // 	$product = DB::table('products')
+    // 	->where('id','like',"%".$cari."%")
+    // 	->paginate();
+
+    //    		// mengirim data pegawai ke view index
+    // 	return view('product.index',['products' => $product]);
+
+    // }
+
+    // public function fetchStaff(Request $request)
+
+    // {
+
+    //     $data['products'] = Product::where("penandatangan", $request->penandatangan)
+
+    //                             ->get(["penandatangan", "id"]);
+
+  
+
+    //     return response()->json($data);
+
+    // }
 }

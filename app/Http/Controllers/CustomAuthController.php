@@ -54,11 +54,43 @@ class CustomAuthController extends Controller
         ]);
     
         $credentials = $request->only('email', 'password');
-        if (Auth::attempt($credentials)) {
+        if (Auth::guard('user')->attempt(['email' => $request->email, 'password' => $request->password])) {
             return redirect()->intended('admin')
+
+                             ->withSuccess('Signed in');
+
+        }elseif (Auth::guard('kominfo')->attempt(['email' => $request->email, 'password' => $request->password])) {
+            return redirect()->intended('kominfoadmin')
                         ->withSuccess('Signed in');
-        }
         
-        return back()->withErrors('Username atau Password anda salah');
+        }elseif (Auth::guard('ppid')->attempt(['email' => $request->email, 'password' => $request->password])) {
+            return redirect()->intended('ppidadmin')
+                             ->withSuccess('Signed in');
+            
+        }return back()->withErrors('Username atau Password anda salah');
+    
+
     }
+
+    public function logout(Request $request)
+   
+    {
+        if(Auth::guard('user')->check()){
+            Auth::guard('user')->logout();
+
+        }elseif (Auth::guard('kominfo')->check()) {
+            Auth::guard('kominfo')->logout();
+            
+        }elseif (Auth::guard('ppid')->check()) {
+            Auth::guard('ppid')->logout();
+        }
+ 
+
+        $request->session()->invalidate();
+    
+        $request->session()->regenerateToken();
+    
+        return redirect('/dashboard');
+    }
+
 }

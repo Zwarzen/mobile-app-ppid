@@ -4,6 +4,15 @@
 
 @section('content')
 
+<style>
+    canvas {
+        border: 1px solid #ccc;
+        border-radius: 0.5rem;
+        width: 100%;
+        height: 400px;
+    }
+</style>
+
 <div class="row">
 
     <div class="col-lg-12 margin-tb" style="margin-top: 30px;">
@@ -54,9 +63,18 @@
 
     @csrf
 
-
+    <!-- route('products.show',$product->id) -->
 
     <div class="row">
+        <!-- <div class="col-xs-12 col-sm-12 col-md-12" style="margin-top: 20px;">
+
+            <div class="form-group">
+
+                <input type="hidden" name="id" >
+
+            </div>
+
+        </div> -->
 
         <div class="col-xs-12 col-sm-12 col-md-12" style="margin-top: 20px;">
 
@@ -110,11 +128,11 @@
 
             <div class="form-group">
 
-                <strong>Organisasi:</strong><br>
+                <strong>Organisasi / Kuasa Hukum:</strong><br>
                 <!-- <input type="text" name="organisasi" class="form-control" placeholder="Nama Organisasi"> -->
-                
-                <input type="text" name="organisasi" class="form-control" placeholder="Nama Organisasi">
-                
+
+                <input type="text" name="organisasi" class="form-control" placeholder="Nama Organisasi / Kuasa Hukum (isi ' - ' jika Perorangan)">
+
             </div>
 
         </div>
@@ -159,7 +177,7 @@
 
                 <!-- <input type="text" name="cara_memperoleh_info" class="form-control" placeholder="Cara Memperoleh Informasi"> -->
                 <tr style="display: block;">
-                    <td><input type="radio" name="cara_memperoleh_info" value="Melihat/Membaca/Mendengar/Mencatat"/> Melihat/Membaca/Mendengar/Mencatat</td>
+                    <td><input type="radio" name="cara_memperoleh_info" value="Melihat/Membaca/Mendengar/Mencatat" /> Melihat/Membaca/Mendengar/Mencatat</td>
                 <tr><br>
                     <td><input type="radio" name="cara_memperoleh_info" value="Mendapat Salinan Informasi(Hard Copy/Soft Copy)" /> Mendapat Salinan Informasi(Hard Copy/Soft Copy)</td>
                 </tr>
@@ -177,7 +195,8 @@
 
                 <!-- <input type="text" name="cara_mendapat_salinan" class="form-control" placeholder="Cara Mendapat Salinan"> -->
                 <tr>
-                    <br><td><input type="radio" name="cara_mendapat_salinan" value="Mengambil Langsung" /> Mengambil Langsung</td>
+                    <br>
+                    <td><input type="radio" name="cara_mendapat_salinan" value="Mengambil Langsung" /> Mengambil Langsung</td>
                 <tr>
                     <td><br><input type="radio" name="cara_mendapat_salinan" value="Kurir" /> Kurir</td>
                 </tr>
@@ -200,14 +219,22 @@
             <div class="form-group">
 
                 <strong>Tujuan SKPD:</strong>
+                <div class="form-group">
+                    <select class="form-control" name="tujuan_skpd">
+                        <option selected disabled>Pilih Tujuan SKPD</option>
+                        <option name="tujuan_skpd" value="KOMINFO">KOMINFO</option>
+                        <option name="tujuan_skpd" value="PPID">PPID</option>
+                    </select>
+                </div>
+
 
                 <!-- <input type="text" name="tujuan_skpd" class="form-control" placeholder="Tujuan"> -->
-                <tr style="display: block;">
+                {{-- <tr style="display: block;">
                     <td><br><input type="radio" name="tujuan_skpd" value="KOMINFO"/> KOMINFO</td>
                 <tr><br>
                     <td><input type="radio" name="tujuan_skpd" value="PPID" /> PPID</td>
                 </tr>
-                </tr>
+                </tr> --}}
             </div>
 
         </div>
@@ -228,13 +255,48 @@
 
             <div class="form-group">
 
-                <strong>Image:</strong>
+                <strong>Foto KTP:</strong>
 
-                <input type="file" name="image" class="form-control" placeholder="image">
+                <input type="file" name="image" class="form-control" placeholder="masukan foto KTP">
 
             </div>
 
         </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+
+            <div class="form-group">
+
+                <strong>Dokumen Pendukung:</strong>
+
+                <input type="file" name="dokumen" class="form-control" placeholder="Dokumen Berformat PDF">
+
+            </div>
+
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+
+            <div class="form-group">
+
+                <p>Tanda Tangan bisa dilakukan di <a href="https://signaturely.com/online-signature/draw/">sini</a>, lalu unggah pada form dibawah.( atau bisa menggunakan link <a href="https://signaturely.com/online-signature/draw/">https://signaturely.com/online-signature/draw/</a>)</p>
+
+                <strong>Tanda Tangan:</strong>
+
+                <input type="file" name="ttd" class="form-control" placeholder="masukan gambar Tanda Tangan">
+
+                <!-- <canvas id="signature-pad" class="signature-pad"></canvas> -->
+
+            </div>
+
+        </div>
+
+        <!-- <a href="{{ url('/prnpriview') }}" class="btnprn btn">Print Preview</a>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('.btnprn').printPage();
+            });
+        </script> -->
 
         <div class="col-xs-12 col-sm-12 col-md-12 text-center" style="padding-bottom: 50px;">
 
